@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cart</title>
+
+    <!-- jQuery mobile files -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+    <!-- Font awesome file -->
+    <script src="https://kit.fontawesome.com/f083cf2118.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom JS Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Paypal-->
+    <script
+        src="https://www.paypal.com/sdk/js?client-id=AUN1TSse5y5m44StUi5DtqErcIDV_-Pyi7c8Ro35EUrs30celJskEs5FQEjKo5xttQmfhyLPrk4_2Pyu">
+    </script>
+
+    <!-- Custom main CSS file -->
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <div data-theme="b" data-role="page" id="payment">
+        <div class="payment">
+            <div data-role="header" id="header2">
+                <div class="container">
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <div class="container">
+                                <div class="ui-block-a w15">
+                                    <a data-rel="back" rel="external"><img src="assets/img/back.svg" height="30"
+                                            width="30"></a>
+                                </div>
+                                <div class="-ui-block-b w90">
+                                    <h3 class="ui-block-b text-primary text-center">Payment</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui-block-b icons" id="optionz">
+                                <a class="primary-color-black-text" data-rel="popup" href="#overlay" data-position-to="#optionz"><i
+                                    class="fas fa-search"></i></a>
+                            <div class="ui-content pt-0 mb-1" data-shadow="false" data-theme="none" data-overlay-theme="a" data-role="popup"
+                                 id="overlay">
+                                <div class="deals-search-bar">
+                                    <ul data-role="listview" data-filter="true" data-filter-reveal="true"
+                                        data-filter-placeholder="Searching Promotions" data-inset="true">
+                                        <li><a class="dealsClick" accesskey="1">Winter Coffee Sale</a></li>
+                                        <li><a class="dealsClick" accesskey="2">Google Pixel Sale</a></li>
+                                        <li><a class="dealsClick" accesskey="3">Furniture Sale</a></li>
+                                        <li><a class="dealsClick" accesskey="4">Electronic Christmas Sale</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a class="primary-color-black-text" href="realAR.html" rel="external"><i class="fas fa-camera"></i></a>
+                            </div>
+                    </div>
+                </div>
+                <div class="header-content mt-4">
+                    <div class="progress-stepper">
+                        <div class="ui-grid-b">
+                            <div class="ui-block-a step">
+                                <div class="d-flex flex-column align-items-center">
+                                    <div
+                                        class="step-count text-left primary-color-blue-bg bar-active primary-color-white-text">
+                                        <span>1</span>
+                                    </div>
+                                    <div class="step-content-label">
+                                        <span class="font-size-s primary-color-blue-text">Cart</span>
+                                    </div>
+                                </div>
+                                <div class="bar-left bar-left-1 bar-active"></div>
+                            </div>
+                            <div class="ui-block-b step active">
+                                <div class="d-flex flex-column align-items-center">
+                                    <div class="step-content-icon text-center">
+                                        <span class="step-count">2</span>
+                                    </div>
+                                    <div class="step-content-label">
+                                        <span class="font-size-s">Payment</span>
+                                    </div>
+                                </div>
+                                <div class="bar-left bar-left-2 bar-active"></div>
+                            </div>
+                            <div class="ui-block-c step">
+                                <div class="d-flex flex-column align-items-center justify-content-center">
+                                    <div class="step-content-icon text-right">
+                                        <span class="step-count">3</span>
+                                    </div>
+                                    <div class="step-content-label">
+                                        <span class="font-size-s">Confirm</span>
+                                    </div>
+                                </div>
+                                <div class="bar-left bar-left-3"></div>
+                                <div class="bar-right"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-shadow: none;" data-role="main">
+                <div class="ui-grid-a">
+                    <div class="container pb-5">
+                        <div class="ui-block-a w50">
+                            <div class="head mt-5">
+                                <ul class="nav nav-tabs nav-justified nav-primary">
+                                    <li class="nav-item">
+                                        <a href="#card" id="card_link" class="nav-link active" data-toggle="tab">Card
+                                            Payment</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#paypal" id="paypal_link" class="nav-link" data-toggle="tab">Paypal</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="card">
+                                        <h5 class="text-right primary-color">Manage my Cards</h5>
+                                        <div class="card my-card mx-auto">
+                                            <div class="ui-grid-a">
+                                                <div class="ui-block-a">
+                                                    <img src="assets/img/visa-logo.png" alt="Visa" width="60px">
+                                                </div>
+                                                <div class="ui-block-b text-right">
+                                                    <i style="color: #fff; font-size: 20px;"
+                                                        class="far fa-trash-alt"></i>
+                                                    <i style="color: #fff; font-size: 20px;"
+                                                        class="far fa-edit pl-3"></i>
+                                                </div>
+                                                <div style="color: #1A80AD;" class="text-center pt-5 pb-3">
+                                                    <h4 style="letter-spacing: 4px; color: #fff;">**** **** **** **94
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                            <div class="ui-grid-a">
+                                                <div class="ui-block-a">
+                                                    <h5 style="color: #E2C224;">Card Holder</h5>
+                                                    <h5 style="color: #fff;">James Smitherson</h5>
+                                                </div>
+                                                <div class="ui-block-b text-right">
+                                                    <h5 style="color: #E2C224;">Expiry</h5>
+                                                    <h5 style="color: #fff;">09/20</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="paypal">
+                                        <h5 class="text-right primary-color">Manage Paypal</h5>
+                                        <div class="card paypal-card mx-auto">
+                                            <div class="ui-grid-a">
+                                                <div class="ui-block-a">
+                                                    <img src="assets/img/paypal-logo.png" alt="Paypal" width="60px">
+                                                </div>
+                                                <div class="ui-block-b">
+                                                    <p class="gray text-right">Last Used: 02/10/2019</p>
+                                                </div>
+                                                <div style="color: #1A80AD;" class="text-center pt-5 pb-3">
+                                                    <h4>Current Balance</h4>
+                                                    <h2><b>$14,090.06</b></h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui-block-b pl-5 w50">
+                            <div class="foot mt-5">
+                                <div class="card pb-4 pt-4">
+                                    <div class="ui-grid-a">
+                                        <div class="ui-block-a w70">
+                                            <h5 class="black">James Smithersom</h5>
+                                            <p class="gray">47<sup>th</sup> Lane, Yorkshire Avenue, <br>California,
+                                                United
+                                                States
+                                            </p>
+                                            <p class="gray">+1 900 200 3999 <br />smithersonrocks@gmail.com</p>
+                                        </div>
+                                        <div class="ui-block-b w30">
+                                            <a href="#address" data-rel="popup">
+                                                <h5 class="primary-color text-right">Change</h5>
+                                            </a>
+                                        </div>
+                                        <div data-role="popup" data-position-to="window" id="address">
+                                            <div class="address_popup">
+                                                <div class="ui-grid-solo text-center">
+                                                    <h2 class="primary-color-blue-text">Modify Address</h2>
+                                                </div>
+                                                <hr>
+                                                <form>
+                                                    <fieldset data-role="controlgroup" data-iconpos="right">
+                                                        <div class="ui-grid-a">
+                                                            <div class="ui-block-a">
+                                                                <div class="ui-radio-2 card py-0 px-0 mt-3 ml-3 mr-3">
+                                                                    <div style="width: 300px !important;"
+                                                                        class="pt-4 pb-3 pl-4 pr-2 ui-grid-a">
+                                                                        <div class="ui-block-a w90">
+                                                                            <h5>James Smitherson</h5>
+                                                                            <p class="primary-color-grey-text">47th
+                                                                                Lane,
+                                                                                Yorkshire Avenue,
+                                                                                <br>California, United States</p>
+                                                                            <h6>+1 900 200 3999</h6>
+                                                                            <h6>smithersonrocks@gmail.com</h6>
+                                                                        </div>
+                                                                        <div class="ui-block-b w10">
+                                                                            <input class="mt-0" type="radio"
+                                                                                name="radio-choice-w-6"
+                                                                                id="radio-choice-w-6a"
+                                                                                checked="checked">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="mb-0 mx-0 address-foot">
+                                                                        <div class="ui-grid-b py-2 px-4">
+                                                                            <div class="ui-block-a w20">
+                                                                                <i
+                                                                                    class="fas fa-trash-alt primary-color-grey-text"></i>
+                                                                            </div>
+                                                                            <div class="ui-block-b w20">
+                                                                                <i
+                                                                                    class="fas fa-edit primary-color-blue-text"></i>
+                                                                            </div>
+                                                                            <div class="ui-block-c w60 text-right">
+                                                                                <p style="line-height: 2;"
+                                                                                    class="fw-bold primary-color-red-text mb-0">
+                                                                                    Default</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ui-block-b">
+                                                                <div class="ui-radio-2 card py-0 px-0 mt-3 ml-3 mr-3">
+                                                                    <div style="width: 300px !important;"
+                                                                        class="pt-4 pb-3 pl-4 pr-2 ui-grid-a">
+                                                                        <div class="ui-block-a w90">
+                                                                            <h5>James Smitherson</h5>
+                                                                            <p class="primary-color-grey-text">47th
+                                                                                Lane,
+                                                                                Yorkshire Avenue,
+                                                                                <br>California, United States</p>
+                                                                            <h6>+1 900 200 3999</h6>
+                                                                            <h6>smithersonrocks@gmail.com</h6>
+                                                                        </div>
+                                                                        <div class="ui-block-b w10">
+                                                                            <input class="mt-0" type="radio"
+                                                                                name="radio-choice-w-6"
+                                                                                id="radio-choice-w-6a">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="mb-0 mx-0 address-foot">
+                                                                        <div class="ui-grid-b py-2 px-4">
+                                                                            <div class="ui-block-a w20">
+                                                                                <i
+                                                                                    class="fas fa-trash-alt primary-color-grey-text"></i>
+                                                                            </div>
+                                                                            <div class="ui-block-b w20">
+                                                                                <i
+                                                                                    class="fas fa-edit primary-color-blue-text"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ui-grid-a">
+                                                                <div class="ui-block-a">
+                                                                    <div class="card mt-3 ml-3 mr-3">
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                    </fieldset>
+                                                </form>
+                                                <div class="ui-grid-solo mx-auto w40">
+                                                    <a href="" data-role="button" class="primary-btn">Apply</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hrb"></div>
+                                    <div id="paypal-button-container"></div>
+                                    <div id="my_card">
+                                        <a href="confirmation.html" rel="external" data-role="button"
+                                            class="btn ui-btn primary-btn">Confirm
+                                            Payment</a>
+                                    </div>
+                                    <div data-role="popup" id="success" class="ui-content popup-success">
+                                        <div class="ui-grid-solo mx-auto text-center">
+                                            <img src="assets/img/success.svg" class="img-fluid">
+                                            <h1 class="primary-color-green-text f50 pt-3">Login Successful</h1>
+                                            <h1 class="primary-color-grey-text">Lets Go!</h1>
+                                            <p class="primary-color-grey-text f16 fw-bold pt-4">You will be redirected
+                                                in 3
+                                                seconds..</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+
+        $(document).on("click", ".dealsClick", function () {
+            sessionStorage.setItem("currentDeal", this.accessKey);
+            sessionStorage.setItem("ratingFilter", '0');
+            sessionStorage.setItem("priceFilter", '{"startValue":"0","EndValue":"145"}');
+            sessionStorage.setItem("sort", 'default');
+            document.location.href = 'promotion_details.html';
+        });
+        paypal.Buttons({
+            style: {
+                layout: 'horizontal',
+                shape: 'pill',
+                tagline: '',
+                label: 'pay',
+                fundingicons: 'true'
+            },
+            createOrder: function (data, actions) {
+                // This function sets up the details of the transaction, including the amount and line item details.
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: parseFloat(JSON.parse(sessionStorage.getItem('cart'))['total'])
+                            -
+                            parseFloat(JSON.parse(sessionStorage.getItem('cart'))['coupon'])
+                        }
+                    }]
+                });
+            },
+            onApprove: function (data, actions) {
+                // This function captures the funds from the transaction.
+                return actions.order.capture().then(function (details) {
+                    // This function shows a transaction success message to your buyer.
+                    setTimeout(function () {
+                        window.location =
+                            "http://localhost/mobile-ux-ipad/success.html"
+                    }, 1000);
+                });
+            }
+        }).render('#paypal-button-container');
+        //This function displays Smart Payment Buttons on your web page.
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#paypal-button-container").hide();
+
+            $("#card_link").click(function () {
+                $("#paypal-button-container").hide();
+                $('#my_card').removeClass("d-none");
+                $('#my_card').addClass("d-block");
+            });
+            $("#paypal_link").click(function () {
+                $('#my_card').addClass("d-none");
+                $('#my_card').removeClass("d-block");
+                $("#paypal-button-container").show();
+            });
+        });
+    </script>
+    <script>
+        $('#my_card').click(function () {
+            setTimeout(function () {
+                window.location = "http://localhost/mobile-ux-ipad/home.html"
+            }, 3000);
+        });
+    </script>
+
+</body>
+
+</html>

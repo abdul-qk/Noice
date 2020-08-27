@@ -1,0 +1,25 @@
+:root {
+    /* Primary Colors start */
+    --primary-color-blue: #4444C8;
+    --primary-color-green: #5A8F40;
+    --primary-color-red: #B22033;
+    --primary-color-white: #FFFFFF;
+    --primary-color-grey: #8F8F8F;
+    --primary-color-black: #313131;
+    /* Primary Colours end */
+
+    /* Secondary Colours start */
+    --secondary-color-background-blue: #F6FAFF;
+    --secondary-color-grey: #E3E3E3;
+    --secondary-color-yellow: #E2C224;
+    --secondary-color-gold: #B7a223;
+    --secondary-color-blue-1: #5151F5;
+    --secondary-color-blue-2: #6C63FF;
+    /* Secondary Colours end */
+
+    /* Gradient Colours start */
+    --gradient-variation-1: linear-gradient(#30156F, #5229B8);
+    --gradient-variation-2: linear-gradient(#634315, #62AB2B);
+    --gradient-variation-3: linear-gradient(#FFFFFF, #A4E3FF);
+    /* Gradient Colours end */
+}

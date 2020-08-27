@@ -1,0 +1,759 @@
+@import "theme_varaibles.css";
+
+/* ------------------------------------------- GENERAL STYLES START ------------------------------------------------- */
+
+h1 {
+    color: #4444C8;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+h2 {
+    font-weight: 500;
+}
+
+h3 {
+    font-weight: 700;
+}
+
+h4 {
+    font-weight: 500;
+}
+
+h6 {
+    color: #8F8F8F;
+    font-weight: 500;
+}
+
+.border-rad-20 {
+    border-radius: 10px !important;
+}
+
+.border-rad-max {
+    border-radius: 100%;
+}
+
+.primary-color {
+    color: #4444C8 !important;
+}
+
+.secondary-color {
+    color: #5A8F40 !important;
+}
+
+.gray {
+    color: #8F8F8F !important;
+}
+
+.red {
+    color: #B22033 !important;
+}
+
+.black {
+    color: #313131 !important;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    display: inline-block;
+    font-weight: 400;
+    color: #8F8F8F;
+}
+
+p {
+    font-weight: 400;
+    font-size: 12px;
+}
+
+a {
+    color: #4444C8;
+    font-weight: 600 !important;
+    font-size: 14px;
+}
+
+.nav-primary {
+    background-color: #E3E3E3;
+    border-radius: 30px;
+}
+
+.nav-primary a {
+    padding: 10px 20px;
+    margin: 5px 5px;
+    border-radius: 30px 30px 30px 30px !important;
+    font-weight: 700 !important;
+    text-align: center;
+}
+
+.post-login #footer {
+    height: 68px;
+}
+
+.post-login #footer .ui-btn {
+    color: var(--primary-color-grey);
+    padding: 0px !important;
+    font-weight: 100 !important;
+}
+
+.post-login #footer .ui-btn.active {
+    font-weight: 600 !important;
+}
+
+.post-login #footer i {
+    font-size: 20px;
+}
+
+.post-login #footer a div {
+    font-size: 11px;
+    padding-top: 6px;
+}
+
+
+.hrb {
+    height: 1px;
+    background-color: #8F8F8F;
+    width: 100%;
+    margin: 20px 0px;
+    margin-bottom: 30px;
+}
+
+.address {
+    background-color: #fff;
+    border-radius: 20px 20px 0px 0px;
+    padding: 30px 20px;
+    -webkit-box-shadow: -3px 5px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -3px 5px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -3px 5px 10px 0px rgba(0, 0, 0, 0.75);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* -------------------------------------------- GENERAL STYLES END -------------------------------------------------- */
+
+
+
+
+/* --------------------------------------- PRE-LOGIN PAGES STYLES START --------------------------------------------- */
+
+/* Header styles start */
+
+.pre-login #header,
+.pre-login #loginHeader {
+    padding-top: unset;
+    border-radius: unset !important;
+}
+
+/* Header styles end */
+
+/* Create Account and Sign In styles start */
+
+.pre-login #loginHeader .ui-block-a {
+    width: 10%;
+}
+
+.pre-login #loginHeader .ui-block-b {
+    width: calc(100% - 20%);
+}
+
+.pre-login #loginHeader .text-primary {
+    font-size: 20px;
+}
+
+.uploadIcon:before {
+    font-size: 72px;
+}
+
+/* Create Account and Sign In styles end */
+
+/* Swiper Information styles start */
+#swiperInformation,
+#firstTimeLanding {
+    min-height: unset !important;
+    height: 100%;
+}
+
+#swiperInformation #header {
+    height: 60px;
+}
+
+#swiperInformation .ui-content {
+    height: 500px;
+}
+
+#swiperInformation #footer {
+    height: calc(100% - 560px);
+}
+
+#swiperInformation .ui-content .ui-block-a,
+#swiperInformation .ui-content .ui-block-b,
+#swiperInformation .ui-content .ui-block-c,
+#swiperInformation .ui-content .ui-block-d {
+    width: 100%;
+}
+
+/* Swiper Information styles end */
+
+/* First time landing styles start */
+#firstTimeLanding .ui-content {
+    height: 560px !important;
+}
+
+#firstTimeLanding #header {
+    height: 60px;
+}
+
+#firstTimeLanding #main {
+    height: calc(100% - 60px);
+    padding-top: 60px;
+}
+
+#firstTimeLanding #footer {
+    height: calc(100% - 560px) !important;
+}
+
+.firstTimeFooter .ui-grid-b .ui-block-a,
+.firstTimeFooter .ui-grid-b .ui-block-c {
+    width: 20% !important;
+}
+
+.firstTimeFooter .ui-grid-b .ui-block-b {
+    width: 60% !important;
+}
+
+.firstTimeFooter .ui-controlgroup .ui-controlgroup-controls {
+    display: flex;
+    justify-content: space-around;
+    width: 100%
+}
+
+.content-landing div:first-child h1 {
+    font-size: 45px !important;
+}
+
+.content-landing div:nth-child(2) {
+    font-size: 18px !important;
+    font-weight: 700;
+}
+
+.content-landing div:nth-child(3) p {
+    font-size: 14px !important;
+    font-weight: 100;
+}
+
+/* First time landing styles end */
+
+/* About Us styles start */
+.team-section .ui-grid-a {
+    display: flex;
+    align-items: center;
+}
+
+.team-section .ui-grid-a:first-child .ui-block-a {
+    width: 30% !important;
+}
+
+.team-section .ui-grid-a:first-child .ui-block-b {
+    width: 70% !important;
+}
+
+.team-section .ui-grid-a:nth-child(2) .ui-block-a {
+    width: 70% !important;
+}
+
+.team-section .ui-grid-a:nth-child(2) .ui-block-b {
+    width: 30% !important;
+}
+
+.team-section .ui-grid-a:nth-child(3) .ui-block-a {
+    width: 30% !important;
+}
+
+.team-section .ui-grid-a:nth-child(3) .ui-block-b {
+    width: 70% !important;
+}
+
+.team-section .ui-grid-a:nth-child(4) .ui-block-a {
+    width: 70% !important;
+}
+
+.team-section .ui-grid-a:nth-child(4) .ui-block-b {
+    width: 30% !important;
+}
+
+/* About Us styles end */
+
+/* --------------------------------------- PRE-LOGIN PAGES STYLES END ----------------------------------------------- */
+
+
+
+
+/* ------------------------------------------ POST-LOGIN STYLES START ----------------------------------------------- */
+
+/* Home Styles Start */
+.home #header {
+    height: 200px;
+}
+
+.post-login #header .header-title .ui-block-a {
+    width: 75% !important;
+}
+
+.post-login #header .header-title .ui-block-b {
+    width: 25% !important;
+}
+
+.post-login .header-title .ui-block-b,
+.post-login .header-title-back .ui-block-b,
+.post-login .header-title-icons .ui-block-b {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-content {
+    margin-top: 28px;
+}
+
+.home .user_name {
+    padding-left: 7px;
+    font-weight: bold;
+}
+
+.home .slider {
+    padding-top: 10px;
+}
+
+.carousell {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding: 0px 12px;
+}
+
+.carousell .item {
+    display: inline-block;
+    width: 78%;
+}
+
+.carousell .item .card {
+    width: 258px;
+    margin-right: 30px;
+    margin-left: 12px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.rankSummary>.ui-grid-a:last-child,
+.ranking>.ui-grid-solo {
+    padding: 0px 12px;
+}
+
+.rankSummary .nav-tabs,
+.rankSummary .card,
+.ranking .card,
+.ranking .nav-tabs {
+    margin: 0px 12px;
+}
+
+.nav-tabs {
+    border-bottom: unset !important;
+}
+
+/* Home Styles End */
+
+/* Deals styles start */
+.deals #for_you.show {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Deals styles end */
+
+/* Promotion Details Styles Start */
+.promoDetails .header-content>div:first-child {
+    height: 105px;
+}
+
+.promoDetails .header-content>div:nth-child(2) {
+    height: 145px;
+}
+
+/* Promotion Details Styles End */
+
+/* Sort and Filter Styles Start */
+.post-login #header .header-title-back .ui-block-a {
+    width: 90% !important;
+}
+
+.post-login #header .header-title-back .ui-block-b {
+    width: 10% !important;
+}
+
+/* Sort and Filter Styles End */
+
+/*  Profile styles start */
+.profile,
+.cart,
+.payment {
+    background-color: #F6FAFF;
+}
+
+#header {
+    padding-top: 30px;
+    border-radius: 0px 0px 50px 0px;
+}
+
+#header2 {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background-color: #fff;
+    border-radius: 0px 0px 50px 0px;
+    -webkit-box-shadow: 0px 5px 10px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 5px 10px -3px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 5px 10px -3px rgba(0, 0, 0, 0.75);
+    color: #313131;
+    border: none;
+    text-shadow: none;
+}
+
+.head-body {
+    margin-top: 20px;
+}
+
+.header-content-profile,
+.header-content-profile .tabs {
+    margin-top: 40px;
+}
+
+.tabs li {
+    font-size: 14px;
+    padding: 6px 12px;
+    text-align: center;
+}
+
+.tabs .active a {
+    color: var(--primary-color-blue) !important;
+    font-weight: 800 !important;
+}
+
+.tabs a {
+    font-weight: var(--font-weight-medium) !important;
+    color: var(--primary-color-grey) !important;
+}
+
+.tabs ul {
+    margin-bottom: 0px
+}
+
+.main-head {
+    margin-top: 20px;
+}
+
+.main-head a {
+    line-height: 3;
+}
+
+.profile .carousell {
+    padding: 0px;
+}
+
+.profile .carousell .item {
+    width: 90%;
+}
+
+.profile .carousell .item .card {
+    width: 100%;
+}
+
+.card {
+    /*margin-top: 20px;*/
+    margin-bottom: 15px;
+    padding: 20px 20px 10px;
+    border-radius: 10px;
+    border: none !important;
+}
+
+.card .bottom {
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.promotion-banner {
+    border-radius: unset !important;
+    padding: 0px !important;
+    margin-top: 0px !important;
+    margin-bottom: 20px;
+    border-radius: 0px;
+    border: none !important;
+}
+
+.online {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.favourites,
+.ranking,
+.couponProfile,
+.settings {
+    margin-top: 40px;
+}
+
+.product_name {
+    padding-bottom: 20px;
+    font-weight: 700;
+}
+
+.icons {
+    text-align: right;
+}
+
+.icons i {
+    line-height: 1.75;
+    font-size: 24px;
+    padding-right: 20px;
+}
+
+.cart-items {
+    overflow-y: scroll;
+    height: 330px;
+}
+
+.counter {
+    width: 70%;
+    border-radius: 6px;
+    height: 45px;
+    text-align: center;
+}
+
+.counter .ui-block-a,
+.counter .ui-block-b,
+.counter .ui-block-c {
+    height: inherit;
+}
+
+.counter i {
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 8px;
+    color: #4444C8;
+    margin: 8px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.counter p {
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/*  Profile styles end */
+
+/* Payment page styles start */
+.my-card,
+.paypal-card {
+    min-height: 170px;
+}
+
+.success-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.success h5 {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.tab-content {
+    margin-top: 12px;
+}
+
+/* Payment page styles end */
+
+/* Review and Comment Page Start */
+
+.btn-review {
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    text-align: center;
+}
+
+.review button {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    margin-right: 200px;
+}
+
+/* Review and Comment Page End */
+
+/* Coupons page styles start */
+.coupons .ui-radio input,
+.changeAddress .ui-radio input,
+.sortFilter .ui-radio input,
+.sortFilter .ui-checkbox input,
+.profile .settings .ui-radio input {
+    position: relative !important;
+    left: unset;
+    top: unset;
+}
+
+.coupons .ui-radio,
+.changeAddress .ui-radio {
+    text-align: right !important;
+}
+
+/* Coupons page styles end (/
+
+    /* Ranking styles start */
+.tableWrapper {
+    overflow: auto;
+    border-radius: 10px;
+}
+
+.td-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.rankTable {
+    color: var(--primary-color-black) !important;
+}
+
+.rankTable thead th {
+    border-bottom: 1px solid #d6d6d6;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.rankTable th,
+.rankTable td {
+    padding-left: 10px;
+    font-size: 11px;
+    vertical-align: middle !important;
+}
+
+.rankTable th:nth-child(3),
+.rankTable th:nth-child(4),
+.rankTable td:nth-child(3),
+.rankTable td:nth-child(4) {
+    padding-right: 10px;
+    padding-left: 0px;
+    text-align: right;
+}
+
+.rankTable td:nth-child(3),
+.rankTable td:nth-child(4) {
+    font-size: 14px;
+}
+
+.rankTable th {
+    color: #8F8F8F;
+}
+
+.rankTable .truncate {
+    width: 68px;
+}
+
+.rankTable td {
+    font-weight: 600;
+}
+
+.rankTable tr {
+    height: 40px;
+    margin: auto;
+}
+
+.rankTable tbody tr:last-child th,
+.rankTable tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.rankTable tbody tr:nth-child(odd) td,
+.rankTable tbody tr:nth-child(odd) th {
+    background-color: #eeeeee;
+    background-color: rgba(0, 0, 0, .04);
+}
+
+/* Ranking styles end */
+
+/* Product Details start */
+.promoDetails .products {
+    padding: 0px 12px;
+}
+
+.promoDetails .products .card {
+    margin: 12px 12px;
+}
+
+.promoDetails .products .card .fa-heart-o {}
+
+.bottom-card {
+    padding: 12px 15px;
+    border-radius: 0 0 10px 10px;
+    margin: 0px !important;
+}
+
+/* Product Details end */
+
+/* Promotion styles start */
+.auto-suggest-table .ui-grid-solo {
+    display: flex !important;
+}
+
+.auto-suggest-table .ui-grid-solo .w50:first-child {
+    margin-top: 0px !important;
+}
+
+/* Promotion styles end */
+
+.pointer {
+    cursor: pointer;
+}
+
+.sparkle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.points {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.points h1 span {
+    font-weight: 800;
+}
+
+.map iframe {
+    height: 70vh;
+}
+
+.yt {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* ------------------------------------------- POST-LOGIN STYLES END ------------------------------------------------ */

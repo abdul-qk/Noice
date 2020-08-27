@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Sort & Filtering</title>
+
+    <!-- jQuery mobile files -->
+    <link href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+    <!-- Font awesome file -->
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/f083cf2118.js"></script>
+
+    <!-- Bootstrap CSS file -->
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet">
+
+    <!-- Custom JS Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Custom main CSS file -->
+    <link href="index.css" rel="stylesheet">
+
+</head>
+
+<body class="post-login">
+<div data-role="page" class="sortFilter">
+    <div data-role="header" id="header" class="px-4 pt-5 pb-4">
+        <div class="ui-grid-a d-flex align-items-center header-title-back">
+            <div class="ui-block-a d-flex align-items-center">
+                <a class="ui-btn p-0 m-0 pathUrl" data-transition="slide" accesskey="promotion_details.html"
+                   rel="external">
+                    <img alt="back button" height="auto" src="assets/img/back.svg" width="30">
+                </a>
+                <h3 class="m-0 pl-3">Sort & Filter</h3>
+            </div>
+            <div class="ui-block-b icons">
+                <a class="primary-color-black-text" data-rel="popup" href="#overlay" data-position-to="origin"><i
+                        class="fas fa-search"></i></a>
+                <div class="ui-content" data-shadow="false" data-theme="none" data-overlay-theme="a" data-role="popup"
+                     id="overlay">
+                    <div class="deals-search-bar">
+                        <ul data-role="listview" data-filter="true" data-filter-reveal="true"
+                            data-filter-placeholder="Searching Promotions" data-inset="true">
+                            <li><a class="dealsClick" accesskey="1">Winter Coffee Sale</a></li>
+                            <li><a class="dealsClick" accesskey="2">Google Pixel Sale</a></li>
+                            <li><a class="dealsClick" accesskey="3">Furniture Sale</a></li>
+                            <li><a class="dealsClick" accesskey="4">Electronic Christmas Sale</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div role="main" class="px-4">
+        <div class="ui-grid-solo">
+            <div class="ui-block-a">
+                <div class="sort">
+                    <div class="ui-grid-a">
+                        <div class="ui-grid-a mt-4 mb-3 d-flex align-items-center">
+                            <div class="ui-block-a w80">
+                                <div class="font-size-xl font-weight-heavy">Sort</div>
+                            </div>
+                            <div class="ui-block-b w20">
+                                <div class="font-size-m text-right">
+                                    <a class="ui-link">Reset</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <form id="sortForm">
+                        <div class="ui-grid-solo">
+                            <h4 class="my-3 font-weight-heavy">Alphabetic</h4>
+                            <fieldset data-role="controlgroup">
+                                <div class="ui-grid-a">
+                                    <div class="ui-block-a d-flex align-items-center">
+                                        <input type="radio" id="AZ" value="AZ" name="radio-group-1"
+                                               class="v-align-bottom"/>
+                                        <div class="font-size-m font-weight-bold pl-2">A - Z</div>
+                                    </div>
+                                    <div class="ui-block-b d-flex align-items-center">
+                                        <input type="radio" id="ZA" value="ZA" name="radio-group-1"
+                                               class="v-align-bottom"/>
+                                        <div class="font-size-m font-weight-bold pl-2">Z - A</div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="ui-grid-solo pt-3">
+                            <h4 class="my-3 font-weight-heavy">Price</h4>
+                            <fieldset data-role="controlgroup">
+                                <div class="ui-grid-a">
+                                    <div class="ui-block-a d-flex align-items-center">
+                                        <input type="radio" id="LowHigh" value="LowHigh" name="radio-group-1"
+                                               class="v-align-bottom"/>
+                                        <div class="font-size-m font-weight-bold pl-2">Low - High</div>
+                                    </div>
+                                    <div class="ui-block-b d-flex align-items-center">
+                                        <input type="radio" id="HighLow" value="HighLow" name="radio-group-1"
+                                               class="v-align-bottom"/>
+                                        <div class="font-size-m font-weight-bold pl-2">High - Low</div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="ui-grid-solo pt-3">
+                            <h4 class="my-3 font-weight-heavy">Date Added</h4>
+                            <fieldset data-role="controlgroup">
+                                <div class="ui-grid-a">
+                                    <div class="ui-block-a d-flex align-items-center">
+                                        <input type="radio" id="OldNew" value="OldNew" name="radio-group-1"
+                                               class="v-align-bottom"/>
+                                        <div class="font-size-m font-weight-bold pl-2">Old - New</div>
+                                    </div>
+                                    <div class="ui-block-b d-flex align-items-center">
+                                        <input type="radio" id="NewOld" value="NewOld" name="radio-group-1"
+                                               class="v-align-bottom"/>
+                                        <div class="font-size-m font-weight-bold pl-2">New - Old</div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="ui-grid-solo mb-3">
+            <div class="ui-block-a">
+                <div class="filter">
+                    <div class="ui-grid-a">
+                        <div class="ui-grid-a mb-3 d-flex align-items-center">
+                            <div class="ui-block-a w80">
+                                <div class="font-size-xl font-weight-heavy">Filter</div>
+                            </div>
+                            <div class="ui-block-b w20">
+                                <div class="font-size-m text-right">
+                                    <a class="ui-link">Reset</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui-grid-solo">
+                        <form>
+                            <h4 class="my-3 font-weight-heavy">Delivery/Popularity</h4>
+                            <fieldset data-role="controlgroup">
+                                <div class="ui-grid-solo">
+                                    <div class="ui-block-a d-flex align-items-center">
+                                        <input type="checkbox" class="checkbox_filter v-align-bottom" id="fd"
+                                               value="Free Delivery" name="checkbox-1"/>
+                                        <div class="font-size-m font-weight-bold pl-2">Free Delivery</div>
+                                    </div>
+                                </div>
+                                <div class="ui-grid-solo my-3">
+                                    <div class="ui-block-a d-flex align-items-center">
+                                        <input type="checkbox" class="checkbox_filter v-align-bottom" id="mv"
+                                               value="Most Viewed" name="checkbox-1"/>
+                                        <div class="font-size-m font-weight-bold pl-2">Most Viewed</div>
+                                    </div>
+                                </div>
+                                <div class="ui-grid-solo">
+                                    <div class="ui-grid-a d-flex align-items-center">
+                                        <input type="checkbox" class="checkbox_filter v-align-bottom" id="br"
+                                               value="Best Rated" name="checkbox-1"/>
+                                        <div class="font-size-m font-weight-bold pl-2">Best Rated</div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="ui-grid-solo pt-3">
+                        <form>
+                            <h4 class="my-3 font-weight-heavy">Rating Range</h4>
+                            <fieldset data-role="controlgroup">
+                                <input id="slider-2" max="5" min="0" name="slider-2" step=".5" type="range" value=""
+                                       data-highlight="true"/>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="ui-grid-solo pt-3 pb-2">
+                        <form>
+                            <h4 class="my-3 font-weight-heavy">Price Range</h4>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">
+                                    <div class="font-size-s font-weight-bold" for="range-1b">Min</div>
+                                </div>
+                                <div class="ui-block-b">
+                                    <div class="font-size-s font-weight-bold text-right" for="range-1a">Max</div>
+                                </div>
+                            </div>
+                            <div data-role="rangeslider">
+                                <input type="range" name="range-1a" id="range-1a" min="0" max="999" value="40"
+                                       data-popup-enabled="true">
+                                <input type="range" name="range-1b" id="range-1b" min="0" max="999" value="80"
+                                       data-popup-enabled="true">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div data-role="footer" data-position="fixed" id="footer-secondary" data-tap-toggle="false" transition="fade"
+         class="pt-4 pb-4">
+        <div class="ui-grid-a text-center sort-apply px-4">
+            <div class="ui-block-a w100 mb-3">
+                <a id="submit" class="ui-btn btn primary-btn m-0">APPLY</a>
+            </div>
+            <div class="ui-block-b mb-3 w100">
+                <a class="ui-btn btn secondary-btn m-0" id="reset">RESET</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $(document).on("click", ".pathUrl", function () {
+            document.location.href = this.accessKey;
+        });
+        $(document).on("click", ".dealsClick", function () {
+            sessionStorage.setItem("currentDeal", this.accessKey);
+            sessionStorage.setItem("ratingFilter", '0');
+            sessionStorage.setItem("priceFilter", '{"startValue":"0","EndValue":"145"}');
+            sessionStorage.setItem("sort", 'default');
+            document.location.href = 'promotion_details.html';
+        });
+        $('#' + sessionStorage.getItem('sort')).prop("checked", true);
+        $('#slider-2').val(sessionStorage.getItem('ratingFilter'));
+        $('#range-1a').val(JSON.parse(sessionStorage.getItem('priceFilter')).startValue)
+        $('#range-1b').val(JSON.parse(sessionStorage.getItem('priceFilter')).EndValue);
+        $(document).on("click", "#submit", function () {
+            var ratingFilter;
+            var priceFilter = {};
+            var sort;
+
+            priceFilter['startValue'] = $('#range-1a').val();
+            priceFilter['EndValue'] = $('#range-1b').val();
+            sessionStorage.setItem("priceFilter", JSON.stringify(priceFilter));
+
+            ratingFilter = $('#slider-2').val();
+            sessionStorage.setItem("ratingFilter", ratingFilter);
+
+            sort = $('input[name=radio-group-1]:checked', '#sortForm').val();
+            sessionStorage.setItem("sort", sort);
+
+            document.location.href = 'promotion_details.html';
+        });
+        $(document).on("click", "#reset", function () {
+            sessionStorage.setItem("ratingFilter", '0');
+            sessionStorage.setItem("priceFilter", '{"startValue":"0","EndValue":"999"}');
+            sessionStorage.setItem("sort", 'default');
+            document.location.href = 'promotion_details.html';
+        });
+    });
+</script>
+
+</body>
+
+</html>

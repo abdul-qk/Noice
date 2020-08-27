@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Create Account</title>
+
+    <!-- jQuery mobile files -->
+    <link href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+    <!-- Font awesome file -->
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/f083cf2118.js"></script>
+
+    <!-- Bootstrap CSS file -->
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet">
+
+    <!-- Custom main CSS file -->
+    <link href="index.css" rel="stylesheet">
+    <!--<script>-->
+    <!--var getUrlParameter = function getUrlParameter(sParam) {-->
+    <!--var sPageURL = window.location.search.substring(1),-->
+    <!--sURLVariables = sPageURL.split('&'),-->
+    <!--sParameterName,-->
+    <!--i;-->
+
+    <!--for (i = 0; i < sURLVariables.length; i++) {-->
+    <!--sParameterName = sURLVariables[i].split('=');-->
+
+    <!--if (sParameterName[0] === sParam) {-->
+    <!--return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);-->
+    <!--}-->
+    <!--}-->
+    <!--};-->
+    <!--console.log(getUrlParameter('error'));-->
+    <!--</script>-->
+</head>
+
+<body class="pre-login">
+<form action="">
+    <div data-role="page" id="landing" class="createAcc">
+        <div class="p-4" data-role="header" id="loginHeader">
+            <div class="ui-grid-a d-flex align-items-center">
+                <div class="ui-block-a">
+                    <a class="p-0 m-0 pathUrl" accesskey="index.html"><img height="30" src="assets/img/back.svg"
+                                                                           width="30"></a>
+                </div>
+                <div class="ui-block-b text-primary text-center">Create Account</div>
+            </div>
+        </div>
+        <div class="ui-content px-4" data-role="main">
+            <div class="text-center">
+                <img height="180" src="assets/img/addImage.svg" width="180" id="previewImg">
+                <input type="file" onchange="fileUploading(this)" name="fileToUpload" id="fileUpload" class="d-none"/>
+                <input type="text" name="imageStr" id="imageStr" class="d-none"/>
+                <i class="fas fa-plus" id="uploadImg"></i>
+                <span class="red f12" id="errImg"></span>
+            </div>
+
+            <div class="pt-4">
+                <div class="ui-field-contain">
+                    <label for="fullName">Full Name</label>
+                    <input id="fullName" name="name" placeholder="Enter your full name here" type="text" value=""/>
+                    <span class="red f12" id="errName"></span>
+                </div>
+
+                <div class="ui-field-contain">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" placeholder="Enter your email here" type="email" value=""/>
+                    <span class="red f12" id="exists"></span>
+                </div>
+
+                <div class="ui-field-contain">
+                    <label for="password">Password</label>
+                    <input id="password" name="password" placeholder="Enter your password  here" type="password"
+                           value=""/>
+                    <span class="red f12" id="errPass"></span>
+                </div>
+                <div class="ui-field-contain">
+                    <label for="password">Confirm password</label>
+                    <input id="confPassword" name="confPassword" placeholder="Confirm your password here"
+                           type="password" value=""/>
+                    <span class="red f12" id="errConfPass"></span>
+                </div>
+            </div>
+        </div>
+        <div class="px-4" data-role="footer" id="footer">
+            <div class="w-landscape-50">
+                <label class="ui-btn btn primary-btn mt-3" id="submit">START YOUR JOURNEY</label>
+                <a class="ui-btn btn bg-transparent text-muted mt-0 pt-0 pathUrl" accesskey="signIn.html">
+                    <span class="font-weight-light"> Already have an account ? </span>
+                    <span class="text-primary px-2 font-weight-medium">Sign In</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+    $(document).ready(function () {
+        $(document).on("click", ".pathUrl", function () {
+            document.location.href = this.accessKey;
+        });
+        $("#uploadImg").click(function () {
+            $("#fileUpload").click();
+        });
+        $("#submit").click(function () {
+            $.post("backend/createAccount.php", {
+                image: $("#imageStr").val(),
+                name: $('#fullName').val(),
+                email: $('#email').val(),
+                password: $('#password').val(),
+                confPassword: $('#confPassword').val()
+            }, function (data, status) {
+                $("#exists").html('');
+                $("#errImg").html('');
+                $("#errName").html('');
+                $("#errPass").html('');
+                $("#errConfPass").html('');
+                if (data === 'exists_email') {
+                    $("#exists").html('Email Already exists');
+                }
+                else if (data === 'proper_email') {
+                    $("#exists").html('Enter a suitable Email Address');
+                } else if (data === 'empty_email') {
+                    $("#exists").html('Email cannot be empty');
+                } else if (data === 'empty_password') {
+                    $("#errPass").html('Password cannot be empty');
+                } else if (data === 'empty_confPassword') {
+                    $("#errConfPass").html('confirm Password cannot be empty');
+                } else if (data === 'mismatch') {
+                    $("#errConfPass").html('Password Mismatch');
+                } else if (data === 'error') {
+                    alert('Error');
+                } else if (data === 'success') {
+                    sessionStorage.setItem("loggedUser", $('#email').val());
+                    document.location.href = 'home.html';
+                } else {
+
+                }
+            });
+        });
+    });
+
+    function fileUploading(input) {
+        if (input.files && input.files[0]) {
+            const file = input.files[0];
+            const fileType = file.name.split('.')[1];
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const src = e.target.result;
+                $("#previewImage").attr('src', src);
+                $("#imageStr").val(src)
+            };
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+</body>
+
+</html>

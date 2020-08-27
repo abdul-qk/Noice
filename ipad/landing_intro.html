@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <title>NOICE</title>
+
+    <!-- jQuery mobile files -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+    <!-- Font awesome file -->
+    <script src="https://kit.fontawesome.com/f083cf2118.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom JS Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Custom main CSS file -->
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <div data-role="page" class="ui-grid-a">
+        <div class="ui-block-a mt-5 landing-left">
+            <div class="container">
+                <h2 class="primary-color-blue-text fw-heavy">NOICE</h2>
+                <div class="ui-grid-solo mx-auto my-auto slider-img">
+                    <img src="assets/img/slider1.png" alt="" id="slider-img-1" class="img-fluid">
+                    <img src="assets/img/slider2.png" alt="" id="slider-img-2" class="img-fluid">
+                    <img src="assets/img/slider3.png" alt="" id="slider-img-3" class="img-fluid">
+                    <img src="assets/img/slider4.png" alt="" id="slider-img-4" class="img-fluid">
+                </div>
+                <div class="ui-grid-solo mx-auto">
+                    <ul class="slider_list">
+                        <li class="active elem1"><a id="1" rel="external">1</a></li>
+                        <li class="elem2"><a id="2" rel="external">2</a></li>
+                        <li class="elem3"><a id="3" rel="external">3</a></li>
+                        <li class="elem4"><a id="4" rel="external">4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="ui-block-b slider-right">
+            <div class="container">
+                <div class="ui-grid-b mt-5 pb-5 text-center">
+                    <div class="ui-block-a">
+                        <a href="aboutUs.html" rel="external">
+                            <h4 class="primary-color-grey-text fw-bold">About Us</h4>
+                        </a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a href="terms.html" rel="external">
+                            <h4 class="primary-color-grey-text fw-medium">Terms & Conditions</h4>
+                        </a>
+                    </div>
+                    <div class="ui-block-c">
+                        <a href="contact.html" rel="external">
+                            <h4 class="primary-color-grey-text fw-bold">Contact</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="slider1">
+                    <div id="slider1" class="ui-grid-solo w80 mx-auto">
+                        <h1>Fast and Easy</h1>
+                        <p class="primary-color-grey-text f16">Don't waste time browsing every corner and let the app
+                            take
+                            control to give you the perfect
+                            customer experience ! We'll recommend the best deals, all day every day.</p>
+                    </div>
+                </div>
+                <div id="slider2" class="slider2">
+                    <div class="ui-grid-solo w80 mx-auto">
+                        <h1>Loyalty is rewarded</h1>
+                        <p class="primary-color-grey-text f16">We treat you for being an enthusiastic shopper through
+                            clever discounts, points and coupons ! Think you're the ultimate shopper ? Then go ahead,
+                            challenge others and rise to the top of the rankings !</p>
+                    </div>
+                </div>
+                <div class="slider3">
+                    <div id="slider3" class="ui-grid-solo w80 mx-auto">
+                        <h1>A valuable customer</h1>
+                        <p class="primary-color-grey-text f16">Don't waste time browsing every corner and let the app
+                            take control to give you the perfect customer experience ! We'll recommend the best deals,
+                            all day every day.</p>
+                    </div>
+                </div>
+                <div class="slider4">
+                    <div id="slider4" class="ui-grid-solo w80 mx-auto">
+                        <h1>Defining reality</h1>
+                        <p class="primary-color-grey-text f16">We take your shopping to a whole new level ! Our platform
+                            offers you the most interactive and fun way to keep your shopping spirits going. All through
+                            the power of Augmented Reality.</p>
+                    </div>
+                </div>
+                <div class="ui-grid-solo slider-btns w60 mx-auto text-center">
+                    <a href="signIn.html" rel="external" data-role="button" class="primary-btn ui-btn btn">Sign In</a>
+                    <a href="createAccount.html" rel="external" data-role="button"
+                        class="secondary-btn ui-btn btn">Create Account</a>
+                    <a href="home.html" rel="external">
+                        <p class="primary-color-grey-text f16">Browse as Guest</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#slider-img-1").show();
+
+            $("#slider-img-2").hide();
+
+            $("#slider-img-3").hide();
+
+            $("#slider-img-4").hide();
+
+            $("#slider1").show();
+
+            $("#slider2").hide();
+
+            $("#slider3").hide();
+
+            $("#slider4").hide();
+
+
+            $("#1").click(function () {
+                $("#slider-img-1").show(200);
+                $("#slider1").show(200);
+                $(".elem1").addClass(" active");
+
+                $("#slider-img-2").hide();
+                $("#slider2").hide();
+                $(".elem2").removeClass("active");
+
+                $("#slider-img-3").hide();
+                $("#slider3").hide();
+                $(".elem3").removeClass("active");
+
+                $("#slider-img-4").hide();
+                $("#slider4").hide();
+                $(".elem4").removeClass("active");
+            });
+
+            $("#2").click(function () {
+                console.log("test")
+                $("#slider-img-1").hide();
+                $("#slider1").hide();
+                $(".elem1").removeClass("active");
+
+                $("#slider-img-2").show(200);
+                $("#slider2").show(200);
+                $(".elem2").addClass(" active");
+
+                $("#slider-img-3").hide();
+                $("#slider3").hide();
+                $(".elem3").removeClass("active");
+
+                $("#slider-img-4").hide();
+                $("#slider4").hide();
+                $(".elem4").removeClass("active");
+            });
+
+            $("#3").click(function () {
+                $("#slider-img-1").hide();
+                $("#slider1").hide();
+                $(".elem1").removeClass("active");
+
+                $("#slider-img-2").hide();
+                $("#slider2").hide();
+                $(".elem2").removeClass("active");
+
+                $("#slider-img-3").show(200);
+                $("#slider3").show(200);
+                $(".elem3").addClass("active");
+
+                $("#slider-img-4").hide();
+                $("#slider4").hide();
+                $(".elem4").removeClass("active");
+            });
+
+
+            $("#4").click(function () {
+                $("#slider-img-1").hide();
+                $("#slider1").hide();
+                $(".elem1").removeClass("active");
+
+                $("#slider-img-2").hide();
+                $("#slider2").hide();
+                $(".elem2").removeClass("active");
+
+                $("#slider-img-3").hide();
+                $("#slider3").hide();
+                $(".elem3").removeClass("active");
+
+                $("#slider-img-4").show(200);
+                $("#slider4").show(200);
+                $(".elem4").addClass("active");
+            });
+        });
+    </script>
+</body>
+
+</html>

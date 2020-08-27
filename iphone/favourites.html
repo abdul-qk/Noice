@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Coupons</title>
+
+    <!-- jQuery mobile files -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+    <!-- Font awesome file -->
+    <script src="https://kit.fontawesome.com/f083cf2118.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom JS Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Custom main CSS file -->
+    <link rel="stylesheet" href="index.css">
+    <script src="scripts/sendEmail.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+</head>
+
+<body class="post-login">
+<div data-role="page" class="coupons">
+    <div data-role="header" id="header" class="px-4 pt-5 pb-4">
+        <div class="ui-grid-a d-flex align-items-center header-title-back">
+            <div class="ui-block-a d-flex align-items-center">
+                <a class="ui-btn p-0 m-0" data-transition="slide" data-rel="profile.html" rel="external">
+                    <img alt="back button" height="auto" src="assets/img/back.svg" width="30">
+                </a>
+                <h3 class="m-0 pl-3">Favourites</h3>
+            </div>
+            <div class="ui-block-b">
+                <i class="fas fa-search" style="font-size: 19px;"></i>
+            </div>
+        </div>
+    </div>
+    <div data-role="main" class="px-4">
+        <div class="ui-grid-solo mt-4 mb-3">
+            <div class="ui-block-a">
+                <div class="font-size-m text-left primary-color-red-text" id="favCount">4 Items</div>
+            </div>
+        </div>
+        <form>
+            <fieldset data-role="controlgroup" data-iconpos="right" class="mt-0 mb-3">
+                <div class="ui-grid-a" id="favList">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <div data-role="footer" data-position="fixed" id="footer-secondary" data-tap-toggle="false" transition="fade"
+         class="pt-4 pb-4">
+        <div class="ui-grid-solo text-center sort-apply px-4">
+            <div class="ui-block-a w100 mb-3">
+                <a class="ui-btn btn primary-btn m-0" onclick="sendEmail()">SHARE VIA EMAIL</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    // $(document).ready(function () {
+    //     alert("hello");
+    //     let favouriteList;
+    //     changeValue = 'a';
+    //     $.post("backend/userData.php", {
+    //         action: 'view',
+    //         currentUser: sessionStorage.getItem("loggedUser")
+    //     }, function (data, status) {
+    //         const json = JSON.parse(data);
+    //         favouriteList = Object.values((json.favoriteList));
+    //         // $("#username").html(json.favoriteList);
+    //         let favoriteList;
+    //         $.post("backend/favourite.php", {
+    //             action: 'getList',
+    //             currentUser: sessionStorage.getItem("loggedUser"),
+    //             favList: favouriteList
+    //         }, function (data, status) {
+    //             const jsonProducts = JSON.parse(data);
+    //             jsonProducts.forEach(function (item) {
+    //                 const jsonIterate = JSON.parse(item);
+    //                 if (Object.keys(jsonProducts).length <= 1) {
+    //                     $('#favCount').text(Object.keys(jsonProducts).length + " Item");
+    //                 } else {
+    //                     $('#favCount').text(Object.keys(jsonProducts).length + " Items");
+    //                 }
+    //
+    //                 jsonIterate.forEach(function (product) {
+    //
+    //                     const ratings = product.rating;
+    //                     const ratingInt = parseInt(ratings);
+    //                     let ratingHtml = "";
+    //                     for (let i = 0; i < 5; i++) {
+    //                         if (ratingInt > i) {
+    //                             ratingHtml = ratingHtml + `<i class="fas fa-star secondary-color-yellow-text"></i>`;
+    //                         } else {
+    //                             ratingHtml = ratingHtml + `<i class="far fa-star secondary-color-yellow-text"></i>`;
+    //                         }
+    //                     }
+    //                     const favitem = `<div class ="ui-block-` + changeValue + ` w100 w-landscape-50"><div class="item">
+    //                     <div class="ui-grid-solo">
+    //                         <div class="ui-block-a w100 p-1">
+    //                             <div class="card py-0 px-0 mx-0 mt-0">
+    //                                 <div class="top-card px-2 pb-2 pt-3">
+    //                                     <div class = "ui-grid-a d-flex align-items-center">
+    //                                         <div class="ui-block-a w30">
+    //                                             <img alt="product Image" class="img-fluid" src="` + product.image + `" height="auto" width="85%">
+    //                                         </div>
+    //                                         <div class="ui-block-b w70">
+    //                                             <div class = "prodContent">
+    //                                                 <div class="ui-grid-solo">
+    //                                                     <div class="ui-block-a">
+    //                                                         <h4 class="mt-0 truncate font-weight-bold m-0">` + product.name + `</h4>
+    //                                                     </div>
+    //                                                 </div>
+    //                                                 <div class = "ui-grid-solo pt-1">
+    //                                                     <div class="ui-block-a w100">
+    //                                                         ` + ratingHtml + `
+    //                                                     </div>
+    //                                                 </div>
+    //                                             </div>
+    //                                             <div class = "price mt-2">
+    //                                                 <div class="font-size-s text-muted font-weight-bold">
+    //                                                     <del>20.99</del>
+    //                                                 </div>
+    //                                                 <div class="font-weight-heavy font-size-xl">
+    //                                                     <div class="red">
+    //                                                         <span class = "font-size-m font-weight-bold">USD</span> ` + product.price + `
+    //                                                     </div>
+    //                                                 </div>
+    //                                             </div>
+    //                                         </div>
+    //                                     </div>
+    //                                 </div>
+    //                                 <div class="bottom-card ui-grid-a">
+    //                                     <div class = "ui-grid-a d-flex align-items-center">
+    //                                         <div class = "ui-block-a w10 text-left icon d-flex">
+    //                                             <i class="fa fa-trash-o removeClick" accesskey="` + product.id + `"></i>
+    //                                         </div>
+    //                                         <div class="ui-block-b w90 text-right d-flex justify-content-end">
+    //                                             <div class="d-inline font-size-s text-muted m-0">
+    //                                                 <span class ="pr-1"> Item Added: </span>
+    //                                                 <span class = "font-weight-bold"> 21/12/2019 </span>
+    //                                             </div>
+    //                                         </div>
+    //                                     </div>
+    //                                 </div>
+    //                             </div>
+    //                         </div>
+    //                     </div>
+    //                 </div></div>`;
+    //                     $("#favList").append(favitem);
+    //                     $("#favList").trigger('change');
+    //                     if (changeValue === 'a') {
+    //                         changeValue = 'b';
+    //                         s
+    //
+    //                     } else if (changeValue === 'b') {
+    //                         changeValue = 'a';
+    //                     }
+    //                 });
+    //
+    //
+    //             });
+    //             //favoriteList = data;
+    //         });
+    //     });
+    //
+    //     $(document).on("click", ".removeClick", function () {
+    //         $.post("backend/favourite.php", {
+    //             action: 'remove',
+    //             currentUser: sessionStorage.getItem("loggedUser"),
+    //             prodId: this.accessKey
+    //         }, function (data, status) {
+    //             location.reload(true);
+    //         });
+    //     });
+    //     // $("div.list-group>a").click(function (e) {
+    //     //     e.preventDefault();
+    //     //     $(this).siblings('a.active').removeClass("active");
+    //     //     $(this).addClass("active");
+    //     //     var index = $(this).index();
+    //     //     $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+    //     //     $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+    //     // });
+    // });
+    $(document).ready(function () {
+        let favouriteList;
+        changeValue = 'a';
+        $.post("backend/userData.php", {
+            action: 'view',
+            currentUser: sessionStorage.getItem("loggedUser")
+        }, function (data, status) {
+            const json = JSON.parse(data);
+            favouriteList = Object.values((json.favoriteList));
+            $.post("backend/favourite.php", {
+                action: 'getList',
+                currentUser: sessionStorage.getItem("loggedUser"),
+                favList: favouriteList
+            }, function (data, status) {
+                const jsonProducts = JSON.parse(data);
+                jsonProducts.forEach(function (item) {
+                    const jsonIterate = JSON.parse(item);
+                    if (Object.keys(jsonProducts).length <= 1) {
+                        $('#favCount').text(Object.keys(jsonProducts).length + " Item");
+                    } else {
+                        $('#favCount').text(Object.keys(jsonProducts).length + " Items");
+                    }
+                    alert(JSON.stringify(jsonIterate));
+                    jsonIterate.forEach(function (product) {
+
+                        const ratings = product.rating;
+                        const ratingInt = parseInt(ratings);
+                        let ratingHtml = "";
+                        for (let i = 0; i < 5; i++) {
+                            if (ratingInt > i) {
+                                ratingHtml = ratingHtml + `<i class="fas fa-star secondary-color-yellow-text"></i>`;
+                            } else {
+                                ratingHtml = ratingHtml + `<i class="far fa-star secondary-color-yellow-text"></i>`;
+                            }
+                        }
+                        const favitem = `<div class ="ui-block-` + changeValue + ` w100 w-landscape-50"><div class="item">
+                    <div class="ui-grid-solo">
+                        <div class="ui-block-a w100 p-1">
+                            <div class="card py-0 px-0 mx-0 mt-0">
+                                <div class="top-card px-2 pb-2 pt-3">
+                                    <div class = "ui-grid-a d-flex align-items-center">
+                                        <div class="ui-block-a w30">
+                                            <img alt="product Image" class="img-fluid" src="` + product.image + `" height="auto" width="85%">
+                                        </div>
+                                        <div class="ui-block-b w70">
+                                            <div class = "prodContent">
+                                                <div class="ui-grid-solo">
+                                                    <div class="ui-block-a">
+                                                        <h4 class="mt-0 truncate font-weight-bold m-0">` + product.name + `</h4>
+                                                    </div>
+                                                </div>
+                                                <div class = "ui-grid-solo pt-1">
+                                                    <div class="ui-block-a w100">
+                                                        ` + ratingHtml + `
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class = "price mt-2">
+                                                <div class="font-size-s text-muted font-weight-bold">
+                                                    <del>20.99</del>
+                                                </div>
+                                                <div class="font-weight-heavy font-size-xl">
+                                                    <div class="red">
+                                                        <span class = "font-size-m font-weight-bold">USD</span> ` + product.price + `
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bottom-card ui-grid-a">
+                                    <div class = "ui-grid-a d-flex align-items-center">
+                                        <div class = "ui-block-a w10 text-left icon d-flex">
+                                            <i class="fa fa-trash-o removeClick" accesskey="` + product.id + `"></i>
+                                        </div>
+                                        <div class="ui-block-b w90 text-right d-flex justify-content-end">
+                                            <div class="d-inline font-size-s text-muted m-0">
+                                                <span class ="pr-1"> Item Added: </span>
+                                                <span class = "font-weight-bold"> 21/12/2019 </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div></div>`;
+                        $("#favList").append(favitem);
+                        $("#favList").trigger('change');
+                        if (changeValue === 'a') {
+                            changeValue = 'b';
+
+                        } else if (changeValue === 'b') {
+                            changeValue = 'a';
+                        }
+                    });
+
+
+                });
+            });
+        });
+
+        $(document).on("click", ".removeClick", function () {
+            $.post("backend/favourite.php", {
+                action: 'remove',
+                currentUser: sessionStorage.getItem("loggedUser"),
+                prodId: this.accessKey
+            }, function (data, status) {
+                location.reload(true);
+            });
+        });
+
+    });
+</script>
+</body>
+
+</html>

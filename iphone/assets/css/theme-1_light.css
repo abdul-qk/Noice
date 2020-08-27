@@ -1,0 +1,462 @@
+@import "theme_varaibles.css";
+
+
+/* ---------------------------------------- COMMON COLOR CLASSES START ---------------------------------------------- */
+
+    /* Primary Colours start */
+    .primary-color-blue-text {
+        color: var(--primary-color-blue) !important;
+    }
+
+    .primary-color-blue-bg {
+        background-color: var(--primary-color-blue) !important;
+    }
+
+    .primary-color-green-text {
+        color: var(--primary-color-green) !important;
+    }
+
+    .primary-color-green-bg {
+        background-color: var(--primary-color-green) !important;
+    }
+
+    .primary-color-red-text {
+        color: var(--primary-color-red) !important;
+    }
+
+    .primary-color-red-bg {
+        background-color: var(--primary-color-red) !important;
+    }
+
+    .primary-color-white-text {
+        color: var(--primary-color-white) !important;
+    }
+
+    .primary-color-white-bg {
+        background-color: var(--primary-color-white) !important;
+    }
+
+    .primary-color-grey-text {
+        color: var(--primary-color-grey) !important;
+    }
+
+    .primary-color-grey-bg {
+        background-color: var(--primary-color-grey) !important;
+    }
+
+    .primary-color-black-text {
+        color: var(--primary-color-black) !important;
+    }
+
+    .primary-color-black-bg {
+        background-color: var(--primary-color-black) !important;
+    }
+
+    /* Primary Colour end */
+
+    /* Secondary Colours start */
+
+    .secondary-color-background-blue-bg {
+        background-color: var(--secondary-color-background-blue) !important;
+    }
+
+    .secondary-color-grey-text {
+        color: var(--secondary-color-grey) !important;
+    }
+
+    .secondary-color-grey-bg {
+        background-color: var(--secondary-color-grey) !important;
+    }
+
+    .secondary-color-yellow-text {
+        color: var(--secondary-color-yellow) !important;
+    }
+
+    .secondary-color-yellow-bg {
+        background-color: var(--secondary-color-yellow) !important;
+    }
+
+    .secondary-color-gold-text {
+        color: var(--secondary-color-gold) !important;
+    }
+
+    .secondary-color-gold-bg {
+        background-color: var(--secondary-color-gold) !important;
+    }
+
+    .secondary-color-blue-1-text {
+        color: var(--secondary-color-blue-1) !important;
+    }
+
+    .secondary-color-blue-1-bg {
+        background-color: var(--secondary-color-blue-1) !important;
+    }
+
+    .secondary-color-blue-2-text {
+        color: var(--secondary-color-blue-2) !important;
+    }
+
+    .secondary-color-blue-2-bg {
+        background-color: var(--secondary-color-blue-2) !important;
+    }
+    .secondary-color-cyan-text {
+        color:var(--secondary-color-cyan) !important;
+    }
+    /* Secondary Colours end */
+
+    /* Application Colours Start */
+    .post-login #main .ui-link,
+    .post-login .reviews .ui-link,
+    .post-login .coupons .ui-link,
+    .post-login .changeAddress .ui-link,
+    .post-login .sortFilter .ui-link,
+    .post-login .profile .ui-link,
+    .post-login .payment .ui-link {
+        color: var(--primary-color-blue);
+    }
+    .nav-tabs .nav-link {
+        color: var(--primary-color-grey) !important;
+        font-weight: var(--font-weight-medium) !important;
+    }
+    .nav-tabs .nav-link.active {
+        color:var(--primary-color-blue) !important;
+        font-weight: var(--font-weight-heavy) !important;
+    }
+    /* Application Colours End */
+
+    /* Form elements start */
+    .sortFilter .ui-slider-handle {
+        background-color: var(--primary-color-white) !important;
+        border: 2px solid #444444 !important;
+    }
+    .sortFilter .ui-slider-bg {
+        background-color: #666666 !important;
+    }
+    .sortFilter .ui-slider input, .sortFilter .ui-rangeslider input {
+        border: 1px solid #444444;
+    }
+    /* Form elements end */
+
+
+/* ----------------------------------------- COMMON COLOR CLASSES END ----------------------------------------------- */
+
+
+/* ------------------------------------------- GENERAL STYLES START ------------------------------------------------- */
+
+    /* Background color start */
+    .ui-page-theme-a {
+        background-color: var(--primary-color-white) !important;
+    }
+
+    .ui-page-theme-b {
+        background-color: var(--secondary-color-background-blue) !important;
+    }
+
+    .ui-overlay-b, .ui-page-theme-b, .ui-page-theme-b .ui-panel-wrapper{
+        text-shadow: none !important;
+        color: #313131;
+    }
+
+    .ui-bar-b, .ui-page-theme-b .ui-bar-inherit, html .ui-bar-b .ui-bar-inherit,
+    html .ui-body-b .ui-bar-inherit, html body .ui-group-theme-b .ui-bar-inherit,
+    .ui-page-theme-a .ui-bar-inherit {
+        text-shadow: none !important;
+        border: none;
+        color: #313131;
+    }
+    /* Background color end */
+
+    /* Buttons start */
+    .ui-btn {
+        background-color: var(--primary-color-white) !important;
+        border-color: var(--primary-color-white) !important;
+        text-shadow: none !important;
+        box-shadow: none;
+    }
+
+    .ui-btn:focus {
+        box-shadow: none !important;
+    }
+
+    .primary-btn {
+        background-color: var(--primary-color-blue) !important;
+        color: var(--primary-color-white) !important;
+        border: 2px solid var(--primary-color-blue) !important;
+    }
+
+    .secondary-btn {
+        background-color: var(--primary-color-white) !important;
+        color: var(--primary-color-blue) !important;
+        border: 2px solid var(--primary-color-blue) !important;
+    }
+
+    .transparent-btn {
+        background-color: unset !important;
+        color: var(--primary-color-grey) !important;
+        border: 2px solid transparent !important;
+    }
+
+    /* Buttons end */
+
+    /* Text colors start */
+    .text-muted {
+        color: var(--primary-color-grey) !important;
+    }
+
+    .text-primary, .post-login #footer .active {
+        color: var(--primary-color-blue) !important;
+    }
+    /* Text colors end */
+
+    /* Header and footer start */
+    .ui-header {
+        border-style: unset !important;
+    }
+
+    .pre-login #header,
+    .pre-login #footer,
+    .pre-login .ui-content,
+    .pre-login #loginHeader {
+        background: var(--primary-color-white) !important;
+        border-color: transparent !important;
+        box-shadow: unset !important;
+    }
+    /* Header and footer end */
+
+    /* Forms start */
+    .ui-input-text input, #feedbackInput {
+        border: 2px solid var(--primary-color-grey) !important;
+    }
+
+    .ui-input-text input:focus, #feedbackInput:focus {
+        border: 3px solid var(--primary-color-blue) !important;
+        color: var(--primary-color-black) !important;
+        font-weight: bold;
+    }
+
+    .ui-input-text {
+        border-style: none !important;
+    }
+
+    .ui-shadow-inset {
+        box-shadow: none !important;
+    }
+
+    /* Forms end */
+
+    /* Pagination indicator start */
+    .paginationSection .indicator {
+        background-color: var(--secondary-color-grey);
+    }
+
+    .paginationSection .indicator.active {
+        background-color: var(--primary-color-blue);
+    }
+
+    /* Pagination indicator end */
+
+    /* Card styles start */
+    .ui-card {
+        box-shadow: 0px -3px 9px -2px rgba(0, 0, 0, 0.17);
+    }
+    /* Card styles end */
+
+/* -------------------------------------------- GENERAL STYLES END -------------------------------------------------- */
+
+
+
+
+/* --------------------------------------- PRE-LOGIN PAGES STYLES START --------------------------------------------- */
+
+/* Index page start */
+.wordmark {
+    color: var(--primary-color-blue);
+}
+
+.title h5 {
+    color: var(--secondary-color-blue-1);
+}
+/* Index page end */
+
+/* First time landing styles start */
+#firstTimeLanding .content-landing{
+    background-image: linear-gradient(rgba(68, 68, 200, 0.8), rgba(68, 68, 200, 0.9)), url("../img/landingImage.jpg") !important;
+    background-size: cover !important;
+}
+#firstTimeLanding #header {
+    background-color: transparent !important;
+}
+.firstTimeFooter .ui-controlgroup .ui-controlgroup-controls img {
+    fill: var(--primary-color-grey);
+}
+
+.content-landing div:nth-child(2) {
+    color: var(--secondary-color-yellow) !important;
+}
+/* First time landing styles end */
+
+/* Information swiper styles start */
+#swiperInformation #footer {
+    box-shadow: 0px -4px 9px -2px rgba(0, 0, 0, 0.5) !important;
+}
+/* Information swiper styles end */
+
+/* ---------------------------------------- PRE-LOGIN PAGES STYLES END ---------------------------------------------- */
+
+
+
+
+/* --------------------------------------- POST-LOGIN PAGES STYLES START -------------------------------------------- */
+.post-login .home,
+.post-login .deals,
+.post-login .cart,
+.post-login .profile,
+.post-login .promoDetails,
+.post-login .productDetails,
+.post-login .reviews,
+.post-login .addReview,
+.post-login .coupons,
+.post-login .changeAddress,
+.post-login .payment,
+.post-login .sortFilter {
+    background-color: var(--secondary-color-background-blue) !important;
+}
+
+.box-shadow-default,
+.post-login #header,
+.post-login #footer,
+.card, .promotion-banner,
+.post-login #footer-secondary {
+    background-color: var(--primary-color-white);
+    -webkit-box-shadow: 0 1px var(--primary-color-white) inset, 0 1px 3px rgba(34, 25, 25, 0.4);
+    -moz-box-shadow: 0 1px var(--primary-color-white) inset, 0 1px 3px rgba(34, 25, 25, 0.4);
+    box-shadow: 0 1px var(--primary-color-white) inset, 0 1px 3px rgba(34, 25, 25, 0.4);
+}
+
+/* Promotion Details styles start */
+.bottom-card, .nav-tabs, .counter {
+    background-color: rgba(227,227,227,0.4) !important;
+}
+.nav-tabs .nav-link.active {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+    border:unset !important;
+}
+/* Promotion Details styles end */
+
+/* Payment Page styles start */
+.paypal-card{
+    background-image: var(--gradient-variation-3);
+}
+
+.feedback textarea {
+    background-color: #fff !important;
+    text-shadow: none !important;
+    border: 2px solid var(--primary-color-grey) !important;
+    color: var(--primary-color-grey) !important;
+    height: auto !important;
+    padding: 10px 15px;
+}
+
+.feedback textarea::placeholder {
+    color: var(--primary-color-grey) !important;
+}
+
+.feedback textarea:focus {
+    border: 3px solid var(--primary-color-blue) !important;
+    color: var(--primary-color-blue) !important;
+    font-weight: bold;
+}
+
+.my-card{
+    background-image: var(--gradient-variation-1);
+}
+/* Payment Page styles end */
+
+/* Stepper styles start */
+.progress-stepper .step .step-count  {
+    border: 2px solid rgba(227,227,227,0.4);
+    background-color: rgba(227,227,227,0.4);
+    color: var(--primary-color-grey);
+}
+.progress-stepper .step.active .step-count {
+    border: 2px solid var(--primary-color-blue);
+    background: var(--primary-color-white) !important;
+    color: var(--primary-color-blue) !important;
+}
+
+.progress-stepper .step .step-content-label {
+    color: var(--primary-color-grey);
+    font-weight: var(--font-weight-bold);
+}
+.progress-stepper .step.active .step-content-label {
+    color: var(--primary-color-blue) !important;
+}
+.progress-stepper .bar-left, .progress-stepper .bar-right {
+    border: 1px solid rgba(227,227,227,0.8);
+}
+
+.bar-active {
+    border-color:var(--primary-color-blue) !important;
+}
+/* Stepper styles end */
+
+/* ---------------------------------------- POST-LOGIN PAGES STYLES END --------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.secondary-color-blue-1-bg {
+    background-color: var(--secondary-color-blue-1) !important;
+}
+
+.secondary-color-blue-2-text {
+    color: var(--secondary-color-blue-2) !important;
+}
+
+.secondary-color-blue-2-bg {
+    background-color: var(--secondary-color-blue-2) !important;
+}
+
+/* Secondary Colours end */
+
+/* font sizes */
+.f8{
+    font-size: var(--font-size-8) !important;
+}
+.f10{
+    font-size: var(--font-size-10) !important;
+}
+.f12{
+    font-size: var(--font-size-h6) !important;
+}
+.f14{
+    ffont-size: var(--font-size-h5) !important;
+}
+.f16{
+    font-size: var(--font-size-h4) !important;
+}
+.f22{
+    font-size: var(--font-size-h3) !important;
+}
+.f28{
+    font-size: var(--font-size-h2) !important;
+}
+.f35{
+    font-size: var(--font-size-h1) !important;
+}
+/*font sizes end */
+

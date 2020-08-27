@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Payment</title>
+
+    <!-- jQuery mobile files -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+    <!-- Font awesome file -->
+    <script src="https://kit.fontawesome.com/f083cf2118.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom JS Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Paypal-->
+    <script
+            src="https://www.paypal.com/sdk/js?client-id=AUN1TSse5y5m44StUi5DtqErcIDV_-Pyi7c8Ro35EUrs30celJskEs5FQEjKo5xttQmfhyLPrk4_2Pyu">
+    </script>
+
+    <!-- Custom main CSS file -->
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body class="post-login">
+<div data-role="page" class="payment" id="payment">
+    <div data-role="header" id="header" class="px-4 pt-5 pb-3">
+        <div class="ui-grid-a d-flex align-items-center header-title-back">
+            <div class="ui-block-a d-flex align-items-center">
+                <a class="ui-btn p-0 m-0" data-transition="fade" data-rel="cart.html" rel="external">
+                    <img alt="back button" height="auto" src="assets/img/back.svg" width="30">
+                </a>
+                <h3 class="m-0 pl-3">Payment Details</h3>
+            </div>
+            <div class="ui-block-b icons">
+                <a class="primary-color-black-text" data-rel="popup" href="#overlay" data-position-to="origin"><i
+                        class="fas fa-search"></i></a>
+                <div class="ui-content" data-shadow="false" data-theme="none" data-overlay-theme="a" data-role="popup"
+                     id="overlay">
+                    <div class="deals-search-bar">
+                        <ul data-role="listview" data-filter="true" data-filter-reveal="true"
+                            data-filter-placeholder="Searching Promotions" data-inset="true">
+                            <li><a class="dealsClick" accesskey="1">Winter Coffee Sale</a></li>
+                            <li><a class="dealsClick" accesskey="2">Google Pixel Sale</a></li>
+                            <li><a class="dealsClick" accesskey="3">Furniture Sale</a></li>
+                            <li><a class="dealsClick" accesskey="4">Electronic Christmas Sale</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-content">
+            <div class="progress-stepper">
+                <div class="ui-grid-b">
+                    <div class="ui-block-a step">
+                        <div class="d-flex flex-column align-items-center">
+                            <div
+                                    class="step-count text-left primary-color-blue-bg bar-active primary-color-white-text">
+                                <span>1</span>
+                            </div>
+                            <div class="step-content-label">
+                                <span class="font-size-s primary-color-blue-text">Cart</span>
+                            </div>
+                        </div>
+                        <div class="bar-left bar-left-1 bar-active"></div>
+                    </div>
+                    <div class="ui-block-b step active">
+                        <div class="d-flex flex-column align-items-center">
+                            <div class="step-content-icon text-center">
+                                <span class="step-count">2</span>
+                            </div>
+                            <div class="step-content-label">
+                                <span class="font-size-s">Payment</span>
+                            </div>
+                        </div>
+                        <div class="bar-left bar-left-2 bar-active"></div>
+                    </div>
+                    <div class="ui-block-c step">
+                        <div class="d-flex flex-column align-items-center justify-content-center">
+                            <div class="step-content-icon text-right">
+                                <span class="step-count">3</span>
+                            </div>
+                            <div class="step-content-label">
+                                <span class="font-size-s">Confirm</span>
+                            </div>
+                        </div>
+                        <div class="bar-left bar-left-3"></div>
+                        <div class="bar-right"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-role="main">
+        <div class="head mt-4 px-4">
+            <ul class="nav nav-tabs nav-justified nav-primary">
+                <li class="nav-item">
+                    <a href="#card" class="nav-link active" id="card_link" data-toggle="tab">Card Payment</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#paypal" class="nav-link" id="paypal_link" data-toggle="tab">Paypal</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="card">
+                    <div class="ui-grid-solo my-3">
+                        <div class="ui-block-a font-size-m text-right">
+                            <a href="favourites.html">Manage My Cards</a>
+                        </div>
+                    </div>
+                    <div class="card my-card mb-2">
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">
+                                <img src="assets/img/visa-logo.png" alt="Visa" width="60px">
+                            </div>
+                            <div class="ui-block-b text-right primary-color-white-text">
+                                <i class="far fa-trash-alt icon"></i>
+                                <i class="far fa-edit pl-3 icon"></i>
+                            </div>
+                            <div class="text-center pt-5 pb-3">
+                                <h4 style="letter-spacing: 4px; color: #fff;">**** **** **** 2194</h4>
+                            </div>
+                        </div>
+                        <div class="ui-grid-a primary-color-white-text">
+                            <div class="ui-block-a">
+                                <h5 class="secondary-color-yellow-text">Card Holder</h5>
+                                <h5>James Smitherson</h5>
+                            </div>
+                            <div class="ui-block-b text-right primary-color-white-text">
+                                <h5 class="secondary-color-yellow-text">Expiry</h5>
+                                <h5>09/20</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="paypal">
+                    <div class="ui-grid-solo my-3">
+                        <div class="ui-block-a font-size-m text-right">
+                            <a href="favourites.html">Manage My PayPal</a>
+                        </div>
+                    </div>
+                    <div class="card paypal-card">
+                        <div class="ui-grid-a d-flex align-items-center mb-3">
+                            <div class="ui-block-a">
+                                <img src="assets/img/paypal-logo.png" alt="Paypal" width="60px">
+                            </div>
+                            <div class="ui-block-b">
+                                <div class="text-muted text-right font-size-s">
+                                    <span class="pr-1">Last Used: </span>
+                                    <span class="font-weight-bold">02/10/2019</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="secondary-color-cyan-text text-center mt-3 pb-3">
+                            <h4>Current Balance</h4>
+                            <h2><b>$14,090.06</b></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-role="footer" data-position="fixed" id="footer-secondary" data-tap-toggle="false" transition="fade"
+         class="pt-3 pb-4 px-4">
+        <div class="ui-grid-a mb-3 d-flex align-items-center">
+            <div class="ui-block-a w80">
+                <div class="font-size-l font-weight-heavy">Shipping Address</div>
+            </div>
+            <div class="ui-block-b w20">
+                <div class="font-size-m text-right"><a href="#address">Change</a></div>
+            </div>
+        </div>
+        <div class="ui-grid-solo">
+            <div class="ui-block-a">
+                <h5 class="black">James Smitherson</h5>
+                <p class="text-muted">47<sup>th</sup> Lane, Yorkshire Avenue, <br>California, United States</p>
+                <p class="text-muted mb-0">+1 900 200 3999 <br/>smithersonrocks@gmail.com</p>
+            </div>
+        </div>
+        <hr>
+        <div class="ui-grid-a text-center sort-apply">
+            <div id="submit_btn" class="ui-block-a w100 mb-3">
+                <a class="ui-btn btn primary-btn m-0" id="submit" href="#confirmation">CONFIRM DETAILS</a>
+            </div>
+            <div class="ui-block-b w100 mb-3">
+                <div id="paypal-button-container"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div data-role="page" class="changeAddress" id="address">
+    <div data-role="header" id="header" class="px-4 pt-5 pb-4">
+        <div class="ui-grid-a d-flex align-items-center header-title-back">
+            <div class="ui-block-a d-flex align-items-center">
+                <a class="ui-btn p-0 m-0" data-transition="fade" href="#payment">
+                    <img alt="back button" height="auto" src="assets/img/back.svg" width="30">
+                </a>
+                <h3 class="m-0 pl-3">Edit Address</h3>
+            </div>
+            <div class="ui-block-b">
+                <i class="fas fa-search" style="font-size: 19px;"></i>
+            </div>
+        </div>
+    </div>
+    <div data-role="main" class="px-4">
+        <div class="my-4 text-right">
+            <a href="#" rel="external" class="ui-link">Add New Address</a>
+        </div>
+        <form class="mb-3">
+            <fieldset data-role="controlgroup" data-iconpos="right" class="my-0">
+                <div class="ui-grid-a">
+                    <div class="ui-block-a w100 w-landscape-50">
+                        <div class="card p-0">
+                            <div class="top-card ui-grid-a p-3">
+                                <div class="ui-block-a w80">
+                                    <h4 class="truncate font-weight-bold">James Smitherson</h4>
+                                    <div class="my-3">
+                                        <p class="text-muted mb-0">47th Lane, Yorkshire Avenue,</p>
+                                        <p class="text-muted mb-0">Nottingham, England</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-muted mb-0">+1 900 200 3999</p>
+                                        <p class="text-muted m-0">smithersonrocks@gmail.com</p>
+                                    </div>
+                                </div>
+                                <div class="ui-block-b w20">
+                                    <input class="mt-0" type="radio" name="radio-choice-w-6" id="radio-choice-w-6a"
+                                           checked="checked">
+                                </div>
+                            </div>
+                            <div class="bottom-card px-3">
+                                <div class="ui-grid-c d-flex align-items-center">
+                                    <div class="ui-block-a w15 text-left icon d-flex">
+                                        <i class="fa fa-trash-o"></i>
+                                    </div>
+                                    <div class="ui-block-b w20 text-right icon d-flex">
+                                        <i class="far fa-edit"></i>
+                                    </div>
+                                    <div class="ui-block-c w65 text-right d-flex justify-content-end">
+                                        <h6 class="primary-color-red-text d-inline font-size-m font-weight-bold m-0">
+                                            Default</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui-block-b w100 w-landscape-50">
+                        <div class="card p-0">
+                            <div class="top-card ui-grid-a p-3">
+                                <div class="ui-block-a w80">
+                                    <h4 class="truncate font-weight-bold">James Smitherson</h4>
+                                    <div class="my-3">
+                                        <p class="text-muted mb-0">47th Lane, Yorkshire Avenue,</p>
+                                        <p class="text-muted mb-0">Nottingham, England</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-muted mb-0">+1 900 200 3999</p>
+                                        <p class="text-muted m-0">smithersonrocks@gmail.com</p>
+                                    </div>
+                                </div>
+                                <div class="ui-block-b w20">
+                                    <input class="mt-0" type="radio" name="radio-choice-w-6" id="radio-choice-w-6a">
+                                </div>
+                            </div>
+                            <div class="bottom-card px-3">
+                                <div class="ui-grid-c d-flex align-items-center">
+                                    <div class="ui-block-a w15 text-left icon d-flex">
+                                        <i class="fa fa-trash-o"></i>
+                                    </div>
+                                    <div class="ui-block-b w20 text-right icon d-flex">
+                                        <i class="far fa-edit"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a w100 w-landscape-50">
+                        <div class="card p-0">
+                            <div class="top-card ui-grid-a p-3">
+                                <div class="ui-block-a w80">
+                                    <h4 class="truncate font-weight-bold">James Smitherson</h4>
+                                    <div class="my-3">
+                                        <p class="text-muted mb-0">47th Lane, Yorkshire Avenue,</p>
+                                        <p class="text-muted mb-0">Nottingham, England</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-muted mb-0">+1 900 200 3999</p>
+                                        <p class="text-muted m-0">smithersonrocks@gmail.com</p>
+                                    </div>
+                                </div>
+                                <div class="ui-block-b w20">
+                                    <input class="mt-0" type="radio" name="radio-choice-w-6" id="radio-choice-w-6a">
+                                </div>
+                            </div>
+                            <div class="bottom-card px-3">
+                                <div class="ui-grid-c d-flex align-items-center">
+                                    <div class="ui-block-a w15 text-left icon d-flex">
+                                        <i class="fa fa-trash-o"></i>
+                                    </div>
+                                    <div class="ui-block-b w20 text-right icon d-flex">
+                                        <i class="far fa-edit"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <div data-role="footer" data-position="fixed" id="footer-secondary" data-tap-toggle="false" transition="fade"
+         class="pt-4 pb-4">
+        <div class="ui-grid-solo text-center sort-apply px-4">
+            <div class="ui-block-a w100 mb-3 w-landscape-50">
+                <a href="signIn.html" class="ui-btn btn primary-btn m-0">CHANGE ADDRESS</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div data-role="page" class="payment" id="confirmation">
+    <div data-role="header" id="header" class="px-4 pt-5 pb-3">
+        <div class="ui-grid-a d-flex align-items-center header-title-back">
+            <div class="ui-block-a d-flex align-items-center">
+                <a class="ui-btn p-0 m-0" data-transition="fade" href="#payment">
+                    <img alt="back button" height="auto" src="assets/img/back.svg" width="30">
+                </a>
+                <h3 class="m-0 pl-3">Confirmation</h3>
+            </div>
+            <div class="ui-block-b">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+        <div class="header-content">
+            <div class="progress-stepper">
+                <div class="ui-grid-b">
+                    <div class="ui-block-a step">
+                        <div class="d-flex flex-column align-items-center">
+                            <div
+                                    class="step-count text-left primary-color-blue-bg bar-active primary-color-white-text">
+                                <span>1</span>
+                            </div>
+                            <div class="step-content-label">
+                                <span class="font-size-s primary-color-blue-text">Cart</span>
+                            </div>
+                        </div>
+                        <div class="bar-left bar-left-1 bar-active"></div>
+                    </div>
+                    <div class="ui-block-b step">
+                        <div class="d-flex flex-column align-items-center">
+                            <div
+                                    class="step-count text-center primary-color-blue-bg bar-active primary-color-white-text">
+                                <span>2</span>
+                            </div>
+                            <div class="step-content-label">
+                                <span class="font-size-s primary-color-blue-text">Payment</span>
+                            </div>
+                        </div>
+                        <div class="bar-left bar-left-2 bar-active"></div>
+                    </div>
+                    <div class="ui-block-c step active">
+                        <div class="d-flex flex-column align-items-center justify-content-center">
+                            <div class="step-content-icon text-right">
+                                <span class="step-count">3</span>
+                            </div>
+                            <div class="step-content-label">
+                                <span class="font-size-s">Confirm</span>
+                            </div>
+                        </div>
+                        <div class="bar-left bar-left-3 bar-active"></div>
+                        <div class="bar-right"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-role="main" class="px-4 mb-3">
+        <div class="ui-grid-a mt-4 mb-3 d-flex align-items-center">
+            <div class="ui-block-a w60">
+                <div class="font-size-l font-weight-heavy">Cart Summary</div>
+            </div>
+            <div class="ui-block-b w40">
+                <div class="font-size-m text-right"><a>Back to Cart</a></div>
+            </div>
+        </div>
+        <div class="items my-4">
+            <h5 class="my-3 font-weight-heavy">Items</h5>
+            <div class="ui-grid-a mb-3">
+                <div class="ui-block-a gray">
+                    <div class="mb-0 font-weight-bold font-size-s">
+                        Stok Coffee Medium Brew
+                    </div>
+                    <div class="mb-0 font-weight-bold font-size-s">
+                        x 3
+                    </div>
+                </div>
+                <div class="ui-block-b text-right">
+                    <p class="mb-0 font-weight-bold" id="fakeTotal">220.00</p>
+                </div>
+            </div>
+            <div class="ui-grid-a mb-3">
+                <div class="ui-block-a gray">
+                    <div class="mb-0 font-weight-bold font-size-s">
+                        Stok Coffee Medium Brew
+                    </div>
+                    <div class="mb-0 font-weight-bold font-size-s">
+                        x 3
+                    </div>
+                </div>
+                <div class="ui-block-b text-right">
+                    <p class="mb-0 font-weight-bold" id="fakeTotal">220.00</p>
+                </div>
+            </div>
+            <div class="ui-grid-a mb-3">
+                <div class="ui-block-a gray">
+                    <div class="mb-0 font-weight-bold font-size-s">
+                        Stok Coffee Medium Brew
+                    </div>
+                    <div class="mb-0 font-weight-bold font-size-s">
+                        x 3
+                    </div>
+                </div>
+                <div class="ui-block-b text-right">
+                    <p class="mb-0 font-weight-bold" id="fakeTotal">220.00</p>
+                </div>
+            </div>
+            <div class="ui-grid-a mb-3">
+                <div class="ui-block-a gray">
+                    <div class="mb-0 font-weight-bold font-size-s">
+                        Stok Coffee Medium Brew
+                    </div>
+                    <div class="mb-0 font-weight-bold font-size-s">
+                        x 3
+                    </div>
+                </div>
+                <div class="ui-block-b text-right">
+                    <p class="mb-0 font-weight-bold" id="fakeTotal">220.00</p>
+                </div>
+            </div>
+        </div>
+        <div class="calc">
+            <h5 class="my-3 font-weight-heavy">Payment</h5>
+            <div class="ui-grid-a mb-2">
+                <div class="ui-block-a gray">
+                    <p class="mb-0 font-weight-bold">Cart Total</p>
+                </div>
+                <div class="ui-block-b text-right">
+                    <p class="mb-0 font-weight-bold" id="fakeTotal">880.00</p>
+                </div>
+            </div>
+            <div class="ui-grid-a mb-2">
+                <div class="ui-block-a gray">
+                    <p class="mb-0 font-weight-bold">Tax</p>
+                </div>
+                <div class="ui-block-b text-right">
+                    <p class="mb-0 font-weight-bold">20.00</p>
+                </div>
+            </div>
+            <div class="ui-grid-a">
+                <div class="ui-block-a gray">
+                    <p class="mb-0 font-weight-bold">Coupon Discount</p>
+                </div>
+                <div class="ui-block-b red text-right">
+                    <p class="mb-0 font-weight-bold">-<span id="coupon">0.00</span></p>
+                </div>
+            </div>
+            <hr class="mb-1">
+            <div class="ui-grid-a d-flex align-items-center">
+                <div class="ui-block-a black">
+                    <h4 class="mb-0 font-weight-bold">Total</h4>
+                </div>
+                <div class="ui-block-b red text-right font-size-xxl font-weight-heavy">
+                    <span class="font-size-m font-weight-bold">USD </span><span id="total">900.00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-role="footer" data-position="fixed" id="footer-secondary" data-tap-toggle="false" transition="fade"
+         class="pt-4 pb-4">
+        <div class="ui-grid-a text-center sort-apply px-4">
+            <div class="ui-block-a w100 w-landscape-50 mb-3">
+                <a id="submit" class="ui-btn btn primary-btn m-0">CONFIRM PAYMENT</a>
+            </div>
+            <div class="ui-block-b mb-3 w100 w-landscape-50">
+                <a class="ui-btn btn secondary-btn m-0" id="reset">CANCEL</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    paypal.Buttons({
+        style: {
+            layout: 'horizontal',
+            shape: 'pill',
+            tagline: '',
+            label: 'pay',
+            fundingicons: 'true'
+        },
+        createOrder: function (data, actions) {
+            // This function sets up the details of the transaction, including the amount and line item details.
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: parseFloat(JSON.parse(sessionStorage.getItem('cart')['total']))
+                    }
+                }]
+            });
+        },
+        onApprove: function (data, actions) {
+            // This function captures the funds from the transaction.
+            return actions.order.capture().then(function (details) {
+                // This function shows a transaction success message to your buyer.
+                alert('Transaction completed by ' + details.payer.name.given_name);
+            });
+        }
+    }).render('#paypal-button-container');
+    //This function displays Smart Payment Buttons on your web page.
+</script>
+<script>
+    $(document).ready(function () {
+        $("#paypal-button-container").hide();
+
+        $("#card_link").click(function () {
+            $("#paypal-button-container").hide();
+            $('#submit_btn').removeClass("d-none");
+            $('#submit_btn').addClass("d-block");
+        });
+        $("#paypal_link").click(function () {
+            $('#submit_btn').addClass("d-none");
+            $('#submit_btn').removeClass("d-block");
+            $("#paypal-button-container").show();
+        });
+        $(document).on("click", ".dealsClick", function () {
+            sessionStorage.setItem("currentDeal", this.accessKey);
+            sessionStorage.setItem("ratingFilter", '0');
+            sessionStorage.setItem("priceFilter", '{"startValue":"0","EndValue":"145"}');
+            sessionStorage.setItem("sort", 'default');
+            document.location.href = 'promotion_details.html';
+        });
+    });
+</script>
+</body>
+
+</html>

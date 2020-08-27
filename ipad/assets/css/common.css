@@ -1,0 +1,155 @@
+@import "common_variables.css";
+
+/* Font Sizes start */
+.wordmark {
+    font-size: var(--font-size-title);
+    font-weight: var(--font-weight-heavy);
+    font-family: futura;
+}
+
+.truncate {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+h1 {
+    font-size: var(--font-size-h1) !important;
+}
+
+h2 {
+    font-size: var(--font-size-h2) !important;
+}
+
+h3 {
+    font-size: var(--font-size-h3) !important;
+}
+
+h4 {
+    font-size: var(--font-size-h4) !important;
+}
+
+h5 {
+    font-size: var(--font-size-h5) !important;
+}
+
+h6 {
+    font-size: var(--font-size-h6) !important;
+}
+
+.line-height-none {
+    line-height: 0px !important;
+}
+
+/* Font Sizes end */
+
+
+/* Buttons start */
+.btn {
+    width: 100% !important;
+    height: 54px !important;
+    border-radius: 8px !important;
+    text-shadow: none !important;
+    font-size: var(--font-size-h5) !important;
+    border: none !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    line-height: 0px !important;
+}
+
+/* Buttons end */
+
+/* Forms start */
+.ui-field-contain {
+    border: none !important;
+}
+
+.ui-mobile label {
+    font-size: var(--font-size-h5);
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.ui-input-text input {
+    min-height: 54px !important;
+    border-radius: 8px !important;
+    font-size: var(--font-size-h5);
+}
+
+.ui-input-text input {
+    padding: 0px 20px;
+}
+
+/* Forms end */
+
+/* Pagination indicator start */
+.paginationSection .indicator {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 2px;
+}
+
+/* Pagination indicator end */
+
+/** Breadcrumb **/
+.progress-stepper .step .step-count {
+    width: 29px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+}
+
+.progress-stepper .step-content-label {
+    width: 50px;
+    text-align: center;
+}
+
+.progress-stepper .bar-left {
+    position: absolute;
+    top: 65%;
+}
+
+.progress-stepper .bar-right {
+    position: absolute;
+    top: 65%;
+    width: 15.2%;
+    right: 0;
+}
+
+.progress-stepper .bar-left-1 {
+    left: 0%;
+    width: 16%;
+}
+
+.progress-stepper .bar-left-2 {
+    left: 18%;
+    width: 30.5%;
+}
+
+.progress-stepper .bar-left-3 {
+    left: 51.6%;
+    width: 30.5%;
+}
+
+/* Breadcrumb end */
+
+/** Loader **/
+
+#load {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background: url("../img/giphy.gif") no-repeat center center rgba(0, 0, 0, 0.25)
+}
+
+/** Loader END **/

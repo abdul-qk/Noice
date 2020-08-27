@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Deals</title>
+
+    <!-- jQuery mobile files -->
+    <link href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+    <!-- Font awesome file -->
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/f083cf2118.js"></script>
+
+    <!-- Bootstrap CSS file -->
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet">
+
+    <!-- Custom JS Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Custom main CSS file -->
+    <link href="index.css" rel="stylesheet">
+
+</head>
+
+<body class="post-login">
+    <div data-role="page" class="deals">
+        <div data-role="header" id="header" class="align-stuff">
+            <div class="container">
+                <div class="ui-grid-a head-head">
+                    <div class="ui-block-a">
+                        <h1>Deals</h1>
+                    </div>
+                    <div class="ui-block-b icons" id="optionz">
+                        <a class="primary-color-black-text" data-rel="popup" href="#overlay"
+                            data-position-to="#optionz"><i class="fas fa-search"></i></a>
+                        <div class="ui-content pt-0 mb-1" data-shadow="false" data-theme="none" data-overlay-theme="a"
+                            data-role="popup" id="overlay">
+                            <div class="deals-search-bar">
+                                <ul data-role="listview" data-filter="true" data-filter-reveal="true"
+                                    data-filter-placeholder="Searching Promotions" data-inset="true">
+                                    <li><a class="dealsClick" accesskey="1">Winter Coffee Sale</a></li>
+                                    <li><a class="dealsClick" accesskey="2">Google Pixel Sale</a></li>
+                                    <li><a class="dealsClick" accesskey="3">Furniture Sale</a></li>
+                                    <li><a class="dealsClick" accesskey="4">Electronic Christmas Sale</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a class="primary-color-black-text" href="realAR.html" rel="external"><i
+                                class="fas fa-camera"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-role="main" class="align-stuff">
+            <div class="container">
+                <div class="favourites">
+                    <div class="ui-grid-solo w70 mx-auto">
+                        <ul class="nav nav-tabs nav-justified nav-primary">
+                            <li class="nav-item">
+                                <a href="#shipping" class="nav-link active" data-toggle="tab">Trending</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#ongoing" class="nav-link" data-toggle="tab">Latest</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#unpaid" class="nav-link" data-toggle="tab">For You</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active mb-5" id="shipping">
+                            <div class="ui-grid-solo main-head pb-4">
+                                <div class="ui-block-a pt-2 pl-2">
+                                    <div class="font-size-m text-right primary-color-red-text">3 Promotions</div>
+                                </div>
+                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a pr-3 justify-content-center dealsClick" accesskey="1">
+                                    <a>
+                                        <img alt="Trending promotion" class="img-fluid" width="100%"
+                                            src="assets/img/coffeePromo.png">
+                                    </a>
+                                </div>
+                                <div class="ui-block-b pl-3 justify-content-center dealsClick" accesskey="2">
+                                    <a>
+                                        <img alt="Trending promotion" class="img-fluid" width="100%"
+                                            src="assets/img/pixelPromo.png">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a pt-3 pr-3 w50 justify-content-center dealsClick" accesskey="3">
+                                    <a href="#">
+                                        <img alt="Trending promotion" class="img-fluid" width="100%"
+                                            src="assets/img/furniturePromo.png">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="ongoing">
+                            <div class="ui-grid-solo main-head  pb-4">
+                                <div class="ui-block-a pt-2 pl-2">
+                                    <div class="font-size-m text-right primary-color-red-text">3 Promotions</div>
+                                </div>
+                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a pr-3 justify-content-center dealsClick" accesskey="4">
+                                    <a href="" rel="external">
+                                        <img alt="Trending promotion" class="img-fluid" width="100%"
+                                            src="assets/img/nikeSale.png">
+                                    </a>
+                                </div>
+                                <div class="ui-block-b pl-3 justify-content-center">
+                                    <a href="promotion_details.html" rel="external">
+                                        <img alt="Trending promotion" class="img-fluid" width="100%"
+                                            src="assets/img/jblSale.png">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a pt-3 pr-3 w50 justify-content-center">
+                                    <a href="promotion_details.html" rel="external">
+                                        <img alt="Trending promotion" class="img-fluid" width="100%"
+                                            src="assets/img/wweSale.png">
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="unpaid">
+                            <div class="text-muted text-center ui-grid-solo">
+                                <h4 class="font-weight-heavy">No promotions available.</h4>
+                                <h5>Browse more or Check back in a few days</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" id="footer" data-tap-toggle="false" transition="fade"
+            class="py-2">
+            <div data-role="navbar" data-grid="d" class="h90 text-center footer">
+                <ul class="h100">
+                    <li class="w100 h20 nav-footer">
+                        <a href="home.html" rel="external">
+                            <i class="fa fa-home"></i>
+                            <div>Home</div>
+                        </a>
+                    </li>
+                    <li class="w100 h20 nav-footer">
+                        <a href="deals.html" rel="external" class="active">
+                            <i class="fa fa-tag font"></i>
+                            <div>Deals</div>
+                        </a>
+                    </li>
+                    <li class="w100 h20 nav-footer">
+                        <a href="store.html" rel="external">
+                            <i class="fa fa-store-alt"></i>
+                            <div>Store</div>
+                        </a>
+                    </li>
+                    <li class="w100 h20 nav-footer">
+                        <a href="cart.html" rel="external">
+                            <i class="fa fa-shopping-cart"></i>
+                            <div>Cart</div>
+                        </a>
+                    </li>
+                    <li class="w100 h20 nav-footer">
+                        <a href="profile.html" rel="external">
+                            <i class="fa fa-user"></i>
+                            <div>Profile</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" id="footer2" data-tap-toggle="false" transition="fade">
+            <div data-role="navbar" data-grid="d" class="text-center footer2">
+                <ul class="w100">
+                    <li class="w20 nav-footer">
+                        <a href="home.html" rel="external">
+                            <i class="fa fa-home"></i>
+                            <div>Home</div>
+                        </a>
+                    </li>
+                    <li class="w20 nav-footer">
+                        <a href="deals.html" rel="external" class="active">
+                            <i class="fa fa-tag font"></i>
+                            <div>Deals</div>
+                        </a>
+                    </li>
+                    <li class="w20 nav-footer">
+                        <a href="store.html" rel="external">
+                            <i class="fa fa-store-alt"></i>
+                            <div>Store</div>
+                        </a>
+                    </li>
+                    <li class="w20 nav-footer">
+                        <a href="cart.html" rel="external">
+                            <i class="fa fa-shopping-cart"></i>
+                            <div>Cart</div>
+                        </a>
+                    </li>
+                    <li class="w20 nav-footer">
+                        <a href="profile.html" rel="external">
+                            <i class="fa fa-user"></i>
+                            <div>Profile</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+
+            $('#' + sessionStorage.getItem('theme')).prop("checked", true);
+
+            if (sessionStorage.getItem('theme') === 'dark') {
+                $('body').addClass('dark');
+            }
+            $('input[name="radio-group-2"]:radio').change(function () {
+                if (this.accessKey === 'dark') {
+                    sessionStorage.setItem('theme', 'dark');
+                    $('body').addClass('dark');
+
+                } else {
+                    sessionStorage.setItem('theme', 'light');
+                    $('body').removeClass('dark');
+                }
+            });
+
+
+            $(document).on("click", ".dealsClick", function () {
+                if(this.accessKey === "2"){
+                    sessionStorage.setItem("currentDeal", this.accessKey);
+                    sessionStorage.setItem("ratingFilter", '0');
+                    sessionStorage.setItem("priceFilter", '{"startValue":"0","EndValue":"999"}');
+                    sessionStorage.setItem("sort", 'default');
+                    document.location.href = 'promotion_details_in.html';
+                }else{
+                    sessionStorage.setItem("currentDeal", this.accessKey);
+                    sessionStorage.setItem("ratingFilter", '0');
+                    sessionStorage.setItem("priceFilter", '{"startValue":"0","EndValue":"999"}');
+                    sessionStorage.setItem("sort", 'default');
+                    document.location.href = 'promotion_details.html';
+                }
+
+            });
+            $(document).on("click", ".pathurl", function () {
+                document.location.href = this.accessKey;
+            });
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Product Details</title>
+
+    <!-- jQuery mobile files -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+    <!-- Font awesome file -->
+    <script src="https://kit.fontawesome.com/f083cf2118.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom JS Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Custom main CSS file -->
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body class="post-login">
+<div data-role="page" class="productDetails">
+    <div data-role="header" id="header" class="px-4 pt-5 pb-4">
+        <div class="ui-grid-a header-title-icons d-flex align-items-center">
+            <div class="ui-block-a w50 d-flex align-items-center">
+                <a class="ui-btn p-0 m-0" data-transition="slide" data-rel="back" rel="external">
+                    <img alt="back button" height="auto" src="assets/img/back.svg" width="30">
+                </a>
+            </div>
+            <div class="ui-block-b icons w50">
+                <i class="fa fa-heart-o"></i>
+                <i class="fas fa-share-alt"></i>
+                <a class="primary-color-black-text" data-rel="popup" href="#overlay" data-position-to="origin"><i
+                        class="fas fa-search"></i></a>
+                <div class="ui-content" data-shadow="false" data-theme="none" data-overlay-theme="a" data-role="popup"
+                     id="overlay">
+                    <div class="deals-search-bar">
+                        <ul data-role="listview" data-filter="true" data-filter-reveal="true"
+                            data-filter-placeholder="Searching Promotions" data-inset="true">
+                            <li><a class="dealsClick" accesskey="1">Winter Coffee Sale</a></li>
+                            <li><a class="dealsClick" accesskey="2">Google Pixel Sale</a></li>
+                            <li><a class="dealsClick" accesskey="3">Furniture Sale</a></li>
+                            <li><a class="dealsClick" accesskey="4">Electronic Christmas Sale</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <i class="fas fa-camera"></i>
+
+            </div>
+        </div>
+        <div class="header-content text-center">
+            <div class="productImg">
+                <img class="img-fluid text-center pt-4" src="assets/img/product.png" id="image">
+            </div>
+        </div>
+    </div>
+    <div role="main" class="mt-4">
+
+        <div class="px-4">
+            <div class="font-size-xl truncate mb-1" id="productTitle"> Stok Cold Brew Coffee</div>
+            <div class="font-size-s text-muted font-weight-bold truncate productSubTitle">Medium Caffeine - Hazelnut
+                Vanilla in Cold Brew Coffee
+            </div>
+
+            <div class="ui-grid-a d-flex align-items-center mt-1 ratingSection">
+                <div class="ui-block-a w40 font-size-l">
+                    <i class="fa fa-star secondary-color-yellow-text"></i>
+                    <i class="fa fa-star secondary-color-yellow-text"></i>
+                    <i class="fa fa-star secondary-color-yellow-text"></i>
+                    <i class="fa fa-star secondary-color-yellow-text"></i>
+                    <i class="fa fa-star-o secondary-color-yellow-text"></i>
+                </div>
+                <div class="ui-block-b w60 px-2">
+                    <a class="font-weight-bold m-0 primary-color-blue-text v-align-middle pathurl" accesskey="reviews">58
+                        Reviews</a>
+                </div>
+            </div>
+
+            <div class="ui-grid-a mt-3 d-flex align-items-baseline priceSection">
+                <div class="ui-block-a font-size-s text-muted font-weight-bold w15">
+                    <h5 class="text-muted m-0">
+                        <del>20.99</del>
+                    </h5>
+                </div>
+                <div class="ui-block-b font-weight-heavy font-size-xxl">
+                    <div class="red">
+                        <span class="font-size-m font-weight-bold">USD</span><span id="price">10.99</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-3 text-justify line-height-small">
+                <p id="productDetails">
+                    Brewed from the heart of Kashmir, Stok presents the
+                    best cold brew coffee of the 21st Century. This new line
+                    of cold brews gives twice the motivation and energy
+                    while keeping the nostalgic taste everybody loves...
+                </p>
+            </div>
+
+            <div class="w100 d-flex justify-content-center pt-3">
+                <div class="ui-grid-b counter w45 w-landscape-20">
+                    <div class="ui-block-a">
+                        <a class="minusCount"><i class="fas fa-minus box-shadow-default"></i></a>
+                    </div>
+                    <div class="ui-block-b">
+                        <p class="count">1</p>
+                    </div>
+                    <div class="ui-block-c">
+                        <a class="plusCount"><i class="fas fa-plus box-shadow-default"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-4 detailsBuy">
+            <div class="ui-grid-a px-4 w-landscape-50">
+                <div class="ui-block-a w30">
+                    <a rel="external" class="ui-btn btn secondary-btn mb-3 pathurl" id="add" accesskey="nope">
+                        <i class="fas fa-shopping-cart primary-color font-size-xl pr-2"></i>
+                        <span class="primary-color-red-text font-size-xl">+</span>
+                    </a>
+                </div>
+                <div class="ui-block-b w70 pl-3">
+                    <a rel="external" class="ui-btn btn primary-btn mb-3 pathurl" id="submit" accesskey="proceed">BUY
+                        NOW</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div data-role="footer" data-position="fixed" id="footer" data-tap-toggle="false" transition="fade" class="py-2">
+        <div data-role="navbar" data-grid="d" class="h100">
+            <ul>
+                <li>
+                    <a class="pathUrl" accesskey="home.html">
+                        <i class="fa fa-home"></i>
+                        <div>Home</div>
+                    </a>
+                </li>
+                <li>
+                    <a class="pathUrl" accesskey="deals.html">
+                        <i class="fa fa-tag font"></i>
+                        <div>Deals</div>
+                    </a>
+                </li>
+                <li>
+                    <a class="pathUrl" accesskey="store.html">
+                        <i class="fa fa-store-alt"></i>
+                        <div>Store</div>
+                    </a>
+                </li>
+                <li>
+                    <a class="pathUrl" accesskey="cart.html">
+                        <i class="fa fa-shopping-cart"></i>
+                        <div>Cart</div>
+                    </a>
+                </li>
+                <li>
+                    <a class="pathUrl" accesskey="profile.html">
+                        <i class="fa fa-user"></i>
+                        <div>Profile</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $(document).on("click", ".dealsClick", function () {
+            sessionStorage.setItem("currentDeal", this.accessKey);
+            sessionStorage.setItem("ratingFilter", '0');
+            sessionStorage.setItem("priceFilter", '{"startValue":"0","EndValue":"145"}');
+            sessionStorage.setItem("sort", 'default');
+            document.location.href = 'promotion_details.html';
+        });
+        quantity = 1;
+        var prodId;
+        $.post("backend/singleProduct.php", {currentProduct: sessionStorage.getItem("currentProduct")}, function (data, status) {
+            data = JSON.parse(data);
+            $.each(data, function (i, v) {
+                prodId = v.id;
+                $('#productTitle').text(v.name);
+                $('#productDetails').text(v.details);
+                $('#price').text(' ' + v.price);
+                $("#image").attr("src", v.image);
+            });
+        });
+        $(".count").text("1");
+
+
+        $(".plusCount").bind("click", function (event, ui) {
+            quantity += 1;
+            $(".count").text(quantity.toString());
+        });
+
+        $(".minusCount").bind("click", function (event, ui) {
+            quantity -= 1;
+            if (parseInt(quantity) > 0) {
+                $(".count").text(quantity.toString());
+            } else {
+                quantity = 0;
+                $(".count").text(quantity.toString());
+            }
+        });
+        var alreadyCart = false;
+        var index;
+        $(".pathurl").click(function () {
+            var currentCart = JSON.parse(sessionStorage.getItem('cart'));
+            $.each(currentCart['items'], function (i, item) {
+                if (item['id'] === prodId) {
+                    alreadyCart = true;
+                    index = i;
+                    return false;
+                }
+            });
+            if (alreadyCart) {
+                currentCart['total'] = (parseFloat(currentCart['total']) - (parseFloat(currentCart['items'][index]['amount']) * parseFloat(currentCart['items'][index]['price']))).toFixed(2);
+                currentCart['items'][index]['amount'] = quantity;
+                currentCart['total'] = (parseFloat(currentCart['total']) + (parseFloat(currentCart['items'][index]['amount']) * parseFloat(currentCart['items'][index]['price']))).toFixed(2);
+                sessionStorage.setItem('cart', JSON.stringify(currentCart));
+            }
+            else {
+                var thisItem = {};
+                thisItem['id'] = prodId;
+                thisItem['name'] = $('#productTitle').text();
+                thisItem['price'] = $('#price').text();
+                thisItem['amount'] = quantity;
+                currentCart['total'] = (parseFloat(currentCart['total']) + (parseFloat(thisItem['amount']) * parseFloat(thisItem['price']))).toFixed(2);
+                currentCart['items'].push(thisItem);
+                sessionStorage.setItem('cart', JSON.stringify(currentCart));
+            }
+
+            if (this.accessKey === 'proceed') {
+                document.location.href = "cart.html";
+            } else if (this.accessKey === 'reviews') {
+                document.location.href = "reviews.html";
+            }
+            else {
+
+            }
+
+        });
+    });
+</script>
+</body>
+
+</html>

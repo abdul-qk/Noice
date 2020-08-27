@@ -1,0 +1,13 @@
+[
+  {
+    "name":"ALL COFFEE PRODUCTS",
+    "discount":"50",
+    "details":"Winter is here and we know how precious coffee is to keep you warm. Browse through an extensive collection of renowned coffee brands to help you survive the cold holiday season...",
+    "duration":"24/11/2019",
+    "type":"Online",
+    "productList":[
+      1,
+      2
+    ]
+  }
+]

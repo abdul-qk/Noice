@@ -1,0 +1,41 @@
+/* Primary Font: Open-Sans ----------------- Start */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap');
+
+html, body {
+    font-family: 'Open Sans', sans-serif;
+}
+/* Primary Font: Open-Sans ----------------- End */
+
+
+/* Secondary Font: Futura ----------------- Start */
+@font-face {
+    font-family: 'futura'; /* Futura light */
+    src: url('../fonts/futura/futura_book_font-webfont.woff2') format('woff2'),
+    url('../fonts/futura/futura_book_font-webfont.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'futura'; /* Futura medium */
+    src: url('../fonts/futura/futura_medium_bt-webfont.woff2') format('woff2'),
+    url('../fonts/futura/futura_medium_bt-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'futura'; /* Futura bold */
+    src: url('../fonts/futura/futura_heavy_font-webfont.woff2') format('woff2'),
+    url('../fonts/futura/futura_heavy_font-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'futura'; /* Futura heavy */
+    src: url('../fonts/futura/Futura-Bold.woff') format('woff'),
+    url('../fonts/futura/futura_heavy_font-webfont.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+/* Secondary Font: Futura ----------------- End */

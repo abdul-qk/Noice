@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Promotional Details</title>
+
+    <!-- jQuery mobile files -->
+    <link href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+    <!-- Font awesome file -->
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/f083cf2118.js"></script>
+
+    <!-- Bootstrap CSS file -->
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet">
+
+    <!-- Custom JS Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Custom main CSS file -->
+    <link href="index.css" rel="stylesheet">
+
+</head>
+
+<body class="post-login">
+    <div data-role="page" class="promoDetails">
+        <div data-role="header" id="header" class="align-stuff">
+            <div class="container ">
+                <div class="ui-grid-a head-head">
+                    <div class="ui-block-a pt-2 primary-color-blue-text">
+                        <h3>Promo Details</h3>
+                    </div>
+                    <div class="ui-block-b icons" id="optionz">
+                        <a class="primary-color-black-text" data-rel="popup" href="#overlay"
+                            data-position-to="#optionz"><i class="fas fa-search"></i></a>
+                        <div class="ui-content pt-0 mb-1" data-shadow="false" data-theme="none" data-overlay-theme="a"
+                            data-role="popup" id="overlay">
+                            <div class="deals-search-bar">
+                                <ul data-role="listview" data-filter="true" data-filter-reveal="true"
+                                    data-filter-placeholder="Searching Promotions" data-inset="true">
+                                    <li><a class="dealsClick" accesskey="1">Winter Coffee Sale</a></li>
+                                    <li><a class="dealsClick" accesskey="2">Google Pixel Sale</a></li>
+                                    <li><a class="dealsClick" accesskey="3">Furniture Sale</a></li>
+                                    <li><a class="dealsClick" accesskey="4">Electronic Christmas Sale</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a class="primary-color-black-text" href="realAR.html" rel="external"><i
+                                class="fas fa-camera"></i></a>
+                    </div>
+                </div>
+                <div class="ui-grid-a head-body">
+                    <div class="ui-block-a text-uppercase w80 f50 font-weight-bold" id="promotionTitle">Winter Coffee
+                        Sale</div>
+                    <div class="ui-block-a w100 secondary-color-gold-text pt-3"> Up to <span id="discount"></span>% Off
+                    </div>
+                    <div style="font-size: 22px;" class="ui-block-a w70 f16 small pt-3" id="promotionDetails">Winter is
+                        here and we know how
+                        precious coffee is to
+                        keep you warm. Browse through an extensive collection
+                        of renowned coffee brands to help you survive the cold
+                        holiday season...
+                    </div>
+                    <div class="ui-block-a w100 d-flex pt-4">
+                        <div class="primary-color-grey-text small f16 w65">Offer Valid till <span id="duration"></span>
+                        </div>
+                        <div class="small w35 primary-color-blue-text f16 text-right pr-3"><span id="type"></span> Store
+                            Offer</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div role="main" class="align-stuff">
+            <div class="container">
+                <div class="favourites pb-5">
+                    <div class="ui-grid-a main-head">
+                        <div class="ui-block-a w65">
+                            <h3 class="primary-color-red-text"><b class="small" id="itemCount">1 item available</b></h3>
+                        </div>
+                        <div class="ui-block-b w35 text-right">
+                            <i class="fa fa-filter w25 d-inline" style="font-size: 25px !important;"></i>
+                            <h6 class="mt-0 w75 d-inline"><a class="primary-color-grey-text" data-transition="slide"
+                                    href="sort_filtering.html" rel="external">Sort & Filter</a></h6>
+                        </div>
+                    </div>
+                    <div class="ui-grid-a" id="itemContain">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" id="footer" data-tap-toggle="false" transition="fade"
+            class="py-2">
+            <div data-role="navbar" data-grid="d" class="h90 text-center footer">
+                <ul class="h100">
+                    <li class="w100 h20 nav-footer">
+                        <a href="home.html" rel="external">
+                            <i class="fa fa-home"></i>
+                            <div>Home</div>
+                        </a>
+                    </li>
+                    <li class="w100 h20 nav-footer">
+                        <a href="deals.html" rel="external" class="active">
+                            <i class="fa fa-tag font"></i>
+                            <div>Deals</div>
+                        </a>
+                    </li>
+                    <li class="w100 h20 nav-footer">
+                        <a href="store.html" rel="external">
+                            <i class="fa fa-store-alt"></i>
+                            <div>Store</div>
+                        </a>
+                    </li>
+                    <li class="w100 h20 nav-footer">
+                        <a href="cart.html" rel="external">
+                            <i class="fa fa-shopping-cart"></i>
+                            <div>Cart</div>
+                        </a>
+                    </li>
+                    <li class="w100 h20 nav-footer">
+                        <a href="profile.html" rel="external">
+                            <i class="fa fa-user"></i>
+                            <div>Profile</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" id="footer2" data-tap-toggle="false" transition="fade">
+            <div data-role="navbar" data-grid="d" class="text-center footer2">
+                <ul class="w100">
+                    <li class="w20 nav-footer">
+                        <a href="home.html" rel="external">
+                            <i class="fa fa-home"></i>
+                            <div>Home</div>
+                        </a>
+                    </li>
+                    <li class="w20 nav-footer">
+                        <a href="deals.html" rel="external" class="active">
+                            <i class="fa fa-tag font"></i>
+                            <div>Deals</div>
+                        </a>
+                    </li>
+                    <li class="w20 nav-footer">
+                        <a href="store.html" rel="external">
+                            <i class="fa fa-store-alt"></i>
+                            <div>Store</div>
+                        </a>
+                    </li>
+                    <li class="w20 nav-footer">
+                        <a href="cart.html" rel="external">
+                            <i class="fa fa-shopping-cart"></i>
+                            <div>Cart</div>
+                        </a>
+                    </li>
+                    <li class="w20 nav-footer">
+                        <a href="profile.html" rel="external">
+                            <i class="fa fa-user"></i>
+                            <div>Profile</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            let showProducts;
+
+            $('#' + sessionStorage.getItem('theme')).prop("checked", true);
+
+            if (sessionStorage.getItem('theme') === 'dark') {
+                $('body').addClass('dark');
+            }
+            $('input[name="radio-group-2"]:radio').change(function () {
+                if (this.accessKey === 'dark') {
+                    sessionStorage.setItem('theme', 'dark')
+                    $('body').addClass('dark');
+
+                } else {
+                    sessionStorage.setItem('theme', 'light')
+                    $('body').removeClass('dark');
+                }
+            });
+
+            $.post("backend/singlePromotion.php", {
+                currentPromotion: sessionStorage.getItem("currentDeal")
+            }, function (data, status) {
+                data = JSON.parse(data);
+                $.each(data, function (i, v) {
+                    prodId = v.id;
+                    thisimage = v.image;
+                    $('#promotionTitle').text(v.name);
+                    $('#promotionDetails').text(v.details);
+                    $('#discount').text(v.discount);
+                    $("#duration").text(v.duration);
+                    $('#type').text(v.type);
+                });
+            });
+
+            divTag = '<div class="ui-block-a pr-3">';
+            var favoriteList;
+            var palaceHolder;
+            $.post("backend/favourite.php", {
+                action: 'view',
+                currentUser: sessionStorage.getItem("loggedUser")
+            }, function (data, status) {
+                favoriteList = data;
+            });
+            $(document).on("click", ".dealsClick", function () {
+                sessionStorage.setItem("currentDeal", this.accessKey);
+                sessionStorage.setItem("ratingFilter", '0');
+                sessionStorage.setItem("priceFilter", '{"startValue":"0","EndValue":"999"}');
+                sessionStorage.setItem("sort", 'default');
+                document.location.href = 'promotion_details.html';
+            });
+            $.post("backend/products.php", {
+                sort: sessionStorage.getItem("sort"),
+                priceFilter: sessionStorage.getItem("priceFilter"),
+                ratingFilter: sessionStorage.getItem("ratingFilter"),
+                promotion: sessionStorage.getItem("currentDeal")
+            }, function (data, status) {
+                showProducts = $.parseJSON(data);
+                if (showProducts.length === 1) {
+                    $("#itemCount").html(showProducts.length + ' Item available');
+                } else {
+                    $("#itemCount").html(showProducts.length + ' Items available');
+                }
+                $.each(showProducts, function (i, item) {
+                    if (favoriteList.indexOf(item['id'])!== -1) {
+                        // alert('came here 2');
+                        palaceHolder =
+                            'class="fas fa-heart primary-color-red-text pointer removeClick" accessKey="' +
+                            item['id'] + '"';
+                    } else {
+                        // alert('came here 1');
+                        palaceHolder = 'class="far fa-heart pointer addClick" accessKey="' +
+                            item['id'] + '"';
+                    }
+                    const viewshowProducts = divTag + `
+                            <div class="card py-0 px-0">
+                                <div class="top px-2 py-4 productClick"  accessKey=` + item['id'] + `>
+                                    <div class="ui-block-a w40">
+                                        <a href="product_details.html" rel="external">
+                                            <img alt="product Image" class="img-fluid"
+                                                src="` + item['image'] + `">
+                                        </a>
+                                    </div>
+                                    <div class="ui-block-b w60">
+                                        <div class="ui-grid-solo">
+                                            <div class="ui-block-a">
+                                                <h4 class="fw-bold mt-0">` + item['name'] + `</h4>
+                                            </div>
+                                        </div>
+                                        <div class="ui-grid-a">
+                                            <div class="ui-block-a w100">
+                                                <i class="fas fa-star secondary-color-yellow-text"></i>
+                                                <i class="fas fa-star secondary-color-yellow-text"></i>
+                                                <i class="fas fa-star secondary-color-yellow-text"></i>
+                                                <i class="fas fa-star secondary-color-yellow-text"></i>
+                                                <i class="far fa-star secondary-color-yellow-text"></i>
+                                            </div>
+                                            <div class="ui-block-a">
+                                                <del>20.99</del>
+                                            </div>
+                                            <div class="ui-block-a">
+                                                <div class="red">USD ` + item['price'] + `</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ui-grid-b mb-0 mx-0 product_foot mt-2">
+                                    <div class="ui-block-a w20 text-left">
+                                        <i ` + palaceHolder + `style="font-size: 26px;"></i>
+                                    </div>
+                                    <div class="ui-block-b w40 text-right share">
+                                        <i class="fa fa-share-alt d-inline"></i>
+                                        <h6 class="primary-color-black-text d-inline">Share</h6>
+                                    </div>
+                                    <div class="ui-block-c w40 text-right">
+                                        <a >
+                                            <i class="fa fa-shopping-cart text-primary d-inline"></i>
+                                            <h6 class="text-primary d-inline buyNow" accessKey="` + item['id'] +`">Buy Now</h6>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>`;
+                    $("#itemContain").append(viewshowProducts);
+
+                    if (divTag === '<div class="ui-block-a pr-3">') {
+                        divTag = '<div class="ui-block-b pl-3">';
+                    } else {
+                        divTag = '<div class="ui-block-a pr-3">';
+                    }
+
+
+                });
+
+            });
+            $(document).on("click", ".productClick", function () {
+                sessionStorage.setItem('currentProduct', this.accessKey);
+                document.location.href = 'product_details.html';
+            });
+            $(document).on("click", ".dealsClick", function () {
+                sessionStorage.setItem("currentDeal", this.accessKey);
+                sessionStorage.setItem("ratingFilter", '0');
+                sessionStorage.setItem("priceFilter", '{"startValue":"0","EndValue":"999"}');
+                sessionStorage.setItem("sort", 'default');
+                document.location.href = 'promotion_details.html';
+            });
+
+            $(document).on("click", ".addClick", function () {
+                const that = this;
+                $.post("backend/favourite.php", {
+                    action: 'add',
+                    currentUser: sessionStorage.getItem("loggedUser"),
+                    prodId: this.accessKey
+                }, function (data, status) {
+                    $(that).removeClass('far fa-heart pointer addClick');
+                    $(that).addClass('fas fa-heart primary-color-red-text pointer removeClick');
+                });
+            });
+            $(document).on("click", ".removeClick", function () {
+                const that = this;
+                $.post("backend/favourite.php", {
+                    action: 'remove',
+                    currentUser: sessionStorage.getItem("loggedUser"),
+                    prodId: this.accessKey
+                }, function (data, status) {
+                    $(that).removeClass(
+                        'fas fa-heart primary-color-red-text pointer removeClick');
+                    $(that).addClass('far fa-heart pointer addClick');
+                });
+            });
+            let alreadyCart = false;
+            let index;
+            $(document).on("click", ".buyNow", function () {
+                const clickedProduct = this.accessKey -1;
+                var currentCart = JSON.parse(sessionStorage.getItem('cart'));
+                $.each(currentCart['items'], function (i, item) {
+                    if (item['id'] === clickedProduct) {
+                        alreadyCart = true;
+                        index = i;
+                        return false;
+                    }
+                });
+                if (alreadyCart) {
+                    currentCart['total'] = (parseFloat(currentCart['total']) - (parseFloat(currentCart[
+                        'items'][index]['amount']) * parseFloat(currentCart['items'][index][
+                        'price'
+                        ]))).toFixed(2);
+                    currentCart['items'][index]['amount'] = 1;
+                    currentCart['total'] = (parseFloat(currentCart['total']) + (parseFloat(currentCart[
+                        'items'][index]['amount']) * parseFloat(currentCart['items'][index][
+                        'price'
+                        ]))).toFixed(2);
+                    sessionStorage.setItem('cart', JSON.stringify(currentCart));
+                    document.location.href = "cart.html";
+                } else {
+                    const thisItem = {};
+                    thisItem['image'] = showProducts[clickedProduct].image;
+                    thisItem['id'] = clickedProduct;
+                    thisItem['name'] = showProducts[clickedProduct].name;
+                    thisItem['price'] = showProducts[clickedProduct].price;
+                    thisItem['amount'] = 1;
+                    currentCart['total'] = (parseFloat(currentCart['total']) + (parseFloat(thisItem[
+                        'amount']) * parseFloat(thisItem['price']))).toFixed(2);
+                    currentCart['items'].push(thisItem);
+                    sessionStorage.setItem('cart', JSON.stringify(currentCart));
+                    document.location.href = "cart.html";
+                }
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

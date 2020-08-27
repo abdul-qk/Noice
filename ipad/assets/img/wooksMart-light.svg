@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="516" viewBox="0 0 1080 516">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_3" data-name="Rectangle 3" width="1080" height="508"/>
+    </clipPath>
+    <clipPath id="clip-wooksMart-light">
+      <rect width="1080" height="516"/>
+    </clipPath>
+  </defs>
+  <g id="wooksMart-light" clip-path="url(#clip-wooksMart-light)">
+    <g id="custom_1" data-name="custom – 1" transform="translate(0 4)" clip-path="url(#clip-path)">
+      <g id="Group_3" data-name="Group 3" transform="translate(16.891 15.836)">
+        <g id="Rectangle_1" data-name="Rectangle 1" transform="translate(0 0)">
+          <rect id="Rectangle_1-2" data-name="Rectangle 1" width="1046" height="475" transform="translate(0.109 0.164)" fill="none"/>
+          <rect id="Rectangle_2" data-name="Rectangle 2" width="1033.024" height="462.51" fill="none" stroke="#0072ce" transform="translate(6.615 6.4)"/>
+        </g>
+        <g id="Group_2" data-name="Group 2" transform="translate(86.569 66.51)">
+          <g id="price-tag" transform="translate(531.856 0.245)">
+            <path id="Path_1" data-name="Path 1" d="M144.842,0H13.306A13.305,13.305,0,0,0,0,13.307V144.842a13.309,13.309,0,0,0,3.9,9.4L187.515,337.869a13.306,13.306,0,0,0,18.817,0L337.867,206.332a13.306,13.306,0,0,0,0-18.817L154.255,3.9A13.3,13.3,0,0,0,144.842,0ZM74.511,95.51a21,21,0,1,1,21-21A21,21,0,0,1,74.511,95.51Z" transform="translate(0 0)" fill="#65c561"/>
+            <path id="Path_2" data-name="Path 2" d="M245.355,234.445a66.28,66.28,0,0,0,13.306-25.286c2.661-10.644-1.33-21.289-10.644-30.6-7.983-7.983-15.967-10.644-26.611-9.314a71.1,71.1,0,0,0-18.627,7.983l-10.644,6.653-29.273-29.273c6.653-5.323,13.306-6.653,18.627-5.323,3.992,0,9.314,2.661,14.636,6.653l10.644-10.644c-9.314-9.314-19.958-13.306-30.6-11.974a45.585,45.585,0,0,0-23.95,11.974L138.914,128l-9.314,9.314,14.636,14.636c-6.653,7.983-10.644,17.3-10.644,25.286q0,15.967,11.974,27.941c6.653,6.653,15.967,10.644,23.95,7.983,5.323-1.33,11.974-3.991,21.289-10.644l2.661-1.33,31.939,31.928c-7.983,5.323-14.636,7.983-22.617,6.653a33.468,33.468,0,0,1-15.967-9.314L176.178,241.1c9.314,9.314,19.958,14.636,31.934,13.306q13.977,0,27.941-11.974L252.019,258.4l9.314-9.314Zm-77.173-38.587a15.015,15.015,0,0,1-14.636-3.991c-3.991-3.991-5.323-9.314-5.323-14.636,0-3.992,2.661-9.314,6.653-14.636l26.611,26.611a118.619,118.619,0,0,0-13.3,6.653Zm73.181,18.627c-1.33,3.991-3.992,6.653-6.653,9.314l-30.6-30.6c7.983-5.323,14.636-7.983,18.627-7.983,5.323-1.33,9.314,1.33,14.636,5.323,7.985,6.654,7.985,14.638,4,23.951Z" transform="translate(-21.825 -21.555)" fill="#fff"/>
+            <path id="Path_3" data-name="Path 3" d="M84.211,70.906c7.983,0,13.306,5.323,13.306,13.306s-5.323,13.3-13.306,13.3-13.3-5.323-13.3-13.306,5.321-13.3,13.3-13.3m0-13.306a26.611,26.611,0,1,0,26.612,26.611A26.611,26.611,0,0,0,84.211,57.6Z" transform="translate(-9.699 -9.7)" fill="#4778b3"/>
+          </g>
+          <g id="Group_1" data-name="Group 1" transform="translate(0 0)">
+            <text id="WOOKS" transform="translate(-0.46 118.654)" fill="#fff" font-size="125" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">WOOKS</tspan></text>
+            <text id="mart" transform="translate(-0.46 297.654)" fill="#fff" font-size="202" font-family="JerseyM54, Jersey M54"><tspan x="0" y="0">mart</tspan></text>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

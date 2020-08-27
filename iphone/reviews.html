@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reviews</title>
+
+    <!-- jQuery mobile files -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+    <!-- Font awesome file -->
+    <script src="https://kit.fontawesome.com/f083cf2118.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom JS Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Custom main CSS file -->
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body class="post-login">
+<div data-role="page" class="reviews">
+    <div data-role="header" id="header" class="px-4 pt-5 pb-4">
+        <div class="ui-grid-a d-flex align-items-center header-title-back">
+            <div class="ui-block-a d-flex align-items-center">
+                <a class="ui-btn p-0 m-0 pathUrl" data-transition="slide" accesskey="product_details.html"
+                   rel="external">
+                    <img alt="back button" height="auto" src="assets/img/back.svg" width="30">
+                </a>
+                <h3 class="m-0 pl-3">Reviews</h3>
+            </div>
+            <div class="ui-block-b icons">
+                <a class="primary-color-black-text" data-rel="popup" href="#overlay" data-position-to="origin"><i
+                        class="fas fa-search"></i></a>
+                <div class="ui-content" data-shadow="false" data-theme="none" data-overlay-theme="a" data-role="popup"
+                     id="overlay">
+                    <div class="deals-search-bar">
+                        <ul data-role="listview" data-filter="true" data-filter-reveal="true"
+                            data-filter-placeholder="Searching Promotions" data-inset="true">
+                            <li><a class="dealsClick" accesskey="1">Winter Coffee Sale</a></li>
+                            <li><a class="dealsClick" accesskey="2">Google Pixel Sale</a></li>
+                            <li><a class="dealsClick" accesskey="3">Furniture Sale</a></li>
+                            <li><a class="dealsClick" accesskey="4">Electronic Christmas Sale</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div role="main" class="px-4">
+        <div class="my-4 text-center">
+            <a accesskey="addreview.html" rel="external" class="ui-link pathUrl">Add a Review</a>
+        </div>
+        <ul class="nav nav-tabs nav-justified nav-primary">
+            <li class="nav-item">
+                <a href="#latest" class="nav-link active" data-toggle="tab">Latest</a>
+            </li>
+            <li class="nav-item">
+                <a href="#highest" class="nav-link" data-toggle="tab">Highest</a>
+            </li>
+            <li class="nav-item">
+                <a href="#lowest" class="nav-link" data-toggle="tab">Lowest</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="latest">
+                <div id="reviewList"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
+<script>
+    $(document).ready(function () {
+        $(document).on("click", ".dealsClick", function () {
+            sessionStorage.setItem("currentDeal", this.accessKey);
+            sessionStorage.setItem("ratingFilter", '0');
+            sessionStorage.setItem("priceFilter", '{"startValue":"0","EndValue":"145"}');
+            sessionStorage.setItem("sort", 'default');
+            document.location.href = 'promotion_details.html';
+        });
+        $(document).on("click", ".pathUrl", function () {
+            document.location.href = this.accessKey;
+        });
+        let reviewList;
+        changeValue = 'a';
+        $.post("backend/review.php", {
+            action: "view",
+            prodId: sessionStorage.getItem("currentProduct"),
+        }, function (data, status) {
+            reviewList = $.parseJSON(data);
+            $.each(reviewList[0].review, function (i, item) {
+                let userData;
+                let imagSrc;
+                $.post("backend/userData.php", {
+                    action: 'view',
+                    currentUser: item.email
+                }, function (data, status) {
+                    alert(data);
+                    userData = JSON.parse(data);
+                    imagSrc = userData.imageSrc;
+                    const ratings = item.rating;
+                    const ratingInt = parseInt(ratings);
+                    let ratingHtml = "";
+                    for (let i = 0; i < 5; i++) {
+                        if (ratingInt > i) {
+                            ratingHtml = ratingHtml + `<i class="fas fa-star secondary-color-yellow-text"></i>`;
+                        } else {
+                            ratingHtml = ratingHtml + `<i class="fas fa-star primary-color-grey-text"></i>`;
+                        }
+                    }
+
+                    const review = `<div class="ui-block-` + changeValue + ` w100 w-landscape-50"><div class="comment card px-3">
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a w20">
+                                <img src="` + userData.imageSrc + `" id="previewImage" alt="Profile Avatar" width="75%">
+                            </div>
+                            <div class="ui-block-b w80">
+                                <div class="ui-grid-a d-flex align-items-baseline">
+                                    <div class="ui-block-a">
+                                        <h4 class="black line-height-small font-weight-bold">` + userData.name + `</h4>
+                                    </div>
+                                    <div class="ui-block-b text-right secondary-color-yellow-text">
+                                        ` + ratingHtml + `
+                                    </div>
+                                </div>
+                                <div class="review-content pt-3">
+                                    <p>
+                                        ` + item.description + `
+                                    </p>
+                                </div>
+                                <div class="ui-grid-a d-flex align-items-center">
+                                    <div class="ui-block-a">
+                                        <h6 class="text-muted mb-0 font-weight-bold">` + item.time + `</h6>
+                                    </div>
+                                    <div class="ui-block-b text-right">
+                                        <i class="far fa-heart icon"></i>
+                                        <span class = "font-weight-heavy font-size-m pl-2 v-align-top">57</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
+                    $("#reviewList").append(review);
+                    if (changeValue === 'a') {
+                        changeValue = 'b';
+
+                    } else if (changeValue === 'b') {
+                        changeValue = 'a';
+                    }
+                });
+            });
+        });
+    });
+</script>

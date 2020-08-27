@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cart</title>
+
+    <!-- jQuery mobile files -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+    <!-- Font awesome file -->
+    <script src="https://kit.fontawesome.com/f083cf2118.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom JS Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Custom main CSS file -->
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body class="post-login">
+    <div data-role="page" class="cart">
+        <div data-role="header" id="header" class="align-stuff">
+            <div class="container">
+                <div class="ui-grid-a head-head">
+                    <div class="ui-block-a">
+                        <h1>Cart</h1>
+                    </div>
+                    <div class="ui-block-b icons" id="optionz">
+                        <a class="primary-color-black-text" data-rel="popup" href="#overlay"
+                            data-position-to="#optionz"><i class="fas fa-search"></i></a>
+                        <div class="ui-content pt-0 mb-1" data-shadow="false" data-theme="none" data-overlay-theme="a"
+                            data-role="popup" id="overlay">
+                            <div class="deals-search-bar">
+                                <ul data-role="listview" data-filter="true" data-filter-reveal="true"
+                                    data-filter-placeholder="Searching Promotions" data-inset="true">
+                                    <li><a class="dealsClick" accesskey="1">Winter Coffee Sale</a></li>
+                                    <li><a class="dealsClick" accesskey="2">Google Pixel Sale</a></li>
+                                    <li><a class="dealsClick" accesskey="3">Furniture Sale</a></li>
+                                    <li><a class="dealsClick" accesskey="4">Electronic Christmas Sale</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a class="primary-color-black-text" href="realAR.html" rel="external"><i
+                                class="fas fa-camera"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div role="main" class="align-stuff">
+            <div class="container pb-5">
+                <div class="ui-grid-solo mt-5">
+                    <div class="container">
+                        <div class="ui-grid-a">
+                            <div class="ui-block-b">
+                                <h3 id="itemCount">4 items</h3>
+                            </div>
+                            <div class="ui-grid-b text-right">
+                                <h4 class="gray">Edit</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <div class="head">
+                            <div class="card cart-items">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui-block-b">
+                        <div class="foot mt-5">
+                            <div class="container">
+                                <div class="calc">
+                                    <div class="ui-grid-a">
+                                        <div class="ui-block-a gray">
+                                            <h4 class="mb-3 fw-bold">Cart Total</h4>
+                                        </div>
+                                        <div class="ui-block-b text-right">
+                                            <h4 class="mb-3">USD <span id="fakeTotal">0.00</span></h4>
+                                        </div>
+                                    </div>
+                                    <div class="ui-grid-a">
+                                        <div class="ui-block-a gray">
+                                            <h4 class="mb-3 fw-bold">Tax</h4>
+                                        </div>
+                                        <div class="ui-block-b text-right">
+                                            <h4 class="mb-3">USD 10.00</h4>
+                                        </div>
+                                    </div>
+                                    <div class="ui-grid-a">
+                                        <div class="ui-block-a gray">
+                                            <h4 class="mb-3 fw-bold">Coupon Discount</h4>
+                                        </div>
+                                        <div class="ui-block-b red text-right">
+                                            <h4 class="mb-3">USD -<span id="coupon"></span></h4>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="ui-grid-a">
+                                        <div class="ui-block-a w40 black">
+                                            <h2 class="mb-3"><b>Total</b></h2>
+                                        </div>
+                                        <div class="ui-block-b red w60 text-right">
+                                            <h2 class="mb-3"><b>USD <span id="total">0.00</span></b></h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="checkout mb-5">
+                                    <div class="ui-grid-solo w70 mx-auto">
+                                        <a rel="external" class="ui-btn btn primary-btn mb-3 pathurl" id="isCheckout"
+                                            accesskey="payment.html">Checkout</a>
+                                        <!--<a href="payment.html" rel="external" ><button-->
+                                        <!--class="primary-btn btn ui-btn" id="isCheckout">Checkout</button></a>-->
+                                    </div>
+                                    <div class="ui-grid-solo mx-auto w30 text-center">
+                                        <a href="#coupons" data-rel="popup"><button class="secondary-btn red"><i
+                                                    class="fas fa-ticket-alt primary-color"></i> x 3</button></a>
+                                    </div>
+                                    <div data-role="popup" data-position-to="window" id="coupons">
+                                        <div class="coupons_popup">
+                                            <div class="ui-grid-solo text-center">
+                                                <h2 class="primary-color-blue-text">Redeem Coupons</h2>
+                                            </div>
+                                            <hr>
+                                            <form id="copForm">
+                                                <fieldset data-role="controlgroup" data-iconpos="right">
+                                                    <div class="ui-grid-a" id="cart">
+
+
+
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                            <div class="ui-grid-solo mx-auto w40">
+                                                <a href="" data-role="button" class="primary-btn" id="submit">Apply</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" id="footer" data-tap-toggle="false" transition="fade"
+            class="py-2">
+            <div data-role="navbar" data-grid="d" class="h90 text-center footer">
+                <ul class="h100">
+                    <li class="w100 h20 nav-footer">
+                        <a href="home.html" rel="external">
+                            <i class="fa fa-home"></i>
+                            <div>Home</div>
+                        </a>
+                    </li>
+                    <li class="w100 h20 nav-footer">
+                        <a href="deals.html" rel="external">
+                            <i class="fa fa-tag font"></i>
+                            <div>Deals</div>
+                        </a>
+                    </li>
+                    <li class="w100 h20 nav-footer">
+                        <a href="store.html" rel="external">
+                            <i class="fa fa-store-alt"></i>
+                            <div>Store</div>
+                        </a>
+                    </li>
+                    <li class="w100 h20 nav-footer">
+                        <a href="cart.html" rel="external" class="active">
+                            <i class="fa fa-shopping-cart"></i>
+                            <div>Cart</div>
+                        </a>
+                    </li>
+                    <li class="w100 h20 nav-footer">
+                        <a href="profile.html" rel="external">
+                            <i class="fa fa-user"></i>
+                            <div>Profile</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" id="footer2" data-tap-toggle="false" transition="fade">
+            <div data-role="navbar" data-grid="d" class="text-center footer2">
+                <ul class="w100">
+                    <li class="w20 nav-footer">
+                        <a href="home.html" rel="external">
+                            <i class="fa fa-home"></i>
+                            <div>Home</div>
+                        </a>
+                    </li>
+                    <li class="w20 nav-footer">
+                        <a href="deals.html" rel="external">
+                            <i class="fa fa-tag font"></i>
+                            <div>Deals</div>
+                        </a>
+                    </li>
+                    <li class="w20 nav-footer">
+                        <a href="store.html" rel="external">
+                            <i class="fa fa-store-alt"></i>
+                            <div>Store</div>
+                        </a>
+                    </li>
+                    <li class="w20 nav-footer">
+                        <a href="cart.html" rel="external" class="active">
+                            <i class="fa fa-shopping-cart"></i>
+                            <div>Cart</div>
+                        </a>
+                    </li>
+                    <li class="w20 nav-footer">
+                        <a href="profile.html" rel="external">
+                            <i class="fa fa-user"></i>
+                            <div>Profile</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    $(document).ready(function () {
+
+        $('#' + sessionStorage.getItem('theme')).prop("checked", true);
+
+        if (sessionStorage.getItem('theme') === 'dark') {
+            $('body').addClass('dark');
+        }
+        $('input[name="radio-group-2"]:radio').change(function () {
+            if (this.accessKey === 'dark') {
+                sessionStorage.setItem('theme', 'dark')
+                $('body').addClass('dark');
+
+            } else {
+                sessionStorage.setItem('theme', 'light')
+                $('body').removeClass('dark');
+            }
+        });
+        $(document).on("click", ".pathUrl", function () {
+            document.location.href = this.accessKey;
+        });
+
+        var cartData = JSON.parse(sessionStorage.getItem("cart"));
+        if (parseInt(cartData.items) > 1) {
+            $("#itemCount").text((cartData.items).length + ' Items');
+        } else {
+            $("#itemCount").text((cartData.items).length + ' Item');
+        }
+        changeData = 'a';
+
+        if (parseInt((cartData.items).length) > 0) {
+            $.each(cartData['items'], function (i, item) {
+                if (parseInt(item['amount']) !== 0) {
+                    var cart = `<div class="cart-item" accesskey="` + i + `">
+                                    <div class="ui-grid-b">
+                                        <div class="ui-block-a w20">
+                                            <img src="` + item['image'] + `" width="60px" alt="Coffee">
+                                        </div>
+                                        <div class="ui-block-b cart-content pl-5 w75 pl-4">
+                                            <h4 class="truncate">` + item['name'] + `</h4>
+                                            <h3 class="red">USD` + item['price'] + `</h3>
+                                            <div class="ui-grid-a">
+                                                <div class="ui-block-a w85">
+                                                    <div style="width: 90% !important;" class="ui-grid-b counter">
+                                                        <div class="ui-block-a minusCount" accessKey="` + item['id'] + `">
+                                                            <i class="fas fa-minus box-shadow-default"></i>
+                                                        </div>
+                                                        <div class="ui-block-b">
+                                                            <p class ="count" id="count` + item['id'] + `">` + item[
+                            'amount'] + `</p>
+                                                        </div>
+                                                        <div class="ui-block-c plusCount" accessKey="` + item['id'] +
+                        `">
+                                                            <i class="fas fa-plus box-shadow-default"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="ui-block-b w15 text-right">
+                                                    <div class="ui-grid-solo">
+                                                        <a><i style="font-size: 20px; padding-top: 30px" class="fa fa-trash-o primary-color-black-text icon bg-transparent deleteIcon" accesskey="` +
+                        i + `"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ui-block-c w5">
+                                            <div class="ui-grid-solo text-right">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                </div>`;
+
+                    $('.cart-items').append(cart);
+
+                    if (changeData === 'a') {
+                        changeData = 'b'
+                    } else {
+                        changeData = 'a'
+                    }
+                } else {
+
+                }
+            });
+        } else {
+            const cart =
+                `<div class = "h100 w-100 d-flex align-items-center justify-content-center font-weight-bold text-muted"> No Items Available </div>`;
+            $('#isCheckout').addClass('disabled');
+            $('.cart-items').append(cart);
+        }
+
+
+        $('#total').text((parseFloat(cartData['total']) - parseFloat(cartData['coupon'])).toFixed(2));
+        $('#fakeTotal').text(cartData['total']);
+        $('#coupon').text(cartData['coupon']);
+
+        //coupon jquery
+        $("#submit").click(function () {
+            var cop = $('input[name=radio-group-1]:checked', '#copForm').val();
+            var cartData = JSON.parse(sessionStorage.getItem("cart"));
+            cartData['coupon'] = cop;
+            sessionStorage.setItem('cart', JSON.stringify(cartData));
+            document.location.href = "cart.html";
+        });
+
+        changeData = 'a';
+        $.post("backend/coupons.php", {
+            type: 'null'
+        }, function (data, status) {
+            showCoupons = $.parseJSON(data);
+            $.each(showCoupons, function (i, item) {
+
+                if (item['status'] === 'collected') {
+                    var coupon = `<div class="ui-block-` + changeData + `">
+                                                            <div class="ui-radio-2 card mt-3 ml-3 mr-3">
+                                                                <label for="1">
+                                                                    <div style="width: 250px !important;"
+                                                                        class="ui-grid-a">
+                                                                        <div class="ui-block-a w80">
+                                                                            <h4>` + item['name'] +
+                        `</h4>
+                                                                            <p class="gray">Valid through
+                                                                                <br />21/11/2019
+                                                                                to
+                                                                                31/12/2019</p>
+                                                                            <h4 class="primary-color-green-text"><b>USD ` +
+                        item['id'] + `</b>
+                                                                            </h4>
+                                                                        </div>
+                                                                        <div class="ui-block-b w20">
+                                                                            <input type="radio" value=" ` + item[
+                            'id'] + `" name="radio-group-1"  id="` + parseInt(item['id']) + `">
+                                                                        </div>
+                                                                    </div>
+                                                                </label>
+                                                            </div>
+                                                        </div>`;
+                    $("#cart").append(coupon);
+                    $('#' + parseInt(JSON.parse(sessionStorage.getItem('cart'))['coupon']))
+                        .prop("checked", true);
+
+                    if (changeData === 'a') {
+                        changeData = 'b'
+                    } else {
+                        changeData = 'a'
+                    }
+
+                }
+            });
+        });
+
+
+
+
+
+
+        //$(".count").text("1");
+        $(document).on("click", ".plusCount", function () {
+            var currentItem = this.accessKey;
+            var countValue = $("#count" + currentItem);
+            var index;
+            countValue.text(parseInt(countValue.text()) + 1);
+            $.each(cartData['items'], function (i, item) {
+                if (item['id'] === currentItem) {
+                    index = i;
+                }
+            });
+            cartData['total'] = (parseFloat(cartData['total']) - (parseFloat(cartData['items'][index][
+                'amount'
+            ])) * parseFloat(cartData['items'][index]['price'])).toFixed(2);
+            cartData['items'][index]['amount'] = parseInt(countValue.text());
+            cartData['total'] = (parseFloat(cartData['total']) + (parseFloat(cartData['items'][index][
+                'amount'
+            ])) * parseFloat(cartData['items'][index]['price'])).toFixed(2);
+            $('#total').text((parseFloat(cartData['total']) - parseFloat(cartData['coupon'])).toFixed(
+                2));
+            $('#fakeTotal').text(cartData['total']);
+            sessionStorage.setItem('cart', JSON.stringify(cartData));
+        });
+
+        $(document).on("click", ".minusCount", function () {
+            var currentItem = this.accessKey;
+            var countValue = $("#count" + currentItem);
+            var index;
+            if (parseInt(countValue.text()) === 0) {
+
+            } else {
+                countValue.text(parseInt(countValue.text()) - 1);
+            }
+            $.each(cartData['items'], function (i, item) {
+                if (item['id'] === currentItem) {
+                    index = i;
+                }
+            });
+            cartData['total'] = (parseFloat(cartData['total']) - (parseFloat(cartData['items'][index][
+                'amount'
+            ])) * parseFloat(cartData['items'][index]['price'])).toFixed(2);
+            cartData['items'][index]['amount'] = parseInt(countValue.text());
+            cartData['total'] = (parseFloat(cartData['total']) + (parseFloat(cartData['items'][index][
+                'amount'
+            ])) * parseFloat(cartData['items'][index]['price'])).toFixed(2);
+            $('#total').text((parseFloat(cartData['total']) - parseFloat(cartData['coupon'])).toFixed(
+                2));
+            $('#fakeTotal').text(cartData['total']);
+            sessionStorage.setItem('cart', JSON.stringify(cartData));
+        });
+    });
+
+    $(document).ready(function () {
+        $(document).on("click", ".pathurl", function () {
+            document.location.href = this.accessKey;
+        });
+        $(document).on("click", ".dealsClick", function () {
+            sessionStorage.setItem("currentDeal", this.accessKey);
+            sessionStorage.setItem("ratingFilter", '0');
+            sessionStorage.setItem("priceFilter", '{"startValue":"0","EndValue":"145"}');
+            sessionStorage.setItem("sort", 'default');
+            document.location.href = 'promotion_details.html';
+        });
+        $(document).on("click", ".deleteIcon", function () {
+            const cartData = JSON.parse(sessionStorage.getItem("cart"));
+            const cartItemNo = this.accessKey;
+            const cartItems = $('.cart-item');
+            for (i = 0; i < cartItems.length; i++) {
+                if (cartItems[i].accessKey === cartItemNo) {
+                    cartData['total'] = (parseFloat(cartData['total']) - (parseFloat(cartData['items'][
+                        cartItemNo
+                    ]['amount'])) * parseFloat(cartData['items'][cartItemNo]['price'])).toFixed(2);
+                    $('#total').text((parseFloat(cartData['total']) - parseFloat(cartData['coupon']))
+                        .toFixed(2));
+                    $('#fakeTotal').text(cartData['total']);
+                    $('#coupon').text(cartData['coupon']);
+                    $(cartItems[i]).fadeOut(500, function () {});
+                }
+            }
+            delete cartData['items'][this.accessKey];
+            const cartArray = cartData['items'].filter(function (el) {
+                return el != null;
+            });
+            if (parseInt(cartArray) > 1) {
+                $("#itemCount").text(cartArray.length + ' Items');
+            } else {
+                $("#itemCount").text(cartArray.length + ' Item');
+            }
+            if (parseInt(cartArray.length) === 0) {
+                const cart =
+                    `<div class = "h100 w-100 d-flex align-items-center justify-content-center font-weight-bold text-muted"> No Items Available </div>`;
+                $('#isCheckout').addClass('disabled');
+                $('.cart-items').append(cart);
+            }
+
+            cartData['items'] = cartArray;
+            sessionStorage.setItem("cart", JSON.stringify(cartData));
+
+        });
+    })
+</script>

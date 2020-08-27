@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Introduction</title>
+
+    <!-- jQuery mobile files -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <!-- Font awesome file -->
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/f083cf2118.js"></script>
+
+    <!-- Swiper script file -->
+    <script src="scripts/preLoginSwiper.js"></script>
+
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom main CSS file -->
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body class="pre-login">
+<div data-role="page" id="swiperInformation">
+    <div data-role="header" id="header"></div>
+    <div role="main" class="ui-content px-4">
+
+        <div id="1" class="ui-grid-c h90 active">
+            <div class="ui-block-a font-family-primary h20">
+                <h2 class="text-primary mb-0 font-weight-bold">Fast</h2>
+                <h2 class="text-primary font-weight-bold">and Easy</h2>
+            </div>
+            <div class="ui-block-b text-center h50">
+                <img src="assets/img/swiperOneGraphic.svg" height="100%" width="100%">
+            </div>
+            <div class="ui-block-c h30 d-flex align-items-center font-size-m">
+                Don't waste time browsing every corner and let the app take control to give you the perfect customer
+                experience !
+                We'll recommend the best deals, all day every day.
+            </div>
+        </div>
+
+        <div id="2" class="ui-grid-c h90 d-none">
+            <div class="ui-block-a font-family-primary h20">
+                <h2 class="text-primary mb-0 font-weight-bold">Loyalty</h2>
+                <h2 class="text-primary font-weight-bold">is Rewarded</h2>
+            </div>
+            <div class="ui-block-b text-center h50">
+                <img src="assets/img/swiperTwoGraphic.svg" height="100%" width="100%">
+            </div>
+            <div class="ui-block-c h30 d-flex align-items-center font-size-m">
+                We treat you for being an enthusiastic shopper through clever discounts, points and coupons !
+                Think you're the ultimate shopper ? Then go ahead, challenge others and rise to the top of the rankings
+                !
+            </div>
+        </div>
+
+        <div id="3" class="ui-grid-c h90 d-none">
+            <div class="ui-block-a font-family-primary h20">
+                <h2 class="text-primary mb-0 font-weight-bold">You're a</h2>
+                <h2 class="text-primary font-weight-bold">valuable customer</h2>
+            </div>
+            <div class="ui-block-b text-center h50">
+                <img src="assets/img/swiperThreeGraphic.svg" height="100%" width="100%">
+            </div>
+            <div class="ui-block-c h30 d-flex align-items-center font-size-m">
+                Welcome to the world of Wooks Mart, where the prices are low and the deals are frequent !
+                Browse through a valley of promotions and products, all designed and available to suit your needs.
+            </div>
+        </div>
+
+        <div id="4" class="ui-grid-c h90 d-none">
+            <div class="ui-block-a font-family-primary h20">
+                <h2 class="text-primary mb-0 font-weight-bold">Defining</h2>
+                <h2 class="text-primary font-weight-bold">reality</h2>
+            </div>
+            <div class="ui-block-b text-center h50">
+                <img src="assets/img/swiperFourGraphic.svg" height="100%" width="100%">
+            </div>
+            <div class="ui-block-c h30 d-flex align-items-center font-size-m">
+                We take your shopping to a whole new level !
+                Our platform offers you the most interactive and fun way to keep your shopping spirits going. All
+                through the power of Augmented Reality.
+            </div>
+        </div>
+
+        <div class="ui-block-d text-center h10 d-flex justify-content-center align-items-center">
+            <div class="paginationSection">
+                <span id="c1" class="indicator active"></span>
+                <span id="c2" class="indicator"></span>
+                <span id="c3" class="indicator"></span>
+                <span id="c4" class="indicator"></span>
+            </div>
+        </div>
+
+    </div>
+    <div data-role="footer" class="px-4 pt-4 pb-2 ui-card" id="footer">
+        <div class="w-landscape-50">
+            <a accesskey="signIn.html" class="ui-btn btn primary-btn mb-3 pathUrl">SIGN IN</a>
+            <a accesskey="createAccount.html" class="ui-btn btn secondary-btn pathUrl">CREATE ACCOUNT</a>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $(document).on("click", ".pathUrl", function () {
+            document.location.href = this.accessKey;
+        });
+    });
+</script>
+</body>
+
+</html>

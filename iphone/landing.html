@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to NOICE</title>
+
+    <!-- jQuery mobile files -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+    <!-- Font awesome file -->
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/f083cf2118.js"></script>
+
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom main CSS file -->
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body class = "pre-login">
+    <div data-role="page">
+        <div data-role="header" id="header">
+            <div class = "title py-5 px-4">
+                <div class ="wordmark text-center">NOICE</div>
+                <h5 class = "text-center line-height-none"> THE ONE STOP FOR THE BEST STUFF </h5>
+            </div>
+        </div>
+        <div data-role="main" class = "ui-content px-4">
+            <img src="assets/img/landingGraphic.svg" height="100%" width="100%">
+        </div>
+        <div data-role="footer" class = "px-4 pt-4 pb-2" id="footer">
+            <a  class="ui-btn btn primary-btn mb-3 pathurl" accesskey="signIn.html">SIGN IN</a>
+            <a  class="ui-btn btn secondary-btn pathurl" accesskey="createAccount.html">CREATE ACCOUNT</a>
+            <a href="#" class="ui-btn btn bg-transparent text-muted"> Browse as guest </a>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $(document).on("click", ".pathurl", function () {
+                document.location.href=this.accessKey;
+            });
+        })
+    </script>
+</body>
+
+</html>

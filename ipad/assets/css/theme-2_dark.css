@@ -1,0 +1,146 @@
+@import "theme_variables_2.css";
+
+.post-login.dark {
+    background-color: var(--secondary-color-black) !important;
+}
+
+.post-login.dark .home,
+.post-login.dark .deals,
+.post-login.dark .cart,
+.post-login.dark .profile,
+.post-login.dark .promoDetails,
+.post-login.dark .productDetails,
+.post-login.dark .reviews,
+.post-login.dark .addReview,
+.post-login.dark .coupons,
+.post-login.dark .changeAddress,
+.post-login.dark .payment,
+.post-login.dark .sortFilter,
+.post-login.dark .store,
+.post-login.dark .map {
+    background-color: var(--secondary-color-black) !important;
+}
+
+.post-login.dark .ui-page-theme-a,
+.post-login.dark #header .header-title,
+.post-login.dark #header .header-content,
+.post-login.dark #header i {
+    color: var(--primary-color-white) !important;
+}
+
+.post-login.dark #main .ui-link,
+.post-login.dark .reviews .ui-link,
+.post-login.dark .coupons .ui-link,
+.post-login.dark .changeAddress .ui-link,
+.post-login.dark .sortFilter .ui-link,
+.post-login.dark .profile .ui-link,
+.post-login.dark .payment .ui-link,
+.post-login.dark .product_details .black,
+.post-login.dark .head-head h1,
+.post-login.dark .head-body h2 {
+    color: var(--primary-color-white) !important;
+}
+
+.post-login.dark .box-shadow-default,
+.post-login.dark .card,
+.post-login.dark .promotion-banner,
+.post-login.dark #footer-secondary {
+    background-color: var(--primary-color-black);
+    -webkit-box-shadow: 0 1px var(--primary-color-white) inset, 0 1px 3px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0 1px var(--primary-color-white) inset, 0 1px 3px rgba(0, 0, 0, 1);
+    box-shadow: 0 1px var(--primary-color-black) inset, 0 1px 3px rgba(0, 0, 0, 1);
+}
+
+.post-login.dark #header,
+.post-login.dark #footer,
+.post-login.dark #footer2 {
+    background-color: var(--primary-color-black);
+    -webkit-box-shadow: 0 1px var(--primary-color-white) inset, 0 1px 3px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0 1px var(--primary-color-white) inset, 0 1px 3px rgba(0, 0, 0, 1);
+    box-shadow: 0 1px var(--primary-color-black) inset, 0 1px 3px rgba(0, 0, 0, 1);
+}
+
+/* Primary Colours start */
+.dark .primary-color-blue-text {
+    color: var(--secondary-color-yellow) !important;
+}
+
+.post-login.dark .primary-color-blue-bg {
+    background-color: var(--primary-color-blue) !important;
+}
+
+.post-login.dark .primary-color-black-text {
+    color: var(--primary-color-white) !important;
+}
+
+.post-login.dark .primary-color-black-bg {
+    background-color: var(--primary-color-white) !important;
+}
+
+/* Primary Colour end */
+
+
+.post-login.dark .rankTable {
+    color: var(--primary-color-white) !important;
+}
+
+.post-login.dark .rankContent .primary-color {
+    color: var(--secondary-color-yellow) !important;
+}
+
+.post-login.dark .nav-tabs .nav-item .nav-link.active {
+    color: var(--primary-color-white);
+    background-color: var(--primary-color-black);
+    box-shadow: unset !important;
+}
+
+.post-login.dark .nav-tabs .nav-item .ui-link {
+    color: var(--primary-color-white) !important;
+}
+
+.post-login.dark #footer .ui-btn,
+.post-login.dark #footer2 .ui-btn {
+    background-color: var(--primary-color-black) !important;
+    border: none !important;
+}
+
+.post-login.dark #footer .text-primary,
+.post-login.dark #footer .active,
+.post-login.dark #footer2 .text-primary,
+.post-login.dark #footer2 .active {
+    color: var(--secondary-color-yellow) !important;
+}
+
+.post-login.dark hr {
+    border-color: var(--secondary-color-black);
+}
+
+.post-login.dark .product_foot {
+    background: rgb(39, 39, 39) !important;
+}
+
+.post-login.dark .nav-tabs {
+    background-color: rgba(227, 227, 227, 0.4) !important;
+    border: unset !important;
+}
+
+.post-login.dark .nav-tabs .nav-link.active {
+    border: unset !important;
+}
+
+.post-login.dark #footer .ui-btn,
+.post-login.dark #footer2 .ui-btn {
+    background-color: transparent !important;
+}
+
+.post-login.dark .profile .tabs li .ui-link {
+    color: var(--primary-color-grey) !important;
+}
+
+.post-login.dark .profile .tabs li.active .ui-link {
+    color: var(--primary-color-white) !important;
+}
+
+.dark .ui-page-theme-a .ui-bar-inherit {
+    color: var(--primary-color-white) !important;
+}

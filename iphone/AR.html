@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<!-- <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script> -->
+<!-- <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+<script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+<script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+
+<body style='margin : 0px; overflow: hidden;'>
+    <a-scene embedded arjs='sourceType: webcam;'>
+
+        <a-marker type="pattern" url="assets/ar/noice.patt">
+            <!-- <a-marker type='pattern'>
+            <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box> -->
+            <a-entity 
+                position="0.5 -2 -0.5"
+                scale="0.10 0.10 0.10"
+                gltf-model-next="url(assets/ar/scene.gltf)"></a-entity>
+        </a-marker>
+
+            <!-- define your gltf asset -->
+        <a-entity camera>
+        </a-entity>
+    </a-scene>
+    <!--<a-assets>
+        <a-asset-item id="tree" src="assets/ar/scene.gltf"></a-asset-item>
+    </a-assets>
+    <!-- use your gltf model -->
+    <!-- <a-entity gltf-model="#tree"></a-entity> -->
+</body>
+
+</html>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script>
+    var m = document.querySelector("a-marker");
+    m.addEventListener("markerFound", (e) => {
+        $.post("backend/AR.php", {
+            points: '100',
+            currentUser: sessionStorage.getItem('loggedUser')
+        }, function (data, status) {
+            // alert("Test");
+            setTimeout(function () {
+                window.location = "http://localhost/mobile-ux/ar_ui.html"
+            }, 500);
+        });
+    });
+
+    m.addEventListener("markerLost", (e) => {
+        console.log("lost")
+    });
+</script>

@@ -1,0 +1,24 @@
+:root {
+
+    /* Heading Font Sizes start */
+    --font-size-title: 72px;
+    --font-size-h1: 40px;
+    --font-size-h2: 28px;
+    --font-size-h3: 22px;
+    --font-size-h4: 16px;
+    --font-size-h5: 14px;
+    --font-size-h6: 12px;
+    /* Font Sizes end */
+
+    /* Common Font Sizes Start */
+
+    /* Common Font Sizes End */
+
+    /* Font Weights start */
+    --font-weight-light: 100;
+    --font-weight-medium: normal;
+    --font-weight-bold: 600;
+    --font-weight-heavy: 800;
+    /* Font Weights end */
+
+}

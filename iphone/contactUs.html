@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us</title>
+
+    <!-- jQuery mobile files -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+    <!-- Font awesome file -->
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/f083cf2118.js"></script>
+
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom main CSS file -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="pre-login">
+<div data-role="page" id="landing">
+    <div data-role="header" id="loginHeader" class="p-4">
+        <div class="ui-grid-a d-flex align-items-center">
+            <div class="ui-block-a">
+                <a accesskey="index.html" class="p-0 m-0 pathUrl"><img src="assets/img/back.svg" height="30" width="30"></a>
+            </div>
+            <div class="ui-block-b text-primary text-center">Contact Us</div>
+        </div>
+    </div>
+
+    <div data-role="main" class="ui-content px-4 pt-4">
+        <div>
+            <h1 class="font-weight-bold font-family-primary primary-color-black-text">Have thoughts ?</h1>
+            <h4 class="font-family-primary text-muted">Let us know what you have in mind</h4>
+        </div>
+        <form action="handler.php" method="post" class="pt-4 mb-4">
+            <div class="ui-field-contain">
+                <label for="fullName">Your Name</label>
+                <input type="text" name="name" id="fullName" value="" placeholder="Enter your name here"/>
+            </div>
+            <div class="ui-field-contain">
+                <label for="email">Email</label>
+                <input type="email" name="name" id="email" value="" placeholder="Enter your email here"/>
+            </div>
+            <div class="ui-field-contain feedbackContainer">
+                <label for="feedback">Your Thoughts</label>
+                <div class="feedback">
+                    <textarea name="feedback" rows="4" id="feedback" value=""
+                              placeholder="Give us your honest opinion"></textarea>
+                </div>
+            </div>
+        </form>
+        <div class="text-center">
+            <h3>Our Social Media</h3>
+            <div data-role="controlgroup" data-type="horizontal" class="my-3">
+                <a data-role="button" href="signIn.html"><img src="assets/icons/facebook.svg" height="40"
+                                                              width="40"></a>
+                <a data-role="button" href="signIn.html"><img src="assets/icons/instagram.svg" height="40"
+                                                              width="40"></a>
+                <a data-role="button" href="signIn.html"><img src="assets/icons/twitter.svg" height="40" width="40"></a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

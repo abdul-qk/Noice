@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add a Review</title>
+
+    <!-- jQuery mobile files -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+    <!-- Font awesome file -->
+    <script src="https://kit.fontawesome.com/f083cf2118.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom JS Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Custom main CSS file -->
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body class="post-login">
+<div data-role="page" class="addReview h100">
+    <div data-role="header" id="header" class="px-4 pt-5 pb-4">
+        <div class="ui-grid-a d-flex align-items-center header-title-back">
+            <div class="ui-block-a d-flex align-items-center">
+                <a class="ui-btn p-0 m-0 pathUrl" data-transition="slide" accesskey="promotion_details.html"
+                   rel="external">
+                    <img alt="back button" height="auto" src="assets/img/back.svg" width="30">
+                </a>
+                <h3 class="m-0 pl-3">Add Review</h3>
+            </div>
+            <div class="ui-block-b">
+                <i class="fas fa-search" style="font-size: 19px;"></i>
+            </div>
+        </div>
+    </div>
+    <div role="main" id="content" class="px-4">
+        <div class="review pt-5">
+            <div class="">
+                <div class="font-size-xl truncate mb-1 productTitle"> Stok Cold Brew Coffee</div>
+                <div class="font-size-s text-muted font-weight-bold truncate productSubTitle">Medium Caffeine - Hazelnut
+                    Vanilla in Cold Brew Coffee
+                </div>
+            </div>
+            <hr>
+            <div class="mt-4 mb-3">
+                <div class="font-size-l font-weight-heavy mb-3">Your Rating</div>
+                <div class="font-size-xx text-left text-muted">
+                    <ul id="rating">
+                        <li class="rate" value="1">
+                            <i class="fas fa-star"></i>
+                        </li>
+                        <li class="rate" value="2">
+                            <i class="fas fa-star"></i>
+                        </li>
+                        <li class="rate" value="3">
+                            <i class="fas fa-star"></i>
+                        </li>
+                        <li class="rate" value="4">
+                            <i class="fas fa-star"></i>
+                        </li>
+                        <li class="rate" value="5">
+                            <i class="fas fa-star"></i>
+                        </li>
+                    </ul>
+                    <input type="text" id="ratedVal" name="ratedVal" class="d-none"/>
+                </div>
+            </div>
+            <div class="ui-field-contain mt-4">
+                <div class="font-size-l font-weight-heavy mb-3">Your Comment</div>
+                <textarea rows="5" type="text" name="feedback" id="feedbackInput"
+                          placeholder="Share your experience with the product..."></textarea>
+            </div>
+        </div>
+    </div>
+    <div data-role="footer" data-position="fixed" id="footer-secondary" data-tap-toggle="false" transition="fade"
+         class="pt-4 pb-4">
+        <div class="ui-grid-solo text-center sort-apply px-4">
+            <div class="ui-block-a w100 mb-3">
+                <a class="ui-btn btn primary-btn m-0" id="submit">POST REVIEW</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
+<script>
+    $(document).ready(function () {
+        alert(sessionStorage.getItem("loggedUser"));
+
+        $('#rating li').on('click', function () {
+
+            const onStar = parseInt(this.value); // The star currently selected
+            const stars = $(this).parent().children('li.rate');
+
+            for (i = 0; i < stars.length; i++) {
+                $(stars[i]).removeClass('secondary-color-yellow-text');
+            }
+            for (i = 0; i < onStar; i++) {
+                $(stars[i]).addClass('secondary-color-yellow-text');
+            }
+            const ratingValue = parseInt($('#rating li.secondary-color-yellow-text').last().val());
+
+            $('#ratedVal').val(ratingValue);
+        })
+    });
+
+    $("#submit").click(function () {
+        $.post("backend/review.php", {
+            action: "add",
+            email: sessionStorage.getItem("loggedUser"),
+            prodId: sessionStorage.getItem("currentProduct"),
+            description: $("#feedbackInput").val(),
+            time: '2 days ago',
+            rating: $('#ratedVal').val(),
+        }, function (data, status) {
+            if (data === 'error') {
+                alert('Error');
+            } else if (data === 'success') {
+                document.location.href = 'reviews.html';
+            } else {
+
+            }
+        });
+    });
+</script>

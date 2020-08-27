@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <title>NOICE</title>
+
+    <!-- jQuery mobile files -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+    <!-- Font awesome file -->
+    <script src="https://kit.fontawesome.com/f083cf2118.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom JS Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Custom main CSS file -->
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <div data-role="page" class="ui-grid-a">
+        <div class="ui-block-a">
+            <div class="ui-grid-a">
+                <div class="container mt-5">
+                    <div class="ui-block-a w10">
+                        <a data-rel="back" rel="external"><img src="assets/img/back.svg" height="30" width="30"></a>
+                    </div>
+                    <div class="-ui-block-b w90">
+                        <h3 class="ui-block-b text-primary text-center">Sign In</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-grid-solo mx-auto my-auto index-left">
+                <img src="assets/img/loginGraphic.svg" class="img-fluid" width="400" alt="">
+            </div>
+        </div>
+        <div class="ui-block-b index-right">
+            <div class="ui-grid-solo w60 mx-auto login-right">
+                <label class="mt-4" for="email">Email</label>
+                <input type="email" name="email" id="email" value="" placeholder="Enter your email name here" />
+                <span class="red f12" id="notfound"></span>
+                <label class="mt-4" for="password">Password</label>
+                <input type="password" name="password" id="password" value=""
+                    placeholder="Enter your password name here" />
+                <span class="red f12" id="passwrong"></span>
+            </div>
+            <div class="ui-grid-solo w50 mx-auto text-center">
+                <a data-position-to="window" data-rel="popup" id="submit" data-role="button"
+                    class="primary-btn ui-btn btn mt-5">Login</a>
+                <p class="f16 primary-color-grey-text"><a href="forgotPassword.html" rel="external" class="f16">Forgot
+                        Password?</a></p>
+                <p class="f16 primary-color-grey-text">Dont have an Account? <a href="createAccount.html" rel="external"
+                        class="f16">Sign Up</a></p>
+                <div data-role="popup" id="confirm" class="ui-content popup-success">
+                    <div class="ui-grid-solo mx-auto text-center">
+                        <img src="assets/img/success.svg" alt="" class="img-fluid">
+                        <h1 class="primary-color-green-text f50 pt-3">Login Successful</h1>
+                        <h1 class="primary-color-grey-text">Lets Go!</h1>
+                        <p class="primary-color-grey-text f16 fw-bold pt-4">You will be redirected in 3 seconds..</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    $(document).ready(function () {
+
+        $("#submit").click(function () {
+            $("#passwrong").html('');
+            $("#notfound").html('');
+            $.post("backend/signIn.php", {
+                email: $('#email').val(),
+                password: $('#password').val()
+            }, function (data, status) {
+                if (data === 'passwrong') {
+                    $("#passwrong").html('Password wrong.Try again');
+                } else if (data === 'empty_email') {
+                    $("#notfound").html('Email cannot be empty');
+                } else if (data === 'proper_email') {
+                    $("#notfound").html('Enter an valid email');
+                } else if (data === 'empty_password') {
+                    $("#passwrong").html('Password cannot be empty');
+                } else if (data === 'notfound') {
+                    $("#notfound").html('User does not exist');
+                } else if (data === 'success') {
+                    sessionStorage.setItem("cart", '{"total":"0","coupon":"0","items":[]}');
+                    sessionStorage.setItem("loggedUser", $('#email').val());
+                    document.location.href = 'home.html';
+                } else {
+                    alert(data);
+                }
+            });
+        });
+    });
+</script>

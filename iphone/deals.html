@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Deals</title>
+
+    <!-- jQuery mobile files -->
+    <link href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+    <!-- Font awesome file -->
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/f083cf2118.js"></script>
+
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom JS Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Custom main CSS file -->
+    <link href="index.css" rel="stylesheet">
+
+</head>
+
+<body class="post-login">
+<div data-role="page" class="deals">
+    <div data-role="header" id="header" class="px-4 pt-5 pb-4">
+        <div class="ui-grid-a d-flex align-items-center header-title">
+            <div class="ui-block-a">
+                <h3 class="m-0">Deals</h3>
+            </div>
+            <div class="ui-block-b icons">
+                <a class="primary-color-black-text" data-rel="popup" href="#overlay" data-position-to="origin"><i
+                        class="fas fa-search"></i></a>
+                <div class="ui-content" data-shadow="false" data-theme="none" data-overlay-theme="a" data-role="popup"
+                     id="overlay">
+                    <div class="deals-search-bar">
+                        <ul data-role="listview" data-filter="true" data-filter-reveal="true"
+                            data-filter-placeholder="Searching Promotions" data-inset="true">
+                            <li><a class="dealsClick" accesskey="1">Winter Coffee Sale</a></li>
+                            <li><a class="dealsClick" accesskey="2">Google Pixel Sale</a></li>
+                            <li><a class="dealsClick" accesskey="3">Furniture Sale</a></li>
+                            <li><a class="dealsClick" accesskey="4">Electronic Christmas Sale</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <i class="fas fa-camera"></i>
+            </div>
+        </div>
+    </div>
+    <div role="main" class="px-4 pt-4 pb-3">
+        <ul class="nav nav-tabs nav-justified nav-primary">
+            <li class="nav-item">
+                <a href="#trending" class="nav-link active" data-toggle="tab">Trending</a>
+            </li>
+            <li class="nav-item">
+                <a href="#latest" class="nav-link" data-toggle="tab">Latest</a>
+            </li>
+            <li class="nav-item">
+                <a href="#for_you" class="nav-link" data-toggle="tab">For You</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="trending">
+                <div class="ui-grid-solo mt-4 mb-3">
+                    <div class="ui-block-a">
+                        <div class="font-size-m text-left primary-color-red-text">3 Promotions</div>
+                    </div>
+                </div>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a w100 w-landscape-50 justify-content-center dealsClick" accesskey="1">
+                        <div class="promotion-banner">
+                            <a>
+                                <img alt="Trending promotion" class="img-fluid" width="100%"
+                                     src="assets/img/coffeePromo.png">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="ui-block-b w100 w-landscape-50 justify-content-center dealsClick" accesskey="2">
+                        <div class="promotion-banner">
+                            <a>
+                                <img alt="Trending promotion" class="img-fluid" width="100%"
+                                     src="assets/img/pixelPromo.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a w100 w-landscape-50 justify-content-center dealsClick" accesskey="3">
+                        <div class="promotion-banner">
+                            <a>
+                                <img alt="Trending promotion" class="img-fluid" width="100%"
+                                     src="assets/img/furniturePromo.png">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ui-block-b w100 w-landscape-50 justify-content-center dealsClick" accesskey="4">
+                        <div class="promotion-banner">
+                            <a>
+                                <img alt="Trending promotion" class="img-fluid" width="100%"
+                                     src="assets/img/coffeePromo.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="latest">
+                <div class="ui-grid-solo mt-4 mb-3">
+                    <div class="ui-block-a">
+                        <div class="font-size-m primary-color-red-text">3 Promotions</div>
+                    </div>
+                </div>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a w100 w-landscape-50 justify-content-center">
+                        <div class="promotion-banner">
+                            <a>
+                                <img alt="Trending promotion" class="img-fluid" width="100%"
+                                     src="assets/img/nikeSale.png">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ui-block-b w100 w-landscape-50 justify-content-center">
+                        <div class="promotion-banner">
+                            <a>
+                                <img alt="Trending promotion" class="img-fluid" width="100%"
+                                     src="assets/img/wweSale.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a w100 w-landscape-50 justify-content-center">
+                        <div class="promotion-banner">
+                            <a>
+                                <img alt="Trending promotion" class="img-fluid" width="100%"
+                                     src="assets/img/jblSale.png">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ui-block-b w100 w-landscape-50 justify-content-center">
+                        <div class="promotion-banner">
+                            <a>
+                                <img alt="Trending promotion" class="img-fluid" width="100%"
+                                     src="assets/img/wweSale.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="for_you">
+                <div class="text-muted text-center">
+                    <h4 class="font-weight-heavy">No promotions available.</h4>
+                    <h5>Browse more or Check back in a few days</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-role="footer" data-position="fixed" id="footer" data-tap-toggle="false" transition="fade" class="py-2">
+        <div data-role="navbar" data-grid="d" class="h100">
+            <ul>
+                <li>
+                    <a class="pathUrl" accesskey="home.html">
+                        <i class="fa fa-home"></i>
+                        <div>Home</div>
+                    </a>
+                </li>
+                <li>
+                    <a class="pathUrl" accesskey="deals.html">
+                        <i class="fa fa-tag font"></i>
+                        <div>Deals</div>
+                    </a>
+                </li>
+                <li>
+                    <a class="pathUrl" accesskey="store.html">
+                        <i class="fa fa-store-alt"></i>
+                        <div>Store</div>
+                    </a>
+                </li>
+                <li>
+                    <a class="pathUrl" accesskey="cart.html">
+                        <i class="fa fa-shopping-cart"></i>
+                        <div>Cart</div>
+                    </a>
+                </li>
+                <li>
+                    <a class="pathUrl" accesskey="profile.html">
+                        <i class="fa fa-user"></i>
+                        <div>Profile</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $(document).on("click", ".pathUrl", function () {
+            document.location.href = this.accessKey;
+        });
+        $(document).on("click", ".dealsClick", function () {
+            sessionStorage.removeItem('currentDeal');
+            sessionStorage.setItem("currentDeal", this.accessKey);
+            sessionStorage.setItem("ratingFilter", '0');
+            sessionStorage.setItem("priceFilter", '{"startValue":"0","EndValue":"999"}');
+            sessionStorage.setItem("sort", 'default');
+            document.location.href = 'promotion_details.html';
+        });
+    })
+</script>
+</body>
+
+</html>

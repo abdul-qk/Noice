@@ -1,0 +1,1819 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile</title>
+
+    <!-- jQuery mobile files -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+    <!-- Font awesome file -->
+    <script src="https://kit.fontawesome.com/f083cf2118.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom JS Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Custom main CSS file -->
+    <link rel="stylesheet" href="index.css">
+    <script src="scripts/sendEmail.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <style>
+        #header {
+            padding-bottom: 0px;
+        }
+    </style>
+
+</head>
+
+<body class="post-login">
+    <div data-role="page" class="profile" id="summary">
+        <div data-role="header" id="header" class="align-stuff">
+            <div class="container">
+                <div class="ui-grid-a head-head">
+                    <div class="ui-block-a">
+                        <h1>Profile</h1>
+                    </div>
+                    <div class="ui-block-b icons" id="optionz">
+                        <a class="primary-color-black-text" data-rel="popup" href="#overlay"
+                            data-position-to="#optionz"><i class="fas fa-search"></i></a>
+                        <div class="ui-content pt-0 mb-1" data-shadow="false" data-theme="none" data-overlay-theme="a"
+                            data-role="popup" id="overlay">
+                            <div class="deals-search-bar">
+                                <ul data-role="listview" data-filter="true" data-filter-reveal="true"
+                                    data-filter-placeholder="Searching Promotions" data-inset="true">
+                                    <li><a class="dealsClick" accesskey="1">Winter Coffee Sale</a></li>
+                                    <li><a class="dealsClick" accesskey="2">Google Pixel Sale</a></li>
+                                    <li><a class="dealsClick" accesskey="3">Furniture Sale</a></li>
+                                    <li><a class="dealsClick" accesskey="4">Electronic Christmas Sale</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a class="primary-color-black-text" href="realAR.html" rel="external"><i
+                                class="fas fa-camera"></i></a>
+                    </div>
+                </div>
+                <div class="ui-grid-a head-body">
+                    <div class="ui-block-a w25">
+                        <img src="assets/img/avatar-placeholder.svg" alt="User Image" width="150px" class="img-fluid">
+                    </div>
+                    <div class="ui-block-b w75 pl-3">
+                        <h2>Adams Apple</h2>
+                        <h6 class="f16">Adam@apple.com</h6>
+                        <div style="margin-top: 23px;" class="ui-grid-a">
+                            <div class="ui-block-a w30">
+                                <h3 class="secondary-color mb-0">1000</h3>
+                                <p class="secondary-color">Total Points</p>
+                            </div>
+                            <div class="ui-block-b w30">
+                                <h3 class="primary-color mb-0">#1200</h3>
+                                <p class="gray">Ranking</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-grid-a tabs">
+                <ul>
+                    <li class="active"><a href="#summary" class="fw-bold" data-transition="fade">Summary</a>
+                    </li>
+                    <li><a href="#rankings" class="primary-color-grey-text fw-bold" data-transition="fade">Rankings</a>
+                    </li>
+                    <li><a href="#coupons" class="primary-color-grey-text fw-bold" data-transition="fade">Coupons</a>
+                    </li>
+                    <li><a href="#settings" class="primary-color-grey-text fw-bold" data-transition="fade">Settings</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="main" class="align-stuff">
+            <div class="container">
+                <div class="favourites">
+                    <div class="ui-grid-a main-head">
+                        <div class="ui-block-a w80">
+                            <h2><b>Favourites</b></h2>
+                        </div>
+                        <div class="ui-block-b w20 text-right">
+                            <h6><a href="favouritesAll.html" rel="external">See All</a></h6>
+                        </div>
+                    </div>
+                    <div class="carousell" id="favSummary">
+                        <div class="item">
+                            <div style="width: 350px !important;" class="card py-0 px-0">
+                                <div class="top px-2 pt-4 pb-2">
+                                    <div class="ui-grid-a pb-2">
+                                        <div class="ui-block-a w40">
+                                            <a href="product_details.html" rel="external">
+                                                <img alt="product Image" class="img-fluid"
+                                                    src="assets/img/productCoffee.png">
+                                            </a>
+                                        </div>
+                                        <div class="ui-block-b w60">
+                                            <div class="ui-grid-solo">
+                                                <div class="ui-block-a">
+                                                    <h4 class="fw-bold mt-0">Stok Cold Brew Coffee</h4>
+                                                </div>
+                                            </div>
+                                            <div class="ui-grid-a">
+                                                <div class="ui-block-a w100">
+                                                    <i class="fas fa-star secondary-color-yellow-text"></i>
+                                                    <i class="fas fa-star secondary-color-yellow-text"></i>
+                                                    <i class="fas fa-star secondary-color-yellow-text"></i>
+                                                    <i class="fas fa-star secondary-color-yellow-text"></i>
+                                                    <i class="far fa-star secondary-color-yellow-text"></i>
+                                                </div>
+                                                <div class="ui-block-a">
+                                                    <del>20.99</del>
+                                                </div>
+                                                <div class="ui-block-a">
+                                                    <div class="red">USD 10.99</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="ui-grid-b mb-0 mx-0 product_foot">
+                                        <div class="ui-block-a w20 text-left">
+                                            <i class="fas fa-trash-alt" style="font-size: 26px;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div style="width: 350px !important;" class="card py-0 px-0">
+                                <div class="top px-2 pt-4 pb-2">
+                                    <div class="ui-grid-a pb-2">
+                                        <div class="ui-block-a w40">
+                                            <a href="product_details.html" rel="external">
+                                                <img alt="product Image" class="img-fluid"
+                                                    src="assets/img/productCoffee.png">
+                                            </a>
+                                        </div>
+                                        <div class="ui-block-b w60">
+                                            <div class="ui-grid-solo">
+                                                <div class="ui-block-a">
+                                                    <h4 class="fw-bold mt-0">Stok Cold Brew Coffee</h4>
+                                                </div>
+                                            </div>
+                                            <div class="ui-grid-a">
+                                                <div class="ui-block-a w100">
+                                                    <i class="fas fa-star secondary-color-yellow-text"></i>
+                                                    <i class="fas fa-star secondary-color-yellow-text"></i>
+                                                    <i class="fas fa-star secondary-color-yellow-text"></i>
+                                                    <i class="fas fa-star secondary-color-yellow-text"></i>
+                                                    <i class="far fa-star secondary-color-yellow-text"></i>
+                                                </div>
+                                                <div class="ui-block-a">
+                                                    <del>20.99</del>
+                                                </div>
+                                                <div class="ui-block-a">
+                                                    <div class="red">USD 10.99</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="ui-grid-b mb-0 mx-0 product_foot">
+                                        <div class="ui-block-a w20 text-left">
+                                            <i class="fas fa-trash-alt" style="font-size: 26px;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div style="width: 350px !important;" class="card py-0 px-0">
+                                <div class="top px-2 pt-4 pb-2">
+                                    <div class="ui-grid-a pb-2">
+                                        <div class="ui-block-a w40">
+                                            <a href="product_details.html" rel="external">
+                                                <img alt="product Image" class="img-fluid"
+                                                    src="assets/img/productCoffee.png">
+                                            </a>
+                                        </div>
+                                        <div class="ui-block-b w60">
+                                            <div class="ui-grid-solo">
+                                                <div class="ui-block-a">
+                                                    <h4 class="fw-bold mt-0">Stok Cold Brew Coffee</h4>
+                                                </div>
+                                            </div>
+                                            <div class="ui-grid-a">
+                                                <div class="ui-block-a w100">
+                                                    <i class="fas fa-star secondary-color-yellow-text"></i>
+                                                    <i class="fas fa-star secondary-color-yellow-text"></i>
+                                                    <i class="fas fa-star secondary-color-yellow-text"></i>
+                                                    <i class="fas fa-star secondary-color-yellow-text"></i>
+                                                    <i class="far fa-star secondary-color-yellow-text"></i>
+                                                </div>
+                                                <div class="ui-block-a">
+                                                    <del>20.99</del>
+                                                </div>
+                                                <div class="ui-block-a">
+                                                    <div class="red">USD 10.99</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="ui-grid-b mb-0 mx-0 product_foot">
+                                        <div class="ui-block-a w20 text-left">
+                                            <i class="fas fa-trash-alt" style="font-size: 26px;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="online">
+                    <div class="ui-grid-a main-head">
+                        <div class="ui-block-a w80">
+                            <h2><b>Online Orders</b></h2>
+                        </div>
+                        <div class="ui-block-b w20 text-right">
+                            <h6><a href="">See All</a></h6>
+                        </div>
+                    </div>
+                    <ul class="nav nav-tabs nav-justified nav-primary">
+                        <li class="nav-item">
+                            <a href="#shipping" class="nav-link active" data-toggle="tab">Shipped</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#ongoing" class="nav-link" data-toggle="tab">Ongoing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#unpaid" class="nav-link" data-toggle="tab">Unpaid</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="shipping">
+                            <div class="carousell">
+                                <div class="item">
+                                    <div style="width: 350px;" class="card">
+                                        <div class="ui-grid-a">
+                                            <div class="ui-block-a w20">
+                                                <img style="padding-top: 20px;" src="assets/img/prod_1.png" width="67px"
+                                                    class="img-fluid" alt="Product 1">
+                                            </div>
+                                            <div class="ui-block-b w80 pl-3 product_details">
+                                                <h5 class="product_name">Google Pixel 4 - Black</h5>
+                                                <div class="ui-grid-a">
+                                                    <div class="ui-block-a w60">
+                                                        <h5 class="gray">Order Places</h5>
+                                                    </div>
+                                                    <div class="ui-block-b w40">
+                                                        <h5 class="black text-right">Feb 12, 2019</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="ui-grid-a">
+                                                    <div class="ui-block-a w60">
+                                                        <h5 class="gray">Quantity</h5>
+                                                    </div>
+                                                    <div class="ui-block-b w40">
+                                                        <h5 class="black text-right">1</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="ui-grid-a">
+                                                    <div class="ui-block-a w60">
+                                                        <h5 class="gray">Total Amount</h5>
+                                                    </div>
+                                                    <div class="ui-block-b w40">
+                                                        <h5 class="red text-right">$760.00</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div style="width: 350px;" class="card">
+                                        <div class="ui-grid-a">
+                                            <div class="ui-block-a w20">
+                                                <img style="padding-top: 20px;" src="assets/img/prod_1.png" width="67px"
+                                                    class="img-fluid" alt="Product 1">
+                                            </div>
+                                            <div class="ui-block-b w80 pl-3 product_details">
+                                                <h5 class="product_name">Google Pixel 4 - Black</h5>
+                                                <div class="ui-grid-a">
+                                                    <div class="ui-block-a w60">
+                                                        <h5 class="gray">Order Places</h5>
+                                                    </div>
+                                                    <div class="ui-block-b w40">
+                                                        <h5 class="black text-right">Feb 12, 2019</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="ui-grid-a">
+                                                    <div class="ui-block-a w60">
+                                                        <h5 class="gray">Quantity</h5>
+                                                    </div>
+                                                    <div class="ui-block-b w40">
+                                                        <h5 class="black text-right">1</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="ui-grid-a">
+                                                    <div class="ui-block-a w60">
+                                                        <h5 class="gray">Total Amount</h5>
+                                                    </div>
+                                                    <div class="ui-block-b w40">
+                                                        <h5 class="red text-right">$760.00</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div style="width: 350px;" class="card">
+                                        <div class="ui-grid-a">
+                                            <div class="ui-block-a w20">
+                                                <img style="padding-top: 20px;" src="assets/img/prod_1.png" width="67px"
+                                                    class="img-fluid" alt="Product 1">
+                                            </div>
+                                            <div class="ui-block-b w80 pl-3 product_details">
+                                                <h5 class="product_name">Google Pixel 4 - Black</h5>
+                                                <div class="ui-grid-a">
+                                                    <div class="ui-block-a w60">
+                                                        <h5 class="gray">Order Places</h5>
+                                                    </div>
+                                                    <div class="ui-block-b w40">
+                                                        <h5 class="black text-right">Feb 12, 2019</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="ui-grid-a">
+                                                    <div class="ui-block-a w60">
+                                                        <h5 class="gray">Quantity</h5>
+                                                    </div>
+                                                    <div class="ui-block-b w40">
+                                                        <h5 class="black text-right">1</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="ui-grid-a">
+                                                    <div class="ui-block-a w60">
+                                                        <h5 class="gray">Total Amount</h5>
+                                                    </div>
+                                                    <div class="ui-block-b w40">
+                                                        <h5 class="red text-right">$760.00</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="ongoing">
+                            <div class="carousell">
+                                <div class="item">
+                                    <div style="width: 350px;" class="card">
+                                        <div class="ui-grid-a">
+                                            <div class="ui-block-a w20">
+                                                <img style="padding-top: 20px;" src="assets/img/prod_1.png" width="67px"
+                                                    class="img-fluid" alt="Product 1">
+                                            </div>
+                                            <div class="ui-block-b w80 pl-3 product_details">
+                                                <h5 class="product_name">Google Pixel 4 - Black</h5>
+                                                <div class="ui-grid-a">
+                                                    <div class="ui-block-a w60">
+                                                        <h5 class="gray">Order Places</h5>
+                                                    </div>
+                                                    <div class="ui-block-b w40">
+                                                        <h5 class="black text-right">Feb 12, 2019</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="ui-grid-a">
+                                                    <div class="ui-block-a w60">
+                                                        <h5 class="gray">Quantity</h5>
+                                                    </div>
+                                                    <div class="ui-block-b w40">
+                                                        <h5 class="black text-right">1</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="ui-grid-a">
+                                                    <div class="ui-block-a w60">
+                                                        <h5 class="gray">Total Amount</h5>
+                                                    </div>
+                                                    <div class="ui-block-b w40">
+                                                        <h5 class="red text-right">$760.00</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div style="width: 350px;" class="card">
+                                        <div class="ui-grid-a">
+                                            <div class="ui-block-a w20">
+                                                <img style="padding-top: 20px;" src="assets/img/prod_1.png" width="67px"
+                                                    class="img-fluid" alt="Product 1">
+                                            </div>
+                                            <div class="ui-block-b w80 pl-3 product_details">
+                                                <h5 class="product_name">Google Pixel 4 - Black</h5>
+                                                <div class="ui-grid-a">
+                                                    <div class="ui-block-a w60">
+                                                        <h5 class="gray">Order Places</h5>
+                                                    </div>
+                                                    <div class="ui-block-b w40">
+                                                        <h5 class="black text-right">Feb 12, 2019</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="ui-grid-a">
+                                                    <div class="ui-block-a w60">
+                                                        <h5 class="gray">Quantity</h5>
+                                                    </div>
+                                                    <div class="ui-block-b w40">
+                                                        <h5 class="black text-right">1</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="ui-grid-a">
+                                                    <div class="ui-block-a w60">
+                                                        <h5 class="gray">Total Amount</h5>
+                                                    </div>
+                                                    <div class="ui-block-b w40">
+                                                        <h5 class="red text-right">$760.00</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div style="width: 350px;" class="card">
+                                        <div class="ui-grid-a">
+                                            <div class="ui-block-a w20">
+                                                <img style="padding-top: 20px;" src="assets/img/prod_1.png" width="67px"
+                                                    class="img-fluid" alt="Product 1">
+                                            </div>
+                                            <div class="ui-block-b w80 pl-3 product_details">
+                                                <h5 class="product_name">Google Pixel 4 - Black</h5>
+                                                <div class="ui-grid-a">
+                                                    <div class="ui-block-a w60">
+                                                        <h5 class="gray">Order Places</h5>
+                                                    </div>
+                                                    <div class="ui-block-b w40">
+                                                        <h5 class="black text-right">Feb 12, 2019</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="ui-grid-a">
+                                                    <div class="ui-block-a w60">
+                                                        <h5 class="gray">Quantity</h5>
+                                                    </div>
+                                                    <div class="ui-block-b w40">
+                                                        <h5 class="black text-right">1</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="ui-grid-a">
+                                                    <div class="ui-block-a w60">
+                                                        <h5 class="gray">Total Amount</h5>
+                                                    </div>
+                                                    <div class="ui-block-b w40">
+                                                        <h5 class="red text-right">$760.00</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="unpaid">
+                            <div class="carousell">
+                                <div class="item">
+                                    <div style="width: 350px;" class="card">
+                                        <div class="ui-grid-a">
+                                            <div class="ui-block-a w20">
+                                                <img style="padding-top: 20px;" src="assets/img/prod_1.png" width="67px"
+                                                    class="img-fluid" alt="Product 1">
+                                            </div>
+                                            <div class="ui-block-b w80 pl-3 product_details">
+                                                <h5 class="product_name">Google Pixel 4 - Black</h5>
+                                                <div class="ui-grid-a">
+                                                    <div class="ui-block-a w60">
+                                                        <h5 class="gray">Order Places</h5>
+                                                    </div>
+                                                    <div class="ui-block-b w40">
+                                                        <h5 class="black text-right">Feb 12, 2019</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="ui-grid-a">
+                                                    <div class="ui-block-a w60">
+                                                        <h5 class="gray">Quantity</h5>
+                                                    </div>
+                                                    <div class="ui-block-b w40">
+                                                        <h5 class="black text-right">1</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="ui-grid-a">
+                                                    <div class="ui-block-a w60">
+                                                        <h5 class="gray">Total Amount</h5>
+                                                    </div>
+                                                    <div class="ui-block-b w40">
+                                                        <h5 class="red text-right">$760.00</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div style="width: 350px;" class="card">
+                                        <div class="ui-grid-a">
+                                            <div class="ui-block-a w20">
+                                                <img style="padding-top: 20px;" src="assets/img/prod_1.png" width="67px"
+                                                    class="img-fluid" alt="Product 1">
+                                            </div>
+                                            <div class="ui-block-b w80 pl-3 product_details">
+                                                <h5 class="product_name">Google Pixel 4 - Black</h5>
+                                                <div class="ui-grid-a">
+                                                    <div class="ui-block-a w60">
+                                                        <h5 class="gray">Order Places</h5>
+                                                    </div>
+                                                    <div class="ui-block-b w40">
+                                                        <h5 class="black text-right">Feb 12, 2019</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="ui-grid-a">
+                                                    <div class="ui-block-a w60">
+                                                        <h5 class="gray">Quantity</h5>
+                                                    </div>
+                                                    <div class="ui-block-b w40">
+                                                        <h5 class="black text-right">1</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="ui-grid-a">
+                                                    <div class="ui-block-a w60">
+                                                        <h5 class="gray">Total Amount</h5>
+                                                    </div>
+                                                    <div class="ui-block-b w40">
+                                                        <h5 class="red text-right">$760.00</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" id="footer" data-tap-toggle="false" transition="fade"
+            class="py-2">
+            <div data-role="navbar" data-grid="d" class="h90 text-center footer">
+                <ul class="h100">
+                    <li class="w100 h20 nav-footer">
+                        <a href="home.html" rel="external">
+                            <i class="fa fa-home"></i>
+                            <div>Home</div>
+                        </a>
+                    </li>
+                    <li class="w100 h20 nav-footer">
+                        <a href="deals.html" rel="external">
+                            <i class="fa fa-tag font"></i>
+                            <div>Deals</div>
+                        </a>
+                    </li>
+                    <li class="w100 h20 nav-footer">
+                        <a href="#" rel="external">
+                            <i class="fa fa-store-alt"></i>
+                            <div>Store</div>
+                        </a>
+                    </li>
+                    <li class="w100 h20 nav-footer">
+                        <a href="cart.html" rel="external">
+                            <i class="fa fa-shopping-cart"></i>
+                            <div>Cart</div>
+                        </a>
+                    </li>
+                    <li class="w100 h20 nav-footer">
+                        <a href="profile.html" rel="external" class="active">
+                            <i class="fa fa-user"></i>
+                            <div>Profile</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" id="footer2" data-tap-toggle="false" transition="fade">
+            <div data-role="navbar" data-grid="d" class="text-center footer2">
+                <ul class="w100">
+                    <li class="w20 nav-footer">
+                        <a href="home.html" rel="external">
+                            <i class="fa fa-home"></i>
+                            <div>Home</div>
+                        </a>
+                    </li>
+                    <li class="w20 nav-footer">
+                        <a href="deals.html" rel="external">
+                            <i class="fa fa-tag font"></i>
+                            <div>Deals</div>
+                        </a>
+                    </li>
+                    <li class="w20 nav-footer">
+                        <a href="#" rel="external">
+                            <i class="fa fa-store-alt"></i>
+                            <div>Store</div>
+                        </a>
+                    </li>
+                    <li class="w20 nav-footer">
+                        <a href="cart.html" rel="external">
+                            <i class="fa fa-shopping-cart"></i>
+                            <div>Cart</div>
+                        </a>
+                    </li>
+                    <li class="w20 nav-footer">
+                        <a href="profile.html" rel="external" class="active">
+                            <i class="fa fa-user"></i>
+                            <div>Profile</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div data-role="page" class="profile" id="rankings">
+        <div class="profile">
+            <div data-role="header" id="header" class="align-stuff">
+                <div class="container">
+                    <div class="ui-grid-a head-head">
+                        <div class="ui-block-a">
+                            <h1>Profile</h1>
+                        </div>
+                        <div class="ui-block-b icons">
+                            <i class="fas fa-search"></i>
+                            <i class="fas fa-camera"></i>
+                        </div>
+                    </div>
+                    <div class="ui-grid-a head-body">
+                        <div class="ui-block-a w25">
+                            <img src="assets/img/avatar-placeholder.svg" alt="User Image" width="150px"
+                                class="img-fluid">
+                        </div>
+                        <div class="ui-block-b w75 pl-3">
+                            <h2>Adams Apple</h2>
+                            <h6 class="f16">Adam@apple.com</h6>
+                            <div style="margin-top: 23px;" class="ui-grid-a">
+                                <div class="ui-block-a w30">
+                                    <h3 class="secondary-color mb-0">1000</h3>
+                                    <p class="secondary-color">Total Points</p>
+                                </div>
+                                <div class="ui-block-b w30">
+                                    <h3 class="primary-color mb-0">#1200</h3>
+                                    <p class="gray">Ranking</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-grid-a tabs">
+                    <ul>
+                        <li><a href="#summary" class="primary-color-grey-text fw-bold"
+                                data-transition="fade">Summary</a>
+                        </li>
+                        <li class="active"><a href="#rankings" class="fw-bold" data-transition="fade">Rankings</a>
+                        </li>
+                        <li><a href="#coupons" class="primary-color-grey-text fw-bold"
+                                data-transition="fade">Coupons</a>
+                        </li>
+                        <li><a href="#settings" class="primary-color-grey-text fw-bold"
+                                data-transition="fade">Settings</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div data-role="main" class="align-stuff">
+            <div class="container">
+                <div class="ui-grid-a main-head ">
+                    <div class="ui-block-a pt-2 pl-2  w80">
+                        <h3><b>Ranking Summary</b></h3>
+                    </div>
+                    <div class="ui-block-b pl-3 w20 text-right">
+                        <h6><a href="">See all</a></h6>
+                    </div>
+                </div>
+                <ul class="nav nav-tabs nav-justified nav-primary">
+                    <li class="nav-item">
+                        <a href="#today" class="nav-link active" data-toggle="tab">Today</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#week" class="nav-link" data-toggle="tab">Week</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#month" class="nav-link" data-toggle="tab">Month</a>
+                    </li>
+                </ul>
+                <div class="ui-grid-a">
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="today">
+                            <div class="ui-block-a w35 pr-3">
+                                <div class="card">
+                                    <div class="ui-grid-solo text-center mb-3">
+                                        <p class="primary-color-grey-text f22 mb-0 mt-3">Today's Rank</p>
+                                        <h2 class="primary-color-blue-text f32 fw-heavy">#101</h2>
+                                        <div class="ui-grid-a mt-4">
+                                            <div class="ui-block-a text-left pb-1">
+                                                <p class="f16 primary-color-grey-text mb-0">Daily Points</p>
+                                                <h3 class="f22 primary-color-green-text">150</h3>
+                                            </div>
+                                            <div class="ui-block-b text-right pb-1">
+                                                <p class="f16 primary-color-grey-text mb-0">Total Points</p>
+                                                <h3 class="f22 primary-color-green-text">15,050</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui-block-b w65 pl-3">
+                                <div class="card">
+                                    <table data-role="table" id="movie-table-custom" data-mode="" class="movie-list">
+                                        <thead>
+                                            <tr>
+                                                <th>Rank</th>
+                                                <th style="width:40%">Name</th>
+                                                <th>Daily Points</th>
+                                                <th>Total Points</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr valign="middle">
+                                                <th>#1</th>
+                                                <td class="primary-color-black-text fw-bold"><img
+                                                        src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                        width="30px" alt="">Citizen Kane
+                                                </td>
+                                                <td class="primary-color-blue-text fw-bold">1941</td>
+                                                <td class="primary-color-blue-text fw-bold">100%</td>
+                                            </tr>
+                                            <tr valign="middle">
+                                                <th>#2</th>
+                                                <td class="primary-color-black-text fw-bold"><img
+                                                        src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                        width="30px" alt="">Casablanca
+                                                </td>
+                                                <td class="primary-color-blue-text fw-bold">1942</td>
+                                                <td class="primary-color-blue-text fw-bold">97%</td>
+                                            </tr>
+                                            <tr valign="middle">
+                                                <th>#3</th>
+                                                <td class="primary-color-black-text fw-bold"><img
+                                                        src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                        width="30px" alt="">The Godfather
+                                                </td>
+                                                <td class="primary-color-blue-text fw-bold">1972</td>
+                                                <td class="primary-color-blue-text fw-bold">97%</td>
+                                            </tr>
+                                            <tr valign="middle">
+                                                <th>#4</th>
+                                                <td class="primary-color-black-text fw-bold"><img
+                                                        src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                        width="30px" alt="">The Middle Man
+                                                </td>
+                                                <td class="primary-color-blue-text fw-bold">1989</td>
+                                                <td class="primary-color-blue-text fw-bold">90%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="week">
+                            <div class="ui-block-a w35 pr-3">
+                                <div class="card">
+                                    <div class="ui-grid-solo text-center mb-3">
+                                        <p class="primary-color-grey-text f22 mb-0 mt-3">Today's Rank</p>
+                                        <h2 class="primary-color-blue-text f32 fw-heavy">#101</h2>
+                                        <div class="ui-grid-a mt-4">
+                                            <div class="ui-block-a text-left pb-1">
+                                                <p class="f16 primary-color-grey-text mb-0">Daily Points</p>
+                                                <h3 class="f22 primary-color-green-text">150</h3>
+                                            </div>
+                                            <div class="ui-block-b text-right pb-1">
+                                                <p class="f16 primary-color-grey-text mb-0">Total Points</p>
+                                                <h3 class="f22 primary-color-green-text">15,050</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui-block-b w65 pl-3">
+                                <div class="card">
+                                    <table data-role="table" id="movie-table-custom" data-mode="" class="movie-list">
+                                        <thead>
+                                            <tr>
+                                                <th>Rank</th>
+                                                <th style="width:40%">Name</th>
+                                                <th>Daily Points</th>
+                                                <th>Total Points</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr valign="middle">
+                                                <th>#1</th>
+                                                <td class="primary-color-black-text fw-bold"><img
+                                                        src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                        width="30px" alt="">Citizen Kane
+                                                </td>
+                                                <td class="primary-color-blue-text fw-bold">1941</td>
+                                                <td class="primary-color-blue-text fw-bold">100%</td>
+                                            </tr>
+                                            <tr valign="middle">
+                                                <th>#2</th>
+                                                <td class="primary-color-black-text fw-bold"><img
+                                                        src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                        width="30px" alt="">Casablanca
+                                                </td>
+                                                <td class="primary-color-blue-text fw-bold">1942</td>
+                                                <td class="primary-color-blue-text fw-bold">97%</td>
+                                            </tr>
+                                            <tr valign="middle">
+                                                <th>#3</th>
+                                                <td class="primary-color-black-text fw-bold"><img
+                                                        src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                        width="30px" alt="">The Godfather
+                                                </td>
+                                                <td class="primary-color-blue-text fw-bold">1972</td>
+                                                <td class="primary-color-blue-text fw-bold">97%</td>
+                                            </tr>
+                                            <tr valign="middle">
+                                                <th>#4</th>
+                                                <td class="primary-color-black-text fw-bold"><img
+                                                        src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                        width="30px" alt="">The Middle Man
+                                                </td>
+                                                <td class="primary-color-blue-text fw-bold">1989</td>
+                                                <td class="primary-color-blue-text fw-bold">90%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="month">
+                            <div class="ui-block-a w35 pr-3">
+                                <div class="card">
+                                    <div class="ui-grid-solo text-center mb-3">
+                                        <p class="primary-color-grey-text f22 mb-0 mt-3">Today's Rank</p>
+                                        <h2 class="primary-color-blue-text f32 fw-heavy">#101</h2>
+                                        <div class="ui-grid-a mt-4">
+                                            <div class="ui-block-a text-left pb-1">
+                                                <p class="f16 primary-color-grey-text mb-0">Daily Points</p>
+                                                <h3 class="f22 primary-color-green-text">150</h3>
+                                            </div>
+                                            <div class="ui-block-b text-right pb-1">
+                                                <p class="f16 primary-color-grey-text mb-0">Total Points</p>
+                                                <h3 class="f22 primary-color-green-text">15,050</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui-block-b w65 pl-3">
+                                <div class="card">
+                                    <table data-role="table" id="movie-table-custom" data-mode="" class="movie-list">
+                                        <thead>
+                                            <tr>
+                                                <th>Rank</th>
+                                                <th style="width:40%">Name</th>
+                                                <th>Daily Points</th>
+                                                <th>Total Points</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr valign="middle">
+                                                <th>#1</th>
+                                                <td class="primary-color-black-text fw-bold"><img
+                                                        src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                        width="30px" alt="">Citizen Kane
+                                                </td>
+                                                <td class="primary-color-blue-text fw-bold">1941</td>
+                                                <td class="primary-color-blue-text fw-bold">100%</td>
+                                            </tr>
+                                            <tr valign="middle">
+                                                <th>#2</th>
+                                                <td class="primary-color-black-text fw-bold"><img
+                                                        src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                        width="30px" alt="">Casablanca
+                                                </td>
+                                                <td class="primary-color-blue-text fw-bold">1942</td>
+                                                <td class="primary-color-blue-text fw-bold">97%</td>
+                                            </tr>
+                                            <tr valign="middle">
+                                                <th>#3</th>
+                                                <td class="primary-color-black-text fw-bold"><img
+                                                        src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                        width="30px" alt="">The Godfather
+                                                </td>
+                                                <td class="primary-color-blue-text fw-bold">1972</td>
+                                                <td class="primary-color-blue-text fw-bold">97%</td>
+                                            </tr>
+                                            <tr valign="middle">
+                                                <th>#4</th>
+                                                <td class="primary-color-black-text fw-bold"><img
+                                                        src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                        width="30px" alt="">The Middle Man
+                                                </td>
+                                                <td class="primary-color-blue-text fw-bold">1989</td>
+                                                <td class="primary-color-blue-text fw-bold">90%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" id="footer" data-tap-toggle="false" transition="fade"
+            class="py-2">
+            <div data-role="navbar" data-grid="d" class="h90 text-center footer">
+                <ul class="h100">
+                    <li class="w100 h20 nav-footer">
+                        <a href="home.html" rel="external">
+                            <i class="fa fa-home"></i>
+                            <div>Home</div>
+                        </a>
+                    </li>
+                    <li class="w100 h20 nav-footer">
+                        <a href="deals.html" rel="external">
+                            <i class="fa fa-tag font"></i>
+                            <div>Deals</div>
+                        </a>
+                    </li>
+                    <li class="w100 h20 nav-footer">
+                        <a href="#" rel="external">
+                            <i class="fa fa-store-alt"></i>
+                            <div>Store</div>
+                        </a>
+                    </li>
+                    <li class="w100 h20 nav-footer">
+                        <a href="cart.html" rel="external">
+                            <i class="fa fa-shopping-cart"></i>
+                            <div>Cart</div>
+                        </a>
+                    </li>
+                    <li class="w100 h20 nav-footer">
+                        <a href="profile.html" rel="external" class="active">
+                            <i class="fa fa-user"></i>
+                            <div>Profile</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" id="footer2" data-tap-toggle="false" transition="fade">
+            <div data-role="navbar" data-grid="d" class="text-center footer2">
+                <ul class="w100">
+                    <li class="w20 nav-footer">
+                        <a href="home.html" rel="external">
+                            <i class="fa fa-home"></i>
+                            <div>Home</div>
+                        </a>
+                    </li>
+                    <li class="w20 nav-footer">
+                        <a href="deals.html" rel="external">
+                            <i class="fa fa-tag font"></i>
+                            <div>Deals</div>
+                        </a>
+                    </li>
+                    <li class="w20 nav-footer">
+                        <a href="#" rel="external">
+                            <i class="fa fa-store-alt"></i>
+                            <div>Store</div>
+                        </a>
+                    </li>
+                    <li class="w20 nav-footer">
+                        <a href="cart.html" rel="external">
+                            <i class="fa fa-shopping-cart"></i>
+                            <div>Cart</div>
+                        </a>
+                    </li>
+                    <li class="w20 nav-footer">
+                        <a href="profile.html" rel="external" class="active">
+                            <i class="fa fa-user"></i>
+                            <div>Profile</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div data-role="page" class="profile" id="coupons">
+        <div class="profile">
+            <div data-role="header" id="header" class="align-stuff">
+                <div class="container">
+                    <div class="ui-grid-a head-head">
+                        <div class="ui-block-a">
+                            <h1>Profile</h1>
+                        </div>
+                        <div class="ui-block-b icons">
+                            <i class="fas fa-search"></i>
+                            <i class="fas fa-camera"></i>
+                        </div>
+                    </div>
+                    <div class="ui-grid-a head-body">
+                        <div class="ui-block-a w25">
+                            <img src="assets/img/avatar-placeholder.svg" alt="User Image" width="150px"
+                                class="img-fluid">
+                        </div>
+                        <div class="ui-block-b w75 pl-3">
+                            <h2>Adams Apple</h2>
+                            <h6 class="f16">Adam@apple.com</h6>
+                            <div style="margin-top: 23px;" class="ui-grid-a">
+                                <div class="ui-block-a w30">
+                                    <h3 class="secondary-color mb-0">1000</h3>
+                                    <p class="secondary-color">Total Points</p>
+                                </div>
+                                <div class="ui-block-b w30">
+                                    <h3 class="primary-color mb-0">#1200</h3>
+                                    <p class="gray">Ranking</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui-grid-a tabs">
+                        <ul>
+                            <li><a href="#summary" class="primary-color-grey-text fw-bold"
+                                    data-transition="fade">Summary</a>
+                            </li>
+                            <li><a href="#rankings" class="primary-color-grey-text fw-bold"
+                                    data-transition="fade">Rankings</a></li>
+                            <li class="active"><a href="#coupons" class="fw-bold" data-transition="fade">Coupons</a>
+                            </li>
+                            <li><a href="#settings" class="primary-color-grey-text fw-bold"
+                                    data-transition="fade">Settings</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div data-role="main" class="align-stuff">
+                <div class="container">
+                    <div class="coupons mt-5">
+                        <h2 class="fw-heavy pb-3">Coupons Available</h2>
+                        <ul class="nav nav-tabs nav-justified nav-primary">
+                            <li class="nav-item">
+                                <a href="#new" class="nav-link active" data-toggle="tab">New</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#collected" class="nav-link" data-toggle="tab">Collected</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#expired" class="nav-link" data-toggle="tab">Expired</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active mb-5 carousell" id="new">
+                                <p id="noNew">No coupons available at the moment</p>
+                            </div>
+                            <div class="tab-pane fade carousell" id="collected">
+                                <p id="noCollected">No coupons collected yet</p>
+
+                            </div>
+                            <div class="tab-pane fade carousell" id="expired">
+                                <p id="noExpired">No coupons expired yet</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-role="footer" data-position="fixed" id="footer" data-tap-toggle="false" transition="fade"
+                class="py-2">
+                <div data-role="navbar" data-grid="d" class="h90 text-center footer">
+                    <ul class="h100">
+                        <li class="w100 h20 nav-footer">
+                            <a href="home.html" rel="external">
+                                <i class="fa fa-home"></i>
+                                <div>Home</div>
+                            </a>
+                        </li>
+                        <li class="w100 h20 nav-footer">
+                            <a href="deals.html" rel="external">
+                                <i class="fa fa-tag font"></i>
+                                <div>Deals</div>
+                            </a>
+                        </li>
+                        <li class="w100 h20 nav-footer">
+                            <a href="store.html" rel="external">
+                                <i class="fa fa-store-alt"></i>
+                                <div>Store</div>
+                            </a>
+                        </li>
+                        <li class="w100 h20 nav-footer">
+                            <a href="cart.html" rel="external">
+                                <i class="fa fa-shopping-cart"></i>
+                                <div>Cart</div>
+                            </a>
+                        </li>
+                        <li class="w100 h20 nav-footer">
+                            <a href="profile.html" rel="external" class="active">
+                                <i class="fa fa-user"></i>
+                                <div>Profile</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div data-role="footer" data-position="fixed" id="footer2" data-tap-toggle="false" transition="fade">
+                <div data-role="navbar" data-grid="d" class="text-center footer2">
+                    <ul class="w100">
+                        <li class="w20 nav-footer">
+                            <a href="home.html" rel="external">
+                                <i class="fa fa-home"></i>
+                                <div>Home</div>
+                            </a>
+                        </li>
+                        <li class="w20 nav-footer">
+                            <a href="deals.html" rel="external">
+                                <i class="fa fa-tag font"></i>
+                                <div>Deals</div>
+                            </a>
+                        </li>
+                        <li class="w20 nav-footer">
+                            <a href="store.html" rel="external">
+                                <i class="fa fa-store-alt"></i>
+                                <div>Store</div>
+                            </a>
+                        </li>
+                        <li class="w20 nav-footer">
+                            <a href="cart.html" rel="external">
+                                <i class="fa fa-shopping-cart"></i>
+                                <div>Cart</div>
+                            </a>
+                        </li>
+                        <li class="w20 nav-footer">
+                            <a href="profile.html" rel="external" class="active">
+                                <i class="fa fa-user"></i>
+                                <div>Profile</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-role="page" class="profile" id="settings">
+        <div class="profile">
+            <div data-role="header" id="header" class="align-stuff">
+                <div class="container">
+                    <div class="ui-grid-a head-head">
+                        <div class="ui-block-a">
+                            <h1>Profile</h1>
+                        </div>
+                        <div class="ui-block-b icons">
+                            <i class="fas fa-search"></i>
+                            <i class="fas fa-camera"></i>
+                        </div>
+                    </div>
+                    <div class="ui-grid-a head-body">
+                        <div class="ui-block-a w25">
+                            <img src="assets/img/avatar-placeholder.svg" alt="User Image" width="150px"
+                                class="img-fluid">
+                        </div>
+                        <div class="ui-block-b w75 pl-3">
+                            <h2>Adams Apple</h2>
+                            <h6 class="f16">Adam@apple.com</h6>
+                            <div style="margin-top: 23px;" class="ui-grid-a">
+                                <div class="ui-block-a w30">
+                                    <h3 class="secondary-color mb-0">1000</h3>
+                                    <p class="secondary-color">Total Points</p>
+                                </div>
+                                <div class="ui-block-b w30">
+                                    <h3 class="primary-color mb-0">#1200</h3>
+                                    <p class="gray">Ranking</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui-grid-a tabs">
+                        <ul>
+                            <li><a href="#summary" class="primary-color-grey-text fw-bold"
+                                    data-transition="fade">Summary</a>
+                            </li>
+                            <li><a href="#rankings" class="primary-color-grey-text fw-bold"
+                                    data-transition="fade">Rankings</a></li>
+                            <li><a href="#coupons" class="primary-color-grey-text fw-bold"
+                                    data-transition="fade">Coupons</a>
+                            </li>
+                            <li class="active"><a href="#settings" class="fw-bold" data-transition="fade">Settings</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div data-role="main" class="align-stuff">
+                <div class="container">
+                    <div class="settings">
+                        <div class="ui-grid-a landscape">
+                            <div class="ui-block-a pr-2">
+                                <div class="card mt-5">
+                                    <div class="ui-grid-solo">
+                                        <h4 class="primary-color-black-text fw-bold f22 pb-3">Accessibility</h4>
+                                        <div class="ui-grid-b">
+                                            <div class="ui-block-a w40 mt-2">
+                                                <p class="f16">Change font-size</p>
+                                            </div>
+                                            <form>
+                                                <div class="ui-block-b w30">
+                                                    <input type="radio" id="normal" value="normal" name="radio-group-1"
+                                                        class="v-align-bottom mt-0" checked />
+                                                    <div class="font-size-m font-weight-bold pl-5">Normal</div>
+                                                </div>
+                                                <div class="ui-block-c w30">
+                                                    <input type="radio" id="large" value="large" name="radio-group-1"
+                                                        class="v-align-bottom mt-0" />
+                                                    <div class="font-size-m font-weight-bold pl-5">Large</div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="ui-grid-solo mt-3">
+                                        <h4 class="primary-color-black-text fw-bold f22 pb-3">Display</h4>
+                                        <div class="ui-grid-b">
+                                            <div class="ui-block-a w40 mt-2">
+                                                <p class="f16">Switch Theme</p>
+                                            </div>
+                                            <form>
+                                                <div class="ui-block-b w30">
+                                                    <input type="radio" id="light" value="light" name="radio-group-2"
+                                                        accesskey="light" class="v-align-bottom mt-0" checked />
+                                                    <div class="font-size-m font-weight-bold pl-5">Light</div>
+                                                </div>
+                                                <div class="ui-block-c w30">
+                                                    <input type="radio" id="dark" value="dark" name="radio-group-2"
+                                                        accesskey="dark" class="v-align-bottom mt-0" />
+                                                    <div class="font-size-m font-weight-bold pl-5">Dark</div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui-block-b pl-3">
+                                <div class="card mt-5 pb-4">
+                                    <div class="ui-grid-solo">
+                                        <h4 class="primary-color-black-text fw-bold f22">Account</h4>
+                                        <div class="ui-grid-a">
+                                            <div class="ui-block-a">
+                                                <p class="f16 pt-4">Account Settings</p>
+                                            </div>
+                                            <div class="ui-block-b pt-4 w30 text-right">
+                                                <i style="font-size: 20px;" class="fas fa-user-cog"></i>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="ui-grid-a">
+                                            <div class="ui-block-a">
+                                                <p class="f16 pt-4">Sign Out</p>
+                                            </div>
+                                            <div class="ui-block-b pt-4 w30 text-right">
+                                                <i style="font-size: 20px;" class="fas fa-power-off"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui-grid-a portrait">
+                            <div class="ui-block-a w65 pr-2">
+                                <div class="card mt-5">
+                                    <div class="ui-grid-solo">
+                                        <h4 class="primary-color-black-text fw-bold f22 pb-3">Accessibility</h4>
+                                        <div class="ui-grid-b">
+                                            <div class="ui-block-a w40 mt-2">
+                                                <p class="f16">Change font-size</p>
+                                            </div>
+                                            <form>
+                                                <div class="ui-block-b w30">
+                                                    <input type="radio" id="normal" value="normal" name="radio-group-1"
+                                                        class="v-align-bottom mt-0" checked />
+                                                    <div class="font-size-m font-weight-bold pl-5">Normal</div>
+                                                </div>
+                                                <div class="ui-block-c w30">
+                                                    <input type="radio" id="large" value="large" name="radio-group-1"
+                                                        class="v-align-bottom mt-0" />
+                                                    <div class="font-size-m font-weight-bold pl-5">Large</div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="ui-grid-solo mt-3">
+                                        <h4 class="primary-color-black-text fw-bold f22 pb-3">Display</h4>
+                                        <div class="ui-grid-b">
+                                            <div class="ui-block-a w40 mt-2">
+                                                <p class="f16">Switch Theme</p>
+                                            </div>
+                                            <form>
+                                                <div class="ui-block-b w30">
+                                                    <input type="radio" id="light" value="light" name="radio-group-2"
+                                                        accesskey="light" class="v-align-bottom mt-0" checked />
+                                                    <div class="font-size-m font-weight-bold pl-5">Light</div>
+                                                </div>
+                                                <div class="ui-block-c w30">
+                                                    <input type="radio" id="dark" value="dark" name="radio-group-2"
+                                                        accesskey="dark" class="v-align-bottom mt-0" />
+                                                    <div class="font-size-m font-weight-bold pl-5">Dark</div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui-block-b w35 pl-3">
+                                <div class="card mt-5 pb-4">
+                                    <div class="ui-grid-solo">
+                                        <h4 class="primary-color-black-text fw-bold f22">Account</h4>
+                                        <div class="ui-grid-a">
+                                            <div class="ui-block-a w80">
+                                                <p class="f16 pt-4">Account Settings</p>
+                                            </div>
+                                            <div class="ui-block-b pt-4 w20 text-right">
+                                                <i class="fas fa-user-cog"></i>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="ui-grid-a">
+                                            <div class="ui-block-a">
+                                                <p class="f16 pt-4">Sign Out</p>
+                                            </div>
+                                            <div class="ui-block-b pt-4 w30 text-right">
+                                                <img src="assets/img/power-off-solid.svg" width="20" class="img-fluid"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-role="footer" data-position="fixed" id="footer" data-tap-toggle="false" transition="fade"
+                class="py-2">
+                <div data-role="navbar" data-grid="d" class="h90 text-center footer">
+                    <ul class="h100">
+                        <li class="w100 h20 nav-footer">
+                            <a href="home.html" rel="external">
+                                <i class="fa fa-home"></i>
+                                <div>Home</div>
+                            </a>
+                        </li>
+                        <li class="w100 h20 nav-footer">
+                            <a href="deals.html" rel="external">
+                                <i class="fa fa-tag font"></i>
+                                <div>Deals</div>
+                            </a>
+                        </li>
+                        <li class="w100 h20 nav-footer">
+                            <a href="store.html" rel="external">
+                                <i class="fa fa-store-alt"></i>
+                                <div>Store</div>
+                            </a>
+                        </li>
+                        <li class="w100 h20 nav-footer">
+                            <a href="cart.html" rel="external">
+                                <i class="fa fa-shopping-cart"></i>
+                                <div>Cart</div>
+                            </a>
+                        </li>
+                        <li class="w100 h20 nav-footer">
+                            <a href="profile.html" rel="external" class="active">
+                                <i class="fa fa-user"></i>
+                                <div>Profile</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div data-role="footer" data-position="fixed" id="footer2" data-tap-toggle="false" transition="fade">
+                <div data-role="navbar" data-grid="d" class="text-center footer2">
+                    <ul class="w100">
+                        <li class="w20 nav-footer">
+                            <a href="home.html" rel="external">
+                                <i class="fa fa-home"></i>
+                                <div>Home</div>
+                            </a>
+                        </li>
+                        <li class="w20 nav-footer">
+                            <a href="deals.html" rel="external">
+                                <i class="fa fa-tag font"></i>
+                                <div>Deals</div>
+                            </a>
+                        </li>
+                        <li class="w20 nav-footer">
+                            <a href="store.html" rel="external">
+                                <i class="fa fa-store-alt"></i>
+                                <div>Store</div>
+                            </a>
+                        </li>
+                        <li class="w20 nav-footer">
+                            <a href="cart.html" rel="external">
+                                <i class="fa fa-shopping-cart"></i>
+                                <div>Cart</div>
+                            </a>
+                        </li>
+                        <li class="w20 nav-footer">
+                            <a href="profile.html" rel="external" class="active">
+                                <i class="fa fa-user"></i>
+                                <div>Profile</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#' + sessionStorage.getItem('theme')).prop("checked", true);
+
+            if (sessionStorage.getItem('theme') === 'dark') {
+                $('body').addClass('dark');
+            }
+            $('input[name="radio-group-2"]:radio').change(function () {
+                if (this.accessKey === 'dark') {
+                    sessionStorage.setItem('theme', 'dark')
+                    $('body').addClass('dark');
+
+                } else {
+                    sessionStorage.setItem('theme', 'light')
+                    $('body').removeClass('dark');
+                }
+            });
+
+        });
+
+        $(document).delegate('#favoritesAll', 'pageshow', function () {
+            alert("text");
+        });
+        $('#favoritesAll').on('pageload', function () {
+            // alert("text");
+            let favouriteList;
+            changeValue = 'a';
+            $.post("backend/userData.php", {
+                action: 'view',
+                currentUser: sessionStorage.getItem("loggedUser")
+            }, function (data, status) {
+                const json = JSON.parse(data);
+                favouriteList = Object.values((json.favoriteList));
+                $.post("backend/favourite.php", {
+                    action: 'getList',
+                    currentUser: sessionStorage.getItem("loggedUser"),
+                    favList: favouriteList
+                }, function (data, status) {
+                    const jsonProducts = JSON.parse(data);
+                    jsonProducts.forEach(function (item) {
+                        const jsonIterate = JSON.parse(item);
+                        if (Object.keys(jsonProducts).length <= 1) {
+                            $('#favCount').text(Object.keys(jsonProducts)
+                                .length +
+                                " Item");
+                        } else {
+                            $('#favCount').text(Object.keys(jsonProducts)
+                                .length +
+                                " Items");
+                        }
+                        alert(JSON.stringify(jsonIterate));
+                        jsonIterate.forEach(function (product) {
+
+                            const ratings = product.rating;
+                            const ratingInt = parseInt(ratings);
+                            let ratingHtml = "";
+                            for (let i = 0; i < 5; i++) {
+                                if (ratingInt > i) {
+                                    ratingHtml = ratingHtml +
+                                        `<i class="fas fa-star secondary-color-yellow-text"></i>`;
+                                } else {
+                                    ratingHtml = ratingHtml +
+                                        `<i class="far fa-star secondary-color-yellow-text"></i>`;
+                                }
+                            }
+                            const favitem = `<div class="ui-block-` +
+                                changeValue + ` pl-3">
+                                <div class="card py-0 px-0">
+                                    <div class="top px-2 py-4">
+                                        <div class="ui-block-a w40">
+                                            <a href="product_details.html" rel="external">
+                                                <img alt="product Image" class="img-fluid"
+                                                     src="assets/img/productCoffee.png">
+                                            </a>
+                                        </div>
+                                        <div class="ui-block-b w60">
+                                            <div class="ui-grid-solo">
+                                                <div class="ui-block-a">
+                                                    <h4 class="fw-bold mt-0">` + product.name + `</h4>
+                                                </div>
+                                            </div>
+                                            <div class="ui-grid-a">
+                                                <div class="ui-block-a w100">
+                                                    ` + ratingHtml + `
+                                                </div>
+                                                <div class="ui-block-a">
+                                                    <del>20.99</del>
+                                                </div>
+                                                <div class="ui-block-a">
+                                                    <div class="red">USD ` + product.price + `</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ui-grid-b mb-0 mx-0 product_foot mt-2">
+                                        <div class="ui-block-a w20 text-left">
+                                            <i class="fas fa-trash-alt removeClick" style="font-size: 26px;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>`;
+                            $("#favList").append(favitem);
+                            $("#favList").trigger('change');
+                            if (changeValue === 'a') {
+                                changeValue = 'b';
+
+                            } else if (changeValue === 'b') {
+                                changeValue = 'a';
+                            }
+                        });
+
+                    });
+                });
+            });
+
+            $(document).on("click", ".removeClick", function () {
+                $.post("backend/favourite.php", {
+                    action: 'remove',
+                    currentUser: sessionStorage.getItem("loggedUser"),
+                    prodId: this.accessKey
+                }, function (data, status) {
+                    location.reload(true);
+                });
+            });
+        });
+
+        $('#summary').on('pagebeforeshow', function () {
+            let favouriteList;
+            changeValue = 'a';
+            $.post("backend/userData.php", {
+                action: 'view',
+                currentUser: sessionStorage.getItem("loggedUser")
+            }, function (data, status) {
+                const json = JSON.parse(data);
+                favouriteList = Object.values((json.favoriteList));
+                $.post("backend/favourite.php", {
+                    action: 'getList',
+                    currentUser: sessionStorage.getItem("loggedUser"),
+                    favList: favouriteList
+                }, function (data, status) {
+                    const jsonProducts = JSON.parse(data);
+                    jsonProducts.forEach(function (item) {
+                        const jsonIterate = JSON.parse(item);
+                        if (Object.keys(jsonProducts).length <= 1) {
+                            $('#favCount').text(Object.keys(jsonProducts)
+                                .length +
+                                " Item");
+                        } else {
+                            $('#favCount').text(Object.keys(jsonProducts)
+                                .length +
+                                " Items");
+                        }
+                        alert(JSON.stringify(jsonIterate));
+                        jsonIterate.forEach(function (product) {
+
+                            const ratings = product.rating;
+                            const ratingInt = parseInt(ratings);
+                            let ratingHtml = "";
+                            for (let i = 0; i < 5; i++) {
+                                if (ratingInt > i) {
+                                    ratingHtml = ratingHtml +
+                                        `<i class="fas fa-star secondary-color-yellow-text"></i>`;
+                                } else {
+                                    ratingHtml = ratingHtml +
+                                        `<i class="far fa-star secondary-color-yellow-text"></i>`;
+                                }
+                            }
+                            const favitem = `<div class="item">
+                                    <div style="width: 350px !important;" class="card py-0 px-0">
+                                        <div class="top px-2 py-4">
+                                            <div class="ui-block-a w40">
+                                                <a href="product_details.html" rel="external">
+                                                    <img alt="product Image" class="img-fluid"
+                                                         src="assets/img/productCoffee.png">
+                                                </a>
+                                            </div>
+                                            <div class="ui-block-b w60">
+                                                <div class="ui-grid-solo">
+                                                    <div class="ui-block-a">
+                                                        <h4 class="fw-bold mt-0">` + product.name + `</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="ui-grid-a">
+                                                    <div class="ui-block-a w100">
+                                                        ` + ratingHtml + `
+                                                    </div>
+                                                    <div class="ui-block-a">
+                                                        <del>20.99</del>
+                                                    </div>
+                                                    <div class="ui-block-a">
+                                                        <div class="red">USD ` + product.price + `</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ui-grid-b mb-0 mx-0 product_foot mt-2">
+                                            <div class="ui-block-a w20 text-left">
+                                                <i class="fas fa-trash-alt removeClick" style="font-size: 26px;"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>`;
+                            $("#favSummary").append(favitem);
+                            $("#favSummary").trigger('change');
+                            if (changeValue === 'a') {
+                                changeValue = 'b';
+
+                            } else if (changeValue === 'b') {
+                                changeValue = 'a';
+                            }
+                        });
+
+                    });
+                });
+            });
+
+            $(document).on("click", ".removeClick", function () {
+                $.post("backend/favourite.php", {
+                    action: 'remove',
+                    currentUser: sessionStorage.getItem("loggedUser"),
+                    prodId: this.accessKey
+                }, function (data, status) {
+                    location.reload(true);
+                });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+
+
+            $('input[name="radio-group-2"]:radio').change(function () {
+
+            });
+
+            $.post("backend/coupons.php", {
+                type: 'null'
+            }, function (data, status) {
+                showCoupons = $.parseJSON(data);
+                $.each(showCoupons, function (i, item) {
+
+                    if (item['status'] === 'redeem') {
+                        $("#noNew").hide();
+                        var coupon = `<div class="item"><div class="card p-0" style="width: 320px">
+                            <div class="top-card ui-grid-solo px-3 pt-3 pb-2">
+                                <div class="ui-block-a">
+                                    <h4 class ="truncate font-weight-bold">` + item['name'] + `</h4>
+                                    <p class ="text-muted font-weight-bold mb-0">Valid Through:</p>
+                                    <p class ="text-muted">21/11/2019 to 31/12/2019</p>
+                                        <div style="position: absolute; top: 50%; left: 62%; transform: translateY(-50%);"
+                                                class="ui-block-b w40">
+                                                <h3 class="primary-color">USD ` + item['id'] + `</h3>
+                                            </div>
+                                </div>
+                            </div>
+                            <div class ="bottom-card ui-grid-a px-3">
+                                <div class ="ui-block-a text-right">
+                                    <div class = "font-size-m text-left primary-color-green-text font-weight-bold">` +
+                            item['points'] + ` points</div>
+                                </div>
+                                <div class ="ui-block-b text-right">
+                                    <div class = "font-size-m text-right couponCollect" accesskey="` + item['id'] + `"><a>Redeem</a></div>
+                                </div>
+                            </div>
+                        </div></div>`;
+
+                        $("#new").append(coupon);
+
+                    } else if (item['status'] === 'collected') {
+                        $("#noCollected").hide();
+                        var coupon = `<div class="item"><div class="card p-0" style="width: 300px">
+                            <div class="top-card ui-grid-solo px-3 pt-3 pb-2">
+                                <div class="ui-block-a">
+                                    <h4 class ="truncate font-weight-bold">` + item['name'] + `</h4>
+                                    <p class ="text-muted font-weight-bold mb-0">Valid Through:</p>
+                                    <p class ="text-muted">21/11/2019 to 31/12/2019</p>
+                                    <div
+                                                        class="ui-grid-a text-right font-size-xl font-weight-heavy d-flex align-items-center">
+                                                        <div class="ui-block-a text-left primary-color-red-text ">
+                                                            USD<span class="font-size-m font-weight-bold f22">
+                                                                ` + item['id'] + `</span>
+                                                        </div>
+                                                    </div>
+                                </div>
+                            </div>
+                            <div class ="bottom-card ui-grid-a px-3 d-flex align-items-baseline">
+                                <div class ="ui-block-a text-right">
+                                    <div class = "font-size-s text-left text-muted">
+                                        <span>Added On: </span>
+                                        <span class = "font-weight-bold">05/12/2019</span>
+                                    </div>
+                                </div>
+                                <div class ="ui-block-b text-right">
+                                    <div class = "font-size-m text-right"><a>See Deals</a></div>
+                                </div>
+                            </div>
+                        </div></div>`;
+                        $("#collected").append(coupon);
+                    } else {
+                        $("#noExpired").hide();
+                        var coupon = `<div class="item"><div class="card p-0" style="width: 300px">
+                            <div class="top-card ui-grid-solo px-3 pt-3 pb-2">
+                                <div class="ui-block-a">
+                                    <h4 class ="truncate font-weight-bold">` + item['name'] + `</h4>
+                                    <p class ="text-muted font-weight-bold mb-0">Valid Through:</p>
+                                    <p class ="text-muted">21/11/2019 to 31/12/2019</p>
+                                    <div class="ui-grid-a text-right font-size-xl font-weight-heavy d-flex align-items-center">
+                                        <div class ="ui-block-a text-left primary-color-red-text ">
+                                            <span class = "font-size-m font-weight-bold">USD</span> ` + item['id'] + `
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class ="bottom-card ui-grid-a px-3 d-flex align-items-baseline">
+                                <div class ="ui-block-a text-right">
+                                    <div class = "font-size-s text-left text-muted">
+                                        <span>Expired: </span>
+                                        <span class = "font-weight-bold">03/04/2019</span>
+                                    </div>
+                                </div>
+                                <div class ="ui-block-b text-right">
+                                    <a class="couponDelete" accesskey="` + item['id'] + `"><i class="fa fa-trash-o icon primary-color-black-text"></i></a>
+                                </div>
+                            </div>
+                        </div></div>`;
+
+                        $("#expired").append(coupon);
+                    }
+
+                });
+
+            });
+            $(document).on("click", ".couponCollect", function () {
+                $.post("backend/coupons.php", {
+                    type: 'collected',
+                    id: this.accessKey,
+                    currentUser: sessionStorage.getItem('loggedUser')
+                }, function (data, status) {
+                    if (data === 'success') {
+                        alert("Successfully Redeemed")
+                    } else {
+                        // $( "#errorCoupon" ).click();
+                        alert("you are " + data + " points short")
+                    }
+                });
+            });
+            $(document).on("click", ".couponDelete", function () {
+                $.post("backend/coupons.php", {
+                    type: 'redeem',
+                    id: this.accessKey
+                }, function (data, status) {});
+            });
+
+
+            $("#showIt").hide();
+            $("#collect").click(function () {
+                $("#hideIt").hide();
+                $("#alsohide").hide();
+                $("#showIt").show();
+            });
+            $(document).on("click", ".dealsClick", function () {
+                sessionStorage.setItem("currentDeal", this.accessKey);
+                sessionStorage.setItem("ratingFilter", '0');
+                sessionStorage.setItem("priceFilter", '{"startValue":"0","EndValue":"145"}');
+                sessionStorage.setItem("sort", 'default');
+                document.location.href = 'promotion_details.html';
+            });
+            $(document).on("click", ".removeClick", function () {
+                $.post("backend/favourite.php", {
+                    action: 'remove',
+                    currentUser: sessionStorage.getItem("loggedUser"),
+                    prodId: this.accessKey
+                }, function (data, status) {
+                    location.reload(true);
+                });
+            });
+        });
+    </script>
+</body>

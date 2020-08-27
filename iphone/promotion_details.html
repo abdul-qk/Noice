@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Promotional Details</title>
+
+    <!-- jQuery mobile files -->
+    <link href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+    <!-- Font awesome file -->
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/f083cf2118.js"></script>
+
+    <!-- Bootstrap CSS file -->
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet">
+
+    <!-- Custom JS Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Custom main CSS file -->
+    <link href="index.css" rel="stylesheet">
+
+</head>
+
+<body class="post-login">
+<div data-role="page" class="promoDetails">
+
+    <div data-role="header" id="header" class="px-4 pt-5 pb-4">
+        <div class="ui-grid-a d-flex align-items-center header-title">
+            <div class="ui-block-a">
+                <h3 class="m-0">Promotion Details</h3>
+            </div>
+            <div class="ui-block-b icons">
+                <a class="primary-color-black-text" data-rel="popup" href="#overlay" data-position-to="origin"><i
+                        class="fas fa-search"></i></a>
+                <div class="ui-content" data-shadow="false" data-theme="none" data-overlay-theme="a" data-role="popup"
+                     id="overlay">
+                    <div class="deals-search-bar">
+                        <ul data-role="listview" data-filter="true" data-filter-reveal="true"
+                            data-filter-placeholder="Searching Promotions" data-inset="true">
+                            <li><a class="dealsClick" accesskey="1">Winter Coffee Sale</a></li>
+                            <li><a class="dealsClick" accesskey="2">Google Pixel Sale</a></li>
+                            <li><a class="dealsClick" accesskey="3">Furniture Sale</a></li>
+                            <li><a class="dealsClick" accesskey="4">Electronic Christmas Sale</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <i class="fas fa-camera" id="wow"></i>
+            </div>
+        </div>
+        <div class="header-content">
+            <div>
+                <div class="pt-3 font-size-xxl font-weight-heavy mb-2">Winter Coffee Sale</div>
+                <h4 class="secondary-color-gold-text"> Up to <b>50%</b> Off</h4>
+            </div>
+            <div class="small pt-3 line-height-small">
+                Winter is here and we know how precious coffee is to
+                keep you warm. Browse through an extensive collection
+                of renowned coffee brands to help you survive the cold
+                holiday season...
+            </div>
+            <div class="ui-grid-a w100 d-flex pt-3">
+                <div class="ui-block-a primary-color-grey-text small w65">Offer Valid till 24/11/2019</div>
+                <div class="ui-block-b small w35 primary-color-red-text font-weight-bold text-right">Online store
+                    Offer
+                </div>
+            </div>
+        </div>
+    </div>
+    <div role="main" class="mb-3">
+        <div class="ui-grid-a mt-4 px-4">
+            <div class="ui-grid-a mb-3">
+                <div class="ui-block-a">
+                    <div class="font-size-m primary-color-red-text">3 Promotions</div>
+                </div>
+                <div class="ui-block-b d-flex justify-content-end">
+                    <i class="fa fa-filter d-flex align-items-center pr-2 primary-color-blue-text"></i>
+                    <div class="font-size-m text-right"><a class="primary-color-blue-text" data-transition="slide"
+                                                           href="sort_filtering.html" rel="external">Sort & Filter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="products">
+        </div>
+    </div>
+    <div data-role="footer" data-position="fixed" id="footer" data-tap-toggle="false" transition="fade" class="py-2">
+        <div data-role="navbar" data-grid="d" class="h100">
+            <ul>
+                <li>
+                    <a class="pathUrl" accesskey="home.html">
+                        <i class="fa fa-home"></i>
+                        <div>Home</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="deals.html">
+                        <i class="fa fa-tag font"></i>
+                        <div>Deals</div>
+                    </a>
+                </li>
+                <li>
+                    <a class="pathUrl" accesskey="store.html">
+                        <i class="fa fa-store-alt"></i>
+                        <div>Store</div>
+                    </a>
+                </li>
+                <li>
+                    <a class="pathUrl" accesskey="cart.html">
+                        <i class="fa fa-shopping-cart"></i>
+                        <div>Cart</div>
+                    </a>
+                </li>
+                <li>
+                    <a class="pathUrl" accesskey="profile.html">
+                        <i class="fa fa-user"></i>
+                        <div>Profile</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $(document).on("click", ".pathUrl", function () {
+            document.location.href = this.accessKey;
+        });
+
+        var favoriteList;
+        $.post("backend/favourite.php", {
+            action: 'view',
+            currentUser: sessionStorage.getItem("loggedUser")
+        }, function (data, status) {
+            favoriteList = data;
+        });
+        $(document).on("click", ".dealsClick", function () {
+            sessionStorage.setItem("currentDeal", this.accessKey);
+            sessionStorage.setItem("ratingFilter", '0');
+            sessionStorage.setItem("priceFilter", '{"startValue":"0","EndValue":"145"}');
+            sessionStorage.setItem("sort", 'default');
+            document.location.href = 'promotion_details.html';
+        });
+        var showProducts;
+        $.post("backend/products.php", {
+            sort: sessionStorage.getItem("sort"),
+            priceFilter: sessionStorage.getItem("priceFilter"),
+            ratingFilter: sessionStorage.getItem("ratingFilter"),
+            promotion: sessionStorage.getItem("currentDeal")
+        }, function (data, status) {
+            showProducts = $.parseJSON(data);
+            $("#itemCount").html(showProducts.length + ' Items available');
+            $.each(showProducts, function (i, item) {
+
+                const gridSolo = document.createElement("div");
+                gridSolo.className = 'ui-grid-solo productClick';
+                gridSolo.accessKey = item['id']
+                $('.products').append(gridSolo);
+
+                const firstBlock = document.createElement("div");
+                firstBlock.className = 'ui-block-a w100';
+                $(gridSolo).append(firstBlock);
+
+                const card = document.createElement("div");
+                card.className = 'card py-0 px-0';
+                $(firstBlock).append(card);
+                //
+                const top = document.createElement("div");
+                top.className = 'top-card px-2 pb-2 pt-3';
+                $(card).append(top);
+
+                const flexGrid = document.createElement("div");
+                flexGrid.className = 'ui-grid-a d-flex align-items-center';
+                $(top).append(flexGrid);
+
+                const subBlockA = document.createElement("div");
+                subBlockA.className = 'ui-block-a w40';
+                $(flexGrid).append(subBlockA);
+                //
+                const productImage = $('<img />', {
+                    src: item['image'],
+                    height: 'auto',
+                    width: '90%'
+                });
+                productImage.className = 'img-fluid';
+                // productImage.attr('src','assets/img/productCoffee.png');
+                // productImage.attr('height','auto');
+                // productImage.attr('width','90%');
+                $(subBlockA).append(productImage);
+                //
+                const subBlockB = document.createElement("div");
+                subBlockB.className = 'ui-block-b w60';
+                $(flexGrid).append(subBlockB);
+
+                const prodContent = document.createElement("div");
+                prodContent.className = 'prodContent';
+                $(subBlockB).append(prodContent);
+
+                const innerGridA = document.createElement("div");
+                innerGridA.className = 'ui-grid-solo';
+                $(prodContent).append(innerGridA);
+
+                const innerBlockA = document.createElement("div");
+                innerBlockA.className = 'ui-block-a';
+                $(innerGridA).append(innerBlockA);
+
+                const prodTitle = document.createElement("h4");
+                prodTitle.className = 'mt-0 truncate font-weight-bold m-0';
+                prodTitle.textContent = item['name'];
+                $(innerBlockA).append(prodTitle);
+                //
+                const innerGridB = document.createElement("div");
+                innerGridB.className = 'ui-grid-solo pt-1';
+                $(prodContent).append(innerGridB);
+                //
+                const innerBlockB = document.createElement("div");
+                innerBlockB.className = 'ui-block-a w100';
+                $(innerGridB).append(innerBlockB);
+                //
+                const fullStar1 = document.createElement("i");
+                fullStar1.className = 'fa fa-star secondary-color-yellow-text';
+                $(innerBlockB).append(fullStar1);
+                //
+                const fullStar2 = document.createElement("i");
+                fullStar2.className = 'fa fa-star secondary-color-yellow-text pl-1';
+                $(innerBlockB).append(fullStar2);
+
+                const fullStar3 = document.createElement("i");
+                fullStar3.className = 'fa fa-star secondary-color-yellow-text pl-1';
+                $(innerBlockB).append(fullStar3);
+
+                const fullStar4 = document.createElement("i");
+                fullStar4.className = 'fa fa-star secondary-color-yellow-text pl-1';
+                $(innerBlockB).append(fullStar4);
+
+                const noStar = document.createElement("i");
+                noStar.className = 'fa fa-star-o secondary-color-yellow-text pl-1';
+                $(innerBlockB).append(noStar);
+                //
+                const price = document.createElement("div");
+                price.className = 'price mt-2';
+                $(subBlockB).append(price);
+
+                const priceInner = document.createElement("div");
+                priceInner.className = 'font-size-s text-muted font-weight-bold';
+                $(price).append(priceInner);
+
+                const del = document.createElement("del");
+                del.textContent = '20.99';
+                $(priceInner).append(del);
+
+                const usd = document.createElement("div");
+                usd.className = 'font-weight-heavy font-size-xl';
+                $(price).append(usd);
+
+                const innerUsd = document.createElement("div");
+                innerUsd.className = 'red';
+                $(usd).append(innerUsd);
+
+                const span1 = document.createElement("span");
+                span1.textContent = 'USD';
+                span1.className = 'font-size-m font-weight-bold';
+                $(innerUsd).append(span1);
+
+                const span2 = document.createElement("span");
+                span2.textContent = ' ' + item['price'];
+                $(innerUsd).append(span2);
+
+                const bottom = document.createElement("div");
+                bottom.className = 'bottom-card ui-grid-a';
+                $(card).append(bottom);
+
+                const bottomGrid = document.createElement("div");
+                bottomGrid.className = 'ui-grid-c d-flex align-items-center';
+                $(bottom).append(bottomGrid);
+
+                const bottomBlockA = document.createElement("div");
+                bottomBlockA.className = 'ui-block-a w20 text-left icon d-flex';
+                $(bottomGrid).append(bottomBlockA);
+
+                const heart = document.createElement("i");
+                if (jQuery.inArray(item['id'], favoriteList) !== -1) {
+                    heart.className = 'fas fa-heart primary-color-red-text pointer removeClick';
+                }
+                else {
+                    heart.className = 'fa fa-heart-o pointer addClick';
+                }
+                heart.accessKey = item['id'];
+                $(bottomBlockA).append(heart);
+
+                const bottomBlockB = document.createElement("div");
+                bottomBlockB.className = 'ui-block-b w40 text-right d-flex justify-content-end';
+                $(bottomGrid).append(bottomBlockB);
+
+                const share = document.createElement("i");
+                share.className = 'fa fa-share-alt d-inline pr-2';
+                $(bottomBlockB).append(share);
+
+                const shareWord = document.createElement("h6");
+                shareWord.className = 'd-inline font-size-m primary-color-black-text m-0 font-weight-bold';
+                shareWord.textContent = 'Share';
+                $(bottomBlockB).append(shareWord);
+
+                const bottomBlockC = document.createElement("div");
+                bottomBlockC.className = 'ui-block-c w40 text-right d-flex justify-content-end';
+                $(bottomGrid).append(bottomBlockC);
+
+                const cart = document.createElement("i");
+                cart.className = 'fa fa-shopping-cart text-primary d-inline pr-2';
+                $(bottomBlockC).append(cart);
+
+                const cartWord = document.createElement("h6");
+                cartWord.className = 'text-primary d-inline font-size-m font-weight-bold m-0';
+                cartWord.textContent = 'Buy Now';
+                $(bottomBlockC).append(cartWord);
+            });
+
+        });
+        $(document).on("click", ".productClick", function () {
+            sessionStorage.setItem('currentProduct', this.accessKey);
+            document.location.href = 'product_details.html';
+        });
+        $(document).on("click", ".dealsClick", function () {
+            sessionStorage.setItem("currentDeal", this.accessKey);
+            sessionStorage.setItem("ratingFilter", '0');
+            sessionStorage.setItem("priceFilter", '{"startValue":"0","EndValue":"145"}');
+            sessionStorage.setItem("sort", 'default');
+            document.location.href = 'promotion_details.html';
+        });
+
+        $(document).on("click", ".addClick", function () {
+            $.post("backend/favourite.php", {
+                action: 'add',
+                currentUser: sessionStorage.getItem("loggedUser"),
+                prodId: this.accessKey
+            }, function (data, status) {
+                location.reload(true);
+            });
+        });
+        $(document).on("click", ".removeClick", function () {
+            $.post("backend/favourite.php", {
+                action: 'remove',
+                currentUser: sessionStorage.getItem("loggedUser"),
+                prodId: this.accessKey
+            }, function (data, status) {
+                location.reload(true);
+            });
+        });
+
+
+    });
+</script>
+</body>
+
+</html>

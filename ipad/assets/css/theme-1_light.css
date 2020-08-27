@@ -1,0 +1,584 @@
+@import "theme_varaibles.css";
+
+/* Overriden Styles */
+.container {
+    padding-right: 30px !important;
+    padding-left: 30px !important;
+}
+
+/** End of Overriden Styles **/
+
+/* Background color start */
+.ui-page-theme-a {
+    background-color: var(--primary-color-white) !important;
+}
+
+.ui-page-theme-b {
+    background-color: var(--secondary-color-background-blue) !important;
+}
+
+.post-login {
+    background-color: var(--secondary-color-background-blue) !important;
+}
+
+.post-login .home,
+.post-login .deals,
+.post-login .cart,
+.post-login .profile,
+.post-login .promoDetails,
+.post-login .productDetails,
+.post-login .reviews,
+.post-login .addReview,
+.post-login .coupons,
+.post-login .changeAddress,
+.post-login .payment,
+.post-login .sortFilter,
+.post-login .store,
+.post-login .map {
+    background-color: var(--secondary-color-background-blue) !important;
+}
+
+.ui-overlay-b,
+.ui-page-theme-b,
+.ui-page-theme-b .ui-panel-wrapper {
+    text-shadow: none;
+    color: #313131;
+}
+
+.ui-overlay-a,
+.ui-page-theme-a,
+.ui-page-theme-a .ui-panel-wrapper {
+    text-shadow: none !important;
+}
+
+.ui-bar-b,
+.ui-page-theme-b .ui-bar-inherit,
+html .ui-bar-b .ui-bar-inherit,
+html .ui-body-b .ui-bar-inherit,
+html body .ui-group-theme-b .ui-bar-inherit,
+.ui-page-theme-a .ui-bar-inherit {
+    text-shadow: none !important;
+    border: none;
+    color: #313131;
+}
+
+/* Background color end */
+
+/** Breadcrumb Start **/
+.progress-stepper .step .step-count {
+    border: 2px solid rgba(227, 227, 227, 0.4);
+    background-color: rgba(227, 227, 227, 0.4);
+    color: var(--primary-color-grey);
+}
+
+.progress-stepper .step.active .step-count {
+    border: 2px solid var(--primary-color-blue);
+    background: var(--primary-color-white) !important;
+    color: var(--primary-color-blue) !important;
+}
+
+.progress-stepper .step .step-content-label {
+    color: var(--primary-color-grey);
+    font-weight: var(--font-weight-bold);
+}
+
+.progress-stepper .step.active .step-content-label {
+    color: var(--primary-color-blue) !important;
+}
+
+.progress-stepper .bar-left,
+.progress-stepper .bar-right {
+    border: 1px solid rgba(227, 227, 227, 0.8);
+}
+
+.bar-active {
+    border-color: var(--primary-color-blue) !important;
+}
+
+/* Breadcrumb end */
+
+/* Buttons start */
+.ui-btn {
+    background-color: var(--primary-color-white) !important;
+    border-color: var(--primary-color-white) !important;
+    text-shadow: none !important;
+    box-shadow: none;
+}
+
+.ui-btn:focus {
+    box-shadow: none !important;
+}
+
+.primary-btn {
+    background-color: var(--primary-color-blue) !important;
+    color: var(--primary-color-white) !important;
+    border: 2px solid var(--primary-color-blue) !important;
+    font-size: var(--font-size-h4) !important;
+}
+
+.secondary-btn {
+    background-color: var(--primary-color-white) !important;
+    color: var(--primary-color-blue) !important;
+    border: 2px solid var(--primary-color-blue) !important;
+}
+
+.transparent-btn {
+    background-color: unset !important;
+    color: var(--primary-color-grey) !important;
+    border: 2px solid transparent !important;
+}
+
+/* Buttons end */
+
+/* Text colors start */
+.text-muted {
+    color: var(--primary-color-grey) !important;
+}
+
+.text-primary {
+    color: var(--primary-color-blue) !important;
+}
+
+/* Text colors end */
+
+/* Header and footer start */
+.pre-login #header,
+.pre-login #footer,
+.pre-login .ui-content {
+    background: var(--primary-color-white) !important;
+    border-color: transparent !important;
+}
+
+/* Header and footer end */
+
+/* Forms start */
+.ui-input-text input {
+    border: 2px solid var(--primary-color-grey);
+}
+
+.ui-input-text input:focus {
+    border: 3px solid var(--primary-color-blue);
+    color: var(--primary-color-blue);
+    font-weight: bold;
+}
+
+.ui-input-text {
+    border-style: none !important;
+}
+
+.ui-shadow-inset {
+    box-shadow: none !important;
+}
+
+/** Ui Slider **/
+.ui-slider-track .ui-btn.ui-slider-handle {
+    border-radius: 50%;
+    border: 2px solid var(--primary-color-blue) !important;
+}
+
+.ui-bar-a {
+    background-color: var(--primary-color-blue) !important;
+    border-color: var(--primary-color-blue) !important;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+input.ui-slider-input {
+    padding: 5px 10px;
+    background: var(--primary-color-white) !important;
+    color: var(--primary-color-blue) !important;
+    border: 1px solid var(--primary-color-blue) !important;
+}
+
+.ui-slider-track .ui-btn-active {
+    background-color: var(--primary-color-blue) !important;
+    border-color: var(--primary-color-blue) !important;
+    text-shadow: none !important;
+}
+
+.ui-slider-track.ui-corner-all {
+    background-color: var(--secondary-color-grey) !important;
+}
+
+.ui-slider-popup {
+    position: absolute !important;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 22px;
+    padding-top: 5px;
+    z-index: 100;
+    opacity: 0.8;
+    border: 2px solid var(--primary-color-blue);
+}
+
+/**Ui Slider end **/
+
+/* Forms end */
+
+/* Pagination indicator start */
+.paginationSection .indicator {
+    background-color: var(--secondary-color-grey);
+}
+
+.paginationSection .indicator.active {
+    background-color: var(--primary-color-blue);
+}
+
+/* Pagination indicator end */
+
+/* Card styles start */
+.ui-card {
+    box-shadow: 0px -3px 9px -2px rgba(0, 0, 0, 0.17);
+}
+
+/* Card styles end */
+
+/* Index page start */
+.wordmark {
+    color: var(--primary-color-blue);
+}
+
+.title h5 {
+    color: var(--secondary-color-blue-1);
+}
+
+/* Index page end */
+
+/* First time landing styles start */
+.firstTimeFooter .ui-controlgroup .ui-controlgroup-controls img {
+    fill: var(--primary-color-grey);
+}
+
+/* Firs time landing styles end */
+
+/* color themes*/
+/* Primary Colours start */
+.primary-color-blue-text {
+    color: var(--primary-color-blue) !important;
+}
+
+.primary-color-blue-bg {
+    background-color: var(--primary-color-blue) !important;
+}
+
+.primary-color-green-text {
+    color: var(--primary-color-green) !important;
+}
+
+.primary-color-green-bg {
+    background-color: var(--primary-color-green) !important;
+}
+
+.primary-color-red-text {
+    color: var(--primary-color-red) !important;
+}
+
+.primary-color-red-bg {
+    background-color: var(--primary-color-red) !important;
+}
+
+.primary-color-white-text {
+    color: var(--primary-color-white) !important;
+}
+
+.primary-color-white-bg {
+    background-color: var(--primary-color-white) !important;
+}
+
+.primary-color-grey-text {
+    color: var(--primary-color-grey) !important;
+}
+
+.primary-color-grey-bg {
+    background-color: var(--primary-color-grey) !important;
+}
+
+.primary-color-black-text {
+    color: var(--primary-color-black) !important;
+}
+
+.primary-color-black-bg {
+    background-color: var(--primary-color-black) !important;
+}
+
+/* Primary Colour end */
+
+/* Secondary Colours start */
+
+.secondary-color-background-blue-bg {
+    background-color: var(--secondary-color-background-blue) !important;
+}
+
+.secondary-color-grey-text {
+    color: var(--secondary-color-grey) !important;
+}
+
+.secondary-color-grey-bg {
+    background-color: var(--secondary-color-grey) !important;
+}
+
+.secondary-color-yellow-text {
+    color: var(--secondary-color-yellow) !important;
+}
+
+.secondary-color-yellow-bg {
+    background-color: var(--secondary-color-yellow) !important;
+}
+
+.secondary-color-gold-text {
+    color: var(--secondary-color-gold) !important;
+}
+
+.secondary-color-gold-bg {
+    background-color: var(--secondary-color-gold) !important;
+}
+
+.secondary-color-blue-1-text {
+    color: var(--secondary-color-blue-1) !important;
+}
+
+.secondary-color-blue-1-bg {
+    background-color: var(--secondary-color-blue-1) !important;
+}
+
+.secondary-color-blue-2-text {
+    color: var(--secondary-color-blue-2) !important;
+}
+
+.secondary-color-blue-2-bg {
+    background-color: var(--secondary-color-blue-2) !important;
+}
+
+/* Secondary Colours end */
+
+.box-shadow-default {
+    background-color: var(--primary-color-white);
+    -webkit-box-shadow: 0 1px var(--primary-color-white) inset, 0 1px 3px rgba(34, 25, 25, 0.4);
+    -moz-box-shadow: 0 1px var(--primary-color-white) inset, 0 1px 3px rgba(34, 25, 25, 0.4);
+    box-shadow: 0 1px var(--primary-color-white) inset, 0 1px 3px rgba(34, 25, 25, 0.4);
+}
+
+/* font sizes */
+.f8 {
+    font-size: var(--font-size-8) !important;
+}
+
+.f10 {
+    font-size: var(--font-size-10) !important;
+}
+
+.f12 {
+    font-size: var(--font-size-h6) !important;
+}
+
+.f14 {
+    font-size: var(--font-size-h5) !important;
+}
+
+.f16 {
+    font-size: var(--font-size-h4) !important;
+}
+
+.f22 {
+    font-size: var(--font-size-h3) !important;
+}
+
+.f28 {
+    font-size: var(--font-size-h2) !important;
+}
+
+.f35 {
+    font-size: var(--font-size-h1) !important;
+}
+
+.f50 {
+    font-size: var(--font-size-sub-title) !important;
+}
+
+.f72 {
+    font-size: var(--font-size-title) !important;
+}
+
+/*font sizes end */
+
+/* Font weight start */
+.fw-light {
+    font-weight: var(--font-weight-light) !important;
+}
+
+.fw-medium {
+    font-weight: var(--font-weight-medium) !important;
+}
+
+.fw-bold {
+    font-weight: var(--font-weight-bold) !important;
+}
+
+.fw-heavy {
+    font-weight: var(--font-weight-heavy) !important;
+}
+
+/** Width **/
+.w5 {
+    width: 5% !important;
+}
+
+.w15 {
+    width: 15% !important;
+}
+
+.w25 {
+    width: 25% !important;
+}
+
+.w35 {
+    width: 35% !important;
+}
+
+.w45 {
+    width: 45% !important;
+}
+
+.w55 {
+    width: 55% !important;
+}
+
+.w65 {
+    width: 65% !important;
+}
+
+.w75 {
+    width: 75% !important;
+}
+
+.w85 {
+    width: 85% !important;
+}
+
+.w95 {
+    width: 95% !important;
+}
+
+.w10 {
+    width: 10% !important;
+}
+
+.w20 {
+    width: 20% !important;
+}
+
+.w30 {
+    width: 30% !important;
+}
+
+.w40 {
+    width: 40% !important;
+}
+
+.w50 {
+    width: 50% !important;
+}
+
+.w60 {
+    width: 60% !important;
+}
+
+.w70 {
+    width: 70% !important;
+}
+
+.w80 {
+    width: 80% !important;
+}
+
+.w90 {
+    width: 90% !important;
+}
+
+.w100 {
+    width: 100% !important;
+}
+
+
+/** Height **/
+
+.h5 {
+    height: 5% !important;
+}
+
+.h15 {
+    height: 15% !important;
+}
+
+.h25 {
+    height: 25% !important;
+}
+
+.h35 {
+    height: 35% !important;
+}
+
+.h45 {
+    height: 45% !important;
+}
+
+.h55 {
+    height: 55% !important;
+}
+
+.h65 {
+    height: 65% !important;
+}
+
+.h75 {
+    height: 75% !important;
+}
+
+.h85 {
+    height: 85% !important;
+}
+
+.h95 {
+    height: 95% !important;
+}
+
+.h10 {
+    height: 10% !important;
+}
+
+.h20 {
+    height: 20% !important;
+}
+
+.h30 {
+    height: 30% !important;
+}
+
+.h40 {
+    height: 40% !important;
+}
+
+.h50 {
+    height: 50% !important;
+}
+
+.h60 {
+    height: 60% !important;
+}
+
+.h70 {
+    height: 70% !important;
+}
+
+.h80 {
+    height: 80% !important;
+}
+
+.h90 {
+    height: 90% !important;
+}
+
+.h100 {
+    height: 100% !important;
+}

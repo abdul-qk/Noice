@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Meta tags to make template compatible with all devices and all phones -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no;" name="viewport">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; ">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+    <title>Email</title>
+
+    <!-- jQuery mobile files -->
+    <link href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+    <!-- Font awesome file -->
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/f083cf2118.js"></script>
+
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Open Sans from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap" rel="stylesheet">
+
+    <!-- Custom JS Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Internal Styles -->
+    <style type ="text/css">
+        :root {
+            --primary-color-blue: #4444C8;
+            --primary-color-green: #5A8F40;
+            --primary-color-red: #B22033;
+            --primary-color-white: #FFFFFF;
+            --primary-color-grey: #8F8F8F;
+            --primary-color-black: #313131;
+
+            --secondary-color-background-blue: #F6FAFF;
+            --secondary-color-grey: #E3E3E3;
+            --secondary-color-yellow: #E2C224;
+            --secondary-color-gold: #B7a223;
+            --secondary-color-blue-1: #5151F5;
+            --secondary-color-blue-2: #6C63FF;
+
+            --font-weight-light: 100;
+            --font-weight-medium: normal;
+            --font-weight-bold: 600;
+            --font-weight-heavy: 800;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif !important;
+        }
+        #page {
+            background-color: var(--primary-color-blue) !important;
+        }
+        #footer, #header {
+            background-color: var(--primary-color-blue) !important;
+            border: none !important;
+            text-shadow: none !important;
+            color: var(--primary-color-white);
+            font-weight: 400;
+        }
+        #main, .wrapper {
+            background-color: var(--primary-color-white) !important;
+        }
+        #main, .ui-page-theme-a {
+            text-shadow: none !important;
+        }
+        .wrapper {
+            width: 600px;
+        }
+        .primary-color-blue-text {
+            color: var(--primary-color-blue) !important;
+        }
+
+        .primary-color-blue-bg {
+            background-color: var(--primary-color-blue) !important;
+        }
+
+        .primary-color-green-text {
+            color: var(--primary-color-green) !important;
+        }
+
+        .primary-color-green-bg {
+            background-color: var(--primary-color-green) !important;
+        }
+
+        .primary-color-red-text {
+            color: var(--primary-color-red) !important;
+        }
+
+        .primary-color-white-text {
+            color: var(--primary-color-white) !important;
+        }
+
+        .secondary-color-yellow-text {
+            color: var(--secondary-color-yellow) !important;
+        }
+
+        .font-size-xxxx {
+            font-size: 50px !important;
+        }
+
+        .font-size-xxx {
+            font-size: 45px !important;
+        }
+
+        .font-size-xx {
+            font-size: 35px !important;
+        }
+
+        .font-size-xxl {
+            font-size: 28px;
+        }
+
+        .font-size-xl {
+            font-size: 22px;
+        }
+
+        .font-size-l {
+            font-size: 18px !important;
+        }
+
+        .font-size-m {
+            font-size: 14px !important;
+        }
+
+        .font-size-s {
+            font-size: 12px !important;
+        }
+
+        .font-weight-heavy {
+            font-weight: var(--font-weight-heavy) !important;
+        }
+
+        .font-weight-bold {
+            font-weight: var(--font-weight-bold) !important;
+        }
+
+        .font-weight-medium {
+            font-weight: var(--font-weight-medium) !important;
+        }
+
+        .font-weight-light {
+            font-weight: var(--font-weight-light) !important;
+        }
+        .icon {
+            font-size:20px !important;
+        }
+        h4 {
+            font-size: 16px;
+        }
+        .card {
+            /*margin-top: 20px;*/
+            margin-bottom: 15px;
+            max-width: 580px !important;
+            padding: 20px 20px 10px;
+            border-radius: 10px;
+            border: none !important;
+            background-color: var(--primary-color-white);
+            -webkit-box-shadow: 0 1px var(--primary-color-white) inset, 0 1px 3px rgba(34, 25, 25, 0.4);
+            -moz-box-shadow: 0 1px var(--primary-color-white) inset, 0 1px 3px rgba(34, 25, 25, 0.4);
+            box-shadow: 0 1px var(--primary-color-white) inset, 0 1px 3px rgba(34, 25, 25, 0.4);
+        }
+        .w40 {
+            width: 40% !important;
+        }
+        .w50 {
+            width: 50%;
+        }
+        .w60 {
+            width: 60% !important;
+        }
+        .w100 {
+            width: 100% !important;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div data-role="page" id="page" class ="d-flex justify-content-center align-items-center">
+        <div class ="wrapper">
+            <div data-role="header" id="header" class ="p-4">
+                <div class ="ui-grid-solo text-center">
+                    <img src="assets/img/wordmark-logo.svg" width="100px" class="img-fluid">
+                </div>
+            </div>
+            <div role = "main" id="main">
+                <div class ="header-title">
+                    <div class ="ui-grid-solo text-center my-4">
+                        <h3>Well hello there !</h3>
+                        <h5 class ="font-weight-bold primary-color-blue-text"> Here are your favourite items </h5>
+                    </div>
+                </div>
+                <div class ="favourite-items">
+                    <div class="ui-grid-solo">
+                        <div class="ui-block-a w100 px-4 d-flex justify-content-center flex-column align-items-center">
+                            <div class="item card">
+                                <div class = "ui-grid-a d-flex align-items-center">
+                                    <div class="ui-block-a w40">
+                                        <img alt="product Image" class="img-fluid" src="assets/img/productCoffee.png" height="auto" width="100px">
+                                    </div>
+                                    <div class="ui-block-b w60">
+                                        <div class = "prodContent">
+                                            <div class="ui-grid-solo">
+                                                <div class="ui-block-a">
+                                                    <h4 class="mt-0 truncate font-weight-bold m-0">Stok Cold Brew Coffee - Medium Caffeine</h4>
+                                                </div>
+                                            </div>
+                                            <div class = "ui-grid-solo pt-1">
+                                                <div class="ui-block-a w100">
+                                                    <i class="fa fa-star secondary-color-yellow-text"></i>
+                                                    <i class="fa fa-star secondary-color-yellow-text"></i>
+                                                    <i class="fa fa-star secondary-color-yellow-text"></i>
+                                                    <i class="fa fa-star secondary-color-yellow-text"></i>
+                                                    <i class="fa fa-star-o secondary-color-yellow-text"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class = "price mt-2">
+                                            <div class="font-size-s text-muted font-weight-bold">
+                                                <del>20.99</del>
+                                            </div>
+                                            <div class="font-weight-heavy font-size-xl">
+                                                <div class="primary-color-red-text">
+                                                    <span class = "font-size-m font-weight-bold">USD</span> 10.99
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item card">
+                                <div class = "ui-grid-a d-flex align-items-center">
+                                    <div class="ui-block-a w40">
+                                        <img alt="product Image" class="img-fluid" src="assets/img/productCoffee.png" height="auto" width="100px">
+                                    </div>
+                                    <div class="ui-block-b w60">
+                                        <div class = "prodContent">
+                                            <div class="ui-grid-solo">
+                                                <div class="ui-block-a">
+                                                    <h4 class="mt-0 truncate font-weight-bold m-0">Stok Cold Brew Coffee - Medium Caffeine</h4>
+                                                </div>
+                                            </div>
+                                            <div class = "ui-grid-solo pt-1">
+                                                <div class="ui-block-a w100">
+                                                    <i class="fa fa-star secondary-color-yellow-text"></i>
+                                                    <i class="fa fa-star secondary-color-yellow-text"></i>
+                                                    <i class="fa fa-star secondary-color-yellow-text"></i>
+                                                    <i class="fa fa-star secondary-color-yellow-text"></i>
+                                                    <i class="fa fa-star-o secondary-color-yellow-text"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class = "price mt-2">
+                                            <div class="font-size-s text-muted font-weight-bold">
+                                                <del>20.99</del>
+                                            </div>
+                                            <div class="font-weight-heavy font-size-xl">
+                                                <div class="primary-color-red-text">
+                                                    <span class = "font-size-m font-weight-bold">USD</span> 10.99
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item card">
+                                <div class = "ui-grid-a d-flex align-items-center">
+                                    <div class="ui-block-a w40">
+                                        <img alt="product Image" class="img-fluid" src="assets/img/productCoffee.png" height="auto" width="100px">
+                                    </div>
+                                    <div class="ui-block-b w60">
+                                        <div class = "prodContent">
+                                            <div class="ui-grid-solo">
+                                                <div class="ui-block-a">
+                                                    <h4 class="mt-0 truncate font-weight-bold m-0">Stok Cold Brew Coffee - Medium Caffeine</h4>
+                                                </div>
+                                            </div>
+                                            <div class = "ui-grid-solo pt-1">
+                                                <div class="ui-block-a w100">
+                                                    <i class="fa fa-star secondary-color-yellow-text"></i>
+                                                    <i class="fa fa-star secondary-color-yellow-text"></i>
+                                                    <i class="fa fa-star secondary-color-yellow-text"></i>
+                                                    <i class="fa fa-star secondary-color-yellow-text"></i>
+                                                    <i class="fa fa-star-o secondary-color-yellow-text"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class = "price mt-2">
+                                            <div class="font-size-s text-muted font-weight-bold">
+                                                <del>20.99</del>
+                                            </div>
+                                            <div class="font-weight-heavy font-size-xl">
+                                                <div class="primary-color-red-text">
+                                                    <span class = "font-size-m font-weight-bold">USD</span> 10.99
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item card">
+                                <div class = "ui-grid-a d-flex align-items-center">
+                                    <div class="ui-block-a w40">
+                                        <img alt="product Image" class="img-fluid" src="assets/img/productCoffee.png" height="auto" width="100px">
+                                    </div>
+                                    <div class="ui-block-b w60">
+                                        <div class = "prodContent">
+                                            <div class="ui-grid-solo">
+                                                <div class="ui-block-a">
+                                                    <h4 class="mt-0 truncate font-weight-bold m-0">Stok Cold Brew Coffee - Medium Caffeine</h4>
+                                                </div>
+                                            </div>
+                                            <div class = "ui-grid-solo pt-1">
+                                                <div class="ui-block-a w100">
+                                                    <i class="fa fa-star secondary-color-yellow-text"></i>
+                                                    <i class="fa fa-star secondary-color-yellow-text"></i>
+                                                    <i class="fa fa-star secondary-color-yellow-text"></i>
+                                                    <i class="fa fa-star secondary-color-yellow-text"></i>
+                                                    <i class="fa fa-star-o secondary-color-yellow-text"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class = "price mt-2">
+                                            <div class="font-size-s text-muted font-weight-bold">
+                                                <del>20.99</del>
+                                            </div>
+                                            <div class="font-weight-heavy font-size-xl">
+                                                <div class="primary-color-red-text">
+                                                    <span class = "font-size-m font-weight-bold">USD</span> 10.99
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-role="footer" id="footer" class ="p-4 mt-2">
+                <div class ="ui-grid-solo text-center d-flex justify-content-center align-items-center">
+                    <div class ="font-size-m pr-2"> Powered By</div>
+                    <img src="assets/img/wooksMart-light.svg" width="100px" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

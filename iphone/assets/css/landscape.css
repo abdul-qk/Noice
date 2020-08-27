@@ -1,0 +1,311 @@
+@import "common_variables.css";
+@import "theme_varaibles.css";
+
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 812px)
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: landscape) {
+
+    /* Common classes start */
+    .px-landscape-4 {
+        padding-left: 1.5rem!important;
+        padding-right: 1.5rem!important;
+    }
+    .pt-landscape-0 {
+        padding-top: 0px !important;
+    }
+    .pt-landscape-0 {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .w-landscape-50 {
+        width: 50% !important;
+    }
+    .w-landscape-60 {
+        width: 60% !important;
+    }
+    .w-landscape-20 {
+        width: 20% !important;
+    }
+    .coupons.ui-page, .payment.ui-page,
+    .changeAddress.ui-page,
+    .sortFilter.ui-page,
+    .addReview.ui-page
+    {
+        padding-bottom: 0px !important;
+    }
+    .coupons .ui-page-footer-fixed,
+    .payment.ui-page-footer-fixed,
+    .changeAddress .ui-footer-fixed,
+    .sortFilter .ui-footer-fixed,
+    .addReview .ui-footer-fixed {
+        padding-bottom: 0px !important;
+    }
+    .coupons .ui-footer-fixed,
+    .payment .ui-footer-fixed,
+    .changeAddress .ui-footer-fixed,
+    .sortFilter .ui-footer-fixed,
+    .addReview .ui-footer-fixed {
+        left: unset;
+        right: unset;
+        bottom: unset;
+        width: 100%;
+        position: relative;
+        z-index: 1000;
+    }
+    .progress-stepper .bar-left-3 {
+        left: 52%;
+        width: 27.5%;
+    }
+    .progress-stepper .bar-left-2 {
+        left: 20%;
+        width: 28%;
+    }
+    .progress-stepper .bar-left, .progress-stepper .bar-right {
+        top: 63%;
+    }
+    .progress-stepper .bar-right {
+        width: 16.9%;
+    }
+    .sort-apply {
+        display: flex;
+        justify-content: center;
+    }
+    /* Common classes end */
+
+    /* Login styles start */
+    .loginGraphic, .forgotImg {
+        display: none;
+    }
+    /* Login styles end */
+
+    /* First time landing start */
+    #firstTimeLanding .mainTitle {
+        display: flex;
+        justify-content: center;
+    }
+    #firstTimeLanding .mainTitle > h1 {
+        padding-right: 16px;
+    }
+    #firstTimeLanding .landingLogo {
+        width: 10%;
+    }
+    #swiperInformation #footer, .signIn #footer, .createAcc #footer, .forgotPass #footer {
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+    .signIn #footer .primary-btn {
+        margin-top: 0px !important;
+    }
+    #firstTimeLanding #main {
+        padding-top: 28px;
+    }
+    #firstTimeLanding .ui-content {
+        height: 432px !important;
+    }
+    /* First time landing end */
+
+    /* Contact us styles start */
+    .feedbackContainer {
+        display: flex;
+    }
+    .feedbackContainer .feedback:last-child {
+        width: 78%;
+    }
+    /* Contact us styles end */
+
+    /* About us styles start*/
+    .aboutImg {
+        width: 40%;
+    }
+    .team-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .team-section img {
+        width: 60%;
+    }
+    .team-section .ui-grid-a {
+        width: 50% !important;
+        text-align: center;
+    }
+    /* About us styles end
+
+    /* Home Page styles start */
+    .post-login #header {
+        padding-top: 1.5rem!important;
+    }
+    .home #header {
+        height: 175px;
+    }
+    .post-login .header-title .ui-block-b,
+    .post-login .header-title-back .ui-block-b,
+    .post-login .header-title-icons .ui-block-b {
+        display: block;
+        text-align: right;
+    }
+    .post-login .header-title .ui-block-b i:first-child,
+    .post-login .header-title-back .ui-block-b i:first-child,
+    .post-login .header-title-icons .ui-block-b i:first-child,
+    .post-login .productDetails .header-title-icons .ui-block-b i{
+        padding-right: 32px;
+    }
+    .carousell .item {
+        width: 40%;
+    }
+    .carousell .item .card {
+        width: 300px;
+    }
+    .trending-items > .ui-grid-b {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        display: flex;
+    }
+    .promotion-banner {
+        width: 330px;
+        margin-right: 20px;
+    }
+    .rankSummary .tab-pane .rankContent, .profile .ranking .tab-pane .rankContent {
+        display: flex;
+        flex-direction: row;
+    }
+    .rankSummary .rankContent > .ui-grid-a, .profile .rankContent > .ui-grid-a {
+        width: 40%;
+        border-right: 1px solid var(--secondary-color-grey);
+    }
+    .rankSummary .rankContent .tableWrapper, .profile .ranking .rankContent .tableWrapper {
+        width: 60%;
+        border-radius: 0px 10px 10px 0px;
+    }
+    /* Home Page styles end */
+
+    /* Deals Page styles start */
+    .deals .promotion-banner {
+        width: auto;
+        margin-right: 20px;
+    }
+    .deals #for_you.show {
+        height: unset;
+        margin-top: 2.5rem !important;
+    }
+    /* Deals Page styles end */
+
+    /* Profile Page styles start */
+    .header-content-profile, .header-content-profile .tabs {
+        margin-top: 28px;
+    }
+    .profile .header-content-profile .tabs {
+        text-align: center;
+    }
+    .profile .profile_image > .ui-block-a {
+        width: 20% !important;
+    }
+    .profile .profile_image > .ui-block-b {
+        width: 30% !important;
+    }
+    .header-content-profile .tabs li {
+        padding: 6px 36px;
+    }
+    .profile .profile_image {
+        justify-content: center;
+    }
+    .profile .profile_image img {
+        width: 70%;
+    }
+    .profile .carousell .item {
+        width: 40%;
+        margin-right: 8px;
+    }
+    .profile .couponProfile .card {
+        margin: 8px !important;
+    }
+    .settings .ui-controlgroup-controls > .ui-grid-b > .ui-block-a {
+        width: 80% !important;
+    }
+    .settings .ui-controlgroup-controls > .ui-grid-b > .ui-block-b,
+    .settings .ui-controlgroup-controls > .ui-grid-b > .ui-block-c  {
+        width: 20%;
+    }
+    .accountSettings .ui-controlgroup-controls {
+        display: flex;
+    }
+    .accountSettings .ui-controlgroup-controls .card:first-child {
+        margin-right: 8px;
+    }
+    .accountSettings .ui-controlgroup-controls .card:last-child {
+        margin-left: 8px;
+    }
+    .coupons #couponForm {
+        margin-bottom: 20px;
+    }
+    .coupons #couponForm .card, .changeAddress .card, .reviews .card {
+        margin:10px;
+    }
+    /* Profile Page styles end */
+
+    /* Payment styles start */
+    .payment .tab-content {
+        margin-top: 24px;
+    }
+    .payment .tab-pane .ui-grid-solo .ui-block-a, .checkout {
+        display: flex;
+        justify-content: center;
+    }
+    .payment .my-card, .payment .paypal-card {
+        margin: 0px 190px;
+        margin-bottom: 30px !important;
+    }
+    .payment #footer-secondary .ui-block-a, .payment #footer-secondary .ui-block-b,
+    .sortFilter #footer-secondary .ui-block-a, .sortFilter #footer-secondary .ui-block-b {
+        padding: 0px 6px;
+    }
+    /* Payment styles end */
+
+    /* Promotion details start */
+    .promoDetails .header-content > div:nth-child(2) {
+        height: 75px;
+    }
+    /* Promotion details end */
+
+    /* Product Details start */
+    .post-login .productDetails .header-title-icons .ui-block-b i:last-child {
+        padding-right: 0px;
+    }
+    .productDetails .ratingSection > .ui-block-a {
+        width: 18% !important;
+    }
+    .productDetails .priceSection  {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .productDetails .detailsBuy {
+        display: flex;
+        justify-content: center;
+    }
+    /* Product Details end */
+
+    /* Cart styles start */
+    .cartContent {
+        display: flex !important;
+        margin-bottom: 1.5rem;
+    }
+    .cartContent .cart-items {
+        width: 360px;
+        height: 280px;
+    }
+    .cartContent .cartTotal {
+        width: calc(100% - 360px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0px !important;
+    }
+    /* Cart styles end */
+    .map iframe{
+        height: 55vh;
+    }
+}

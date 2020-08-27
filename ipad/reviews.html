@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reviews</title>
+
+    <!-- jQuery mobile files -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+    <!-- Font awesome file -->
+    <script src="https://kit.fontawesome.com/f083cf2118.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom JS Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Custom main CSS file -->
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body class="post-login">
+    <div data-role="page" class="reviews">
+        <div data-role="header" id="header2">
+            <div class="ui-grid-a">
+                <div class="container">
+                    <div class="ui-block-a w5">
+                        <a data-rel="back" rel="external"><img src="assets/img/back.svg" height="30" width="30"></a>
+                    </div>
+                    <div class="-ui-block-b w95">
+                        <h3 class="ui-block-b text-primary text-center">Reviews</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-role="main">
+            <div class="container pb-5">
+                <div class="head mt-5">
+                    <a href="addreview.html" rel="external">
+                        <h5 class="text-center">Add a Review</h5>
+                    </a>
+                </div>
+                <ul class="nav nav-tabs nav-justified nav-primary mt-4">
+                    <li class="nav-item">
+                        <a href="#latest" class="nav-link active" data-toggle="tab">Latest</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#highest" class="nav-link" data-toggle="tab">Highest</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#lowest" class="nav-link" data-toggle="tab">Lowest</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="latest">
+
+                        <div class="ui-grid-a" id="reviewList">
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="highest">
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a pr-3">
+                                <div class="card">
+                                    <div class="ui-grid-a">
+                                        <div class="ui-block-a w20">
+                                            <img src="assets/img/profile_2.png" alt="Profile Avatar" width="50px">
+                                        </div>
+                                        <div class="ui-block-b w80 pl-2">
+                                            <div class="ui-grid-a">
+                                                <div class="ui-block-a w40">
+                                                    <h4 style="line-height: 1.5;" class="black">Jane Doe</h4>
+                                                </div>
+                                                <div style="color: #E2C224;" class="ui-block-b w60 text-right">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                            </div>
+                                            <div class="review-content pt-2">
+                                                <p style="word-wrap: break-word;" class="primary-color-black text f16">
+                                                    Great product ! This is
+                                                    the
+                                                    best
+                                                    coffee I've tasted in a while. Definitely recommended if you're a
+                                                    coffee
+                                                    lover.</p>
+                                            </div>
+                                            <div class="ui-grid-a">
+                                                <div class="ui-block-a">
+                                                    <h6 class="primary-color-grey-text f16 fw-bold">2 Days ago</h6>
+                                                </div>
+                                                <div class="ui-block-b f16 text-right">
+                                                    <i class="far fa-heart"></i> 57
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui-block-b pl-3">
+                                <div class="card">
+                                    <div class="ui-grid-a">
+                                        <div class="ui-block-a w20">
+                                            <img src="assets/img/profile_2.png" alt="Profile Avatar" width="50px">
+                                        </div>
+                                        <div class="ui-block-b w80 pl-2">
+                                            <div class="ui-grid-a">
+                                                <div class="ui-block-a w40">
+                                                    <h4 style="line-height: 1.5;" class="black">Jane Doe</h4>
+                                                </div>
+                                                <div style="color: #E2C224;" class="ui-block-b w60 text-right">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                            </div>
+                                            <div class="review-content pt-2">
+                                                <p style="word-wrap: break-word;" class="primary-color-black text f16">
+                                                    Great product ! This is
+                                                    the
+                                                    best
+                                                    coffee I've tasted in a while. Definitely recommended if you're a
+                                                    coffee
+                                                    lover.</p>
+                                            </div>
+                                            <div class="ui-grid-a">
+                                                <div class="ui-block-a">
+                                                    <h6 class="primary-color-grey-text f16 fw-bold">2 Days ago</h6>
+                                                </div>
+                                                <div class="ui-block-b f16 text-right">
+                                                    <i class="far fa-heart"></i> 57
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="lowest">
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a pr-3">
+                                <div class="card">
+                                    <div class="ui-grid-a">
+                                        <div class="ui-block-a w20">
+                                            <img src="assets/img/profile_2.png" alt="Profile Avatar" width="50px">
+                                        </div>
+                                        <div class="ui-block-b w80 pl-2">
+                                            <div class="ui-grid-a">
+                                                <div class="ui-block-a w40">
+                                                    <h4 style="line-height: 1.5;" class="black">Jane Doe</h4>
+                                                </div>
+                                                <div style="color: #E2C224;" class="ui-block-b w60 text-right">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                            </div>
+                                            <div class="review-content pt-2">
+                                                <p style="word-wrap: break-word;" class="primary-color-black text f16">
+                                                    Great product ! This is
+                                                    the
+                                                    best
+                                                    coffee I've tasted in a while. Definitely recommended if you're a
+                                                    coffee
+                                                    lover.</p>
+                                            </div>
+                                            <div class="ui-grid-a">
+                                                <div class="ui-block-a">
+                                                    <h6 class="primary-color-grey-text f16 fw-bold">2 Days ago</h6>
+                                                </div>
+                                                <div class="ui-block-b f16 text-right">
+                                                    <i class="far fa-heart"></i> 57
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui-block-b pl-3">
+                                <div class="card">
+                                    <div class="ui-grid-a">
+                                        <div class="ui-block-a w20">
+                                            <img src="assets/img/profile_2.png" alt="Profile Avatar" width="50px">
+                                        </div>
+                                        <div class="ui-block-b w80 pl-2">
+                                            <div class="ui-grid-a">
+                                                <div class="ui-block-a w40">
+                                                    <h4 style="line-height: 1.5;" class="black">Jane Doe</h4>
+                                                </div>
+                                                <div style="color: #E2C224;" class="ui-block-b w60 text-right">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                            </div>
+                                            <div class="review-content pt-2">
+                                                <p style="word-wrap: break-word;" class="primary-color-black text f16">
+                                                    Great product ! This is
+                                                    the
+                                                    best
+                                                    coffee I've tasted in a while. Definitely recommended if you're a
+                                                    coffee
+                                                    lover.</p>
+                                            </div>
+                                            <div class="ui-grid-a">
+                                                <div class="ui-block-a">
+                                                    <h6 class="primary-color-grey-text f16 fw-bold">2 Days ago</h6>
+                                                </div>
+                                                <div class="ui-block-b f16 text-right">
+                                                    <i class="far fa-heart"></i> 57
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $(document).on("click", ".dealsClick", function () {
+                sessionStorage.setItem("currentDeal", this.accessKey);
+                sessionStorage.setItem("ratingFilter", '0');
+                sessionStorage.setItem("priceFilter", '{"startValue":"0","EndValue":"145"}');
+                sessionStorage.setItem("sort", 'default');
+                document.location.href = 'promotion_details.html';
+            });
+            let reviewList;
+            changeValue = 'a pr-3';
+            $.post("backend/review.php", {
+                action: "view",
+                prodId: sessionStorage.getItem("currentProduct"),
+            }, function (data, status) {
+                reviewList = $.parseJSON(data);
+                $.each(reviewList[0].review, function (i, item) {
+                    let userData;
+                    let imagSrc;
+                    $.post("backend/userData.php", {
+                        action: 'view',
+                        currentUser: item.email
+                    }, function (data, status) {
+                        userData = JSON.parse(data);
+                        imagSrc = userData.imageSrc;
+                        const ratings = item.rating;
+                        const ratingInt = parseInt(ratings);
+                        let ratingHtml = "";
+                        for (let i = 0; i < 5; i++) {
+                            if (ratingInt > i) {
+                                ratingHtml = ratingHtml +
+                                    `<i class="fas fa-star secondary-color-yellow-text"></i>`;
+                            } else {
+                                ratingHtml = ratingHtml +
+                                    `<i class="fas fa-star primary-color-grey-text"></i>`;
+                            }
+                        }
+
+                        const review = `<div class="ui-block-` + changeValue + `">
+                                <div class="card">
+                                    <div class="ui-grid-a">
+                                        <div class="ui-block-a w20">
+                                            <img src="` + userData.imageSrc + `" alt="Profile Avatar" width="50px">
+                                        </div>
+                                        <div class="ui-block-b w80 pl-2">
+                                            <div class="ui-grid-a">
+                                                <div class="ui-block-a w40">
+                                                    <h4 style="line-height: 1.5;" class="black">` + userData.name + `</h4>
+                                                </div>
+                                                <div style="color: #E2C224;" class="ui-block-b w60 text-right">
+                                                    ` + ratingHtml +
+                            `
+                                                </div>
+                                            </div>
+                                            <div class="review-content pt-2">
+                                                <p style="word-wrap: break-word;" class="primary-color-black text f16"> ` +
+                            item
+                            .description + `</p>
+                                            </div>
+                                            <div class="ui-grid-a">
+                                                <div class="ui-block-a">
+                                                    <h6 class="primary-color-grey-text f16 fw-bold">` + item.time + `</h6>
+                                                </div>
+                                                <div class="ui-block-b f16 text-right">
+                                                    <i class="far fa-heart"></i> 57
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>`;
+                        $("#reviewList").append(review);
+                        if (changeValue === 'a pr-3') {
+                            changeValue = 'b pl-3';
+
+                        } else if (changeValue === 'b pl-3') {
+                            changeValue = 'a pr-3';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

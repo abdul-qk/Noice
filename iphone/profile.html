@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile</title>
+
+    <!-- jQuery mobile files -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+    <!-- Font awesome file -->
+    <script src="https://kit.fontawesome.com/f083cf2118.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom JS Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Custom main CSS file -->
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body class="post-login">
+<div data-role="page" id="summary" class="profile">
+    <div data-role="header" id="header" class="pt-5">
+        <div class="ui-grid-a d-flex align-items-center header-title px-4 ">
+            <div class="ui-block-a">
+                <h3 class="m-0">Profile</h3>
+            </div>
+            <div class="ui-block-b">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-camera"></i>
+            </div>
+        </div>
+        <div class="header-content-profile">
+            <div class="ui-grid-a px-4 d-flex align-items-center profile_image">
+                <div class="ui-block-a w30">
+                    <img src="assets/img/avatar-placeholder.png" id="image" alt="User Image" width="85%"
+                         class="img-fluid">
+                </div>
+                <div class="ui-block-b w70 pl-2">
+                    <div class="font-weight-bold font-size-l truncate" id="name">James Smitherson</div>
+                    <div class="font-size-s text-muted font-weight-medium" id="email">smithersonrocks@gmail.com</div>
+                    <div class="ui-grid-a mt-3 pointsSection">
+                        <div class="ui-block-a text-left">
+                            <h3 class="secondary-color mb-0" id="points">15,050</h3>
+                            <p class="secondary-color m-0">Total Points</p>
+                        </div>
+                        <div class="ui-block-b text-right">
+                            <h3 class="primary-color mb-0">#12</h3>
+                            <p class="gray m-0">Ranking</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-grid-a tabs">
+                <ul>
+                    <li class="active">
+                        <a class="plain-btn-link" href="#summary" data-role="button" data-transition="fade">Summary</a>
+                    </li>
+                    <li>
+                        <a class="plain-btn-link" href="#rankings" data-role="button"
+                           data-transition="fade">Rankings</a>
+                    </li>
+                    <li>
+                        <a class="plain-btn-link" href="#coupons" data-role="button" data-transition="fade">Coupons</a>
+                    </li>
+                    <li>
+                        <a class="plain-btn-link" href="#settings" data-role="button"
+                           data-transition="fade">Settings</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div role="main">
+        <div class="favourites">
+            <div class="ui-grid-a mt-4 mb-3 d-flex align-items-center px-4">
+                <div class="ui-block-a w80">
+                    <div class="font-size-l font-weight-heavy">Favourite Items</div>
+                </div>
+                <div class="ui-block-b w20">
+                    <div class="font-size-m text-right"><a href="favourites.html">See All</a></div>
+                </div>
+            </div>
+            <div class="carousell px-3" id="favList">
+
+            </div>
+        </div>
+        <div class="orders mb-2">
+            <div class="ui-grid-a mt-4 mb-3 d-flex align-items-center px-4">
+                <div class="ui-block-a w80">
+                    <div class="font-size-l font-weight-heavy">Online Orders</div>
+                </div>
+                <div class="ui-block-b w20">
+                    <div class="font-size-m text-right"><a>See All</a></div>
+                </div>
+            </div>
+
+            <div class="ui-grid-solo px-3">
+                <ul class="nav nav-tabs nav-justified nav-primary">
+                    <li class="nav-item">
+                        <a href="#shipping" class="nav-link active" data-toggle="tab">Shipped</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#ongoing" class="nav-link" data-toggle="tab">Ongoing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#unpaid" class="nav-link" data-toggle="tab">Unpaid</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="shipping">
+                    <div class="carousell px-3">
+                        <div class="item">
+                            <div class="ui-grid-solo">
+                                <div class="ui-block-a w100 p-1">
+                                    <div class="card py-0 px-0 mx-0 mt-0">
+                                        <div class="top-card p-3">
+                                            <div class="ui-grid-a d-flex align-items-center">
+                                                <div class="ui-block-a w30">
+                                                    <img alt="product Image" class="img-fluid"
+                                                         src="assets/img/prod_1.png" height="auto" width="85%">
+                                                </div>
+                                                <div class="ui-block-b w70">
+                                                    <div class="prodContent">
+                                                        <div class="ui-grid-solo mb-3">
+                                                            <div class="ui-block-a">
+                                                                <h4 class="mt-0 truncate font-weight-bold m-0">Google
+                                                                    Pixel 2 - Black</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ui-grid-a font-weight-bold">
+                                                            <div class="ui-block-a font-size-s text-muted">
+                                                                Order Placed
+                                                            </div>
+                                                            <div class="ui-block-b font-size-s text-right">
+                                                                Feb 12, 2019
+                                                            </div>
+                                                        </div>
+                                                        <div class="ui-grid-a pt-1 font-weight-bold">
+                                                            <div class="ui-block-a font-size-s text-muted">
+                                                                Quantity
+                                                            </div>
+                                                            <div class="ui-block-b font-size-s text-right">
+                                                                1
+                                                            </div>
+                                                        </div>
+                                                        <div class="ui-grid-a pt-1">
+                                                            <div class="ui-block-a font-size-s text-muted font-weight-bold">
+                                                                Total Amount
+                                                            </div>
+                                                            <div class="ui-block-b font-size-s text-right primary-color-red-text font-weight-heavy">
+                                                                USD 650.00
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="ui-grid-solo">
+                                <div class="ui-block-a w100 p-1">
+                                    <div class="card py-0 px-0 mx-0 mt-0">
+                                        <div class="top-card p-3">
+                                            <div class="ui-grid-a d-flex align-items-center">
+                                                <div class="ui-block-a w30">
+                                                    <img alt="product Image" class="img-fluid"
+                                                         src="assets/img/prod_1.png" height="auto" width="85%">
+                                                </div>
+                                                <div class="ui-block-b w70">
+                                                    <div class="prodContent">
+                                                        <div class="ui-grid-solo mb-3">
+                                                            <div class="ui-block-a">
+                                                                <h4 class="mt-0 truncate font-weight-bold m-0">Google
+                                                                    Pixel 2 - Black</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ui-grid-a font-weight-bold">
+                                                            <div class="ui-block-a font-size-s text-muted">
+                                                                Order Placed
+                                                            </div>
+                                                            <div class="ui-block-b font-size-s text-right">
+                                                                Feb 12, 2019
+                                                            </div>
+                                                        </div>
+                                                        <div class="ui-grid-a pt-1 font-weight-bold">
+                                                            <div class="ui-block-a font-size-s text-muted">
+                                                                Quantity
+                                                            </div>
+                                                            <div class="ui-block-b font-size-s text-right">
+                                                                1
+                                                            </div>
+                                                        </div>
+                                                        <div class="ui-grid-a pt-1">
+                                                            <div class="ui-block-a font-size-s text-muted font-weight-bold">
+                                                                Total Amount
+                                                            </div>
+                                                            <div class="ui-block-b font-size-s text-right primary-color-red-text font-weight-heavy">
+                                                                USD 650.00
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="ui-grid-solo">
+                                <div class="ui-block-a w100 p-1">
+                                    <div class="card py-0 px-0 mx-0 mt-0">
+                                        <div class="top-card p-3">
+                                            <div class="ui-grid-a d-flex align-items-center">
+                                                <div class="ui-block-a w30">
+                                                    <img alt="product Image" class="img-fluid"
+                                                         src="assets/img/prod_1.png" height="auto" width="85%">
+                                                </div>
+                                                <div class="ui-block-b w70">
+                                                    <div class="prodContent">
+                                                        <div class="ui-grid-solo mb-3">
+                                                            <div class="ui-block-a">
+                                                                <h4 class="mt-0 truncate font-weight-bold m-0">Google
+                                                                    Pixel 2 - Black</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ui-grid-a font-weight-bold">
+                                                            <div class="ui-block-a font-size-s text-muted">
+                                                                Order Placed
+                                                            </div>
+                                                            <div class="ui-block-b font-size-s text-right">
+                                                                Feb 12, 2019
+                                                            </div>
+                                                        </div>
+                                                        <div class="ui-grid-a pt-1 font-weight-bold">
+                                                            <div class="ui-block-a font-size-s text-muted">
+                                                                Quantity
+                                                            </div>
+                                                            <div class="ui-block-b font-size-s text-right">
+                                                                1
+                                                            </div>
+                                                        </div>
+                                                        <div class="ui-grid-a pt-1">
+                                                            <div class="ui-block-a font-size-s text-muted font-weight-bold">
+                                                                Total Amount
+                                                            </div>
+                                                            <div class="ui-block-b font-size-s text-right primary-color-red-text font-weight-heavy">
+                                                                USD 650.00
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="ongoing">
+                    <div class="carousell px-3">
+                        <div class="item">
+                            <div class="ui-grid-solo">
+                                <div class="ui-block-a w100 p-1">
+                                    <div class="card py-0 px-0 mx-0 mt-0">
+                                        <div class="top-card p-3">
+                                            <div class="ui-grid-a d-flex align-items-center">
+                                                <div class="ui-block-a w30">
+                                                    <img alt="product Image" class="img-fluid"
+                                                         src="assets/img/prod_1.png" height="auto" width="85%">
+                                                </div>
+                                                <div class="ui-block-b w70">
+                                                    <div class="prodContent">
+                                                        <div class="ui-grid-solo mb-3">
+                                                            <div class="ui-block-a">
+                                                                <h4 class="mt-0 truncate font-weight-bold m-0">Google
+                                                                    Pixel 2 - Black</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ui-grid-a font-weight-bold">
+                                                            <div class="ui-block-a font-size-s text-muted">
+                                                                Order Placed
+                                                            </div>
+                                                            <div class="ui-block-b font-size-s text-right">
+                                                                Feb 12, 2019
+                                                            </div>
+                                                        </div>
+                                                        <div class="ui-grid-a pt-1 font-weight-bold">
+                                                            <div class="ui-block-a font-size-s text-muted">
+                                                                Quantity
+                                                            </div>
+                                                            <div class="ui-block-b font-size-s text-right">
+                                                                1
+                                                            </div>
+                                                        </div>
+                                                        <div class="ui-grid-a pt-1">
+                                                            <div class="ui-block-a font-size-s text-muted font-weight-bold">
+                                                                Total Amount
+                                                            </div>
+                                                            <div class="ui-block-b font-size-s text-right primary-color-red-text font-weight-heavy">
+                                                                USD 650.00
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="ui-grid-solo">
+                                <div class="ui-block-a w100 p-1">
+                                    <div class="card py-0 px-0 mx-0 mt-0">
+                                        <div class="top-card p-3">
+                                            <div class="ui-grid-a d-flex align-items-center">
+                                                <div class="ui-block-a w30">
+                                                    <img alt="product Image" class="img-fluid"
+                                                         src="assets/img/prod_1.png" height="auto" width="85%">
+                                                </div>
+                                                <div class="ui-block-b w70">
+                                                    <div class="prodContent">
+                                                        <div class="ui-grid-solo mb-3">
+                                                            <div class="ui-block-a">
+                                                                <h4 class="mt-0 truncate font-weight-bold m-0">Google
+                                                                    Pixel 2 - Black</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ui-grid-a font-weight-bold">
+                                                            <div class="ui-block-a font-size-s text-muted">
+                                                                Order Placed
+                                                            </div>
+                                                            <div class="ui-block-b font-size-s text-right">
+                                                                Feb 12, 2019
+                                                            </div>
+                                                        </div>
+                                                        <div class="ui-grid-a pt-1 font-weight-bold">
+                                                            <div class="ui-block-a font-size-s text-muted">
+                                                                Quantity
+                                                            </div>
+                                                            <div class="ui-block-b font-size-s text-right">
+                                                                1
+                                                            </div>
+                                                        </div>
+                                                        <div class="ui-grid-a pt-1">
+                                                            <div class="ui-block-a font-size-s text-muted font-weight-bold">
+                                                                Total Amount
+                                                            </div>
+                                                            <div class="ui-block-b font-size-s text-right primary-color-red-text font-weight-heavy">
+                                                                USD 650.00
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="ui-grid-solo">
+                                <div class="ui-block-a w100 p-1">
+                                    <div class="card py-0 px-0 mx-0 mt-0">
+                                        <div class="top-card p-3">
+                                            <div class="ui-grid-a d-flex align-items-center">
+                                                <div class="ui-block-a w30">
+                                                    <img alt="product Image" class="img-fluid"
+                                                         src="assets/img/prod_1.png" height="auto" width="85%">
+                                                </div>
+                                                <div class="ui-block-b w70">
+                                                    <div class="prodContent">
+                                                        <div class="ui-grid-solo mb-3">
+                                                            <div class="ui-block-a">
+                                                                <h4 class="mt-0 truncate font-weight-bold m-0">Google
+                                                                    Pixel 2 - Black</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ui-grid-a font-weight-bold">
+                                                            <div class="ui-block-a font-size-s text-muted">
+                                                                Order Placed
+                                                            </div>
+                                                            <div class="ui-block-b font-size-s text-right">
+                                                                Feb 12, 2019
+                                                            </div>
+                                                        </div>
+                                                        <div class="ui-grid-a pt-1 font-weight-bold">
+                                                            <div class="ui-block-a font-size-s text-muted">
+                                                                Quantity
+                                                            </div>
+                                                            <div class="ui-block-b font-size-s text-right">
+                                                                1
+                                                            </div>
+                                                        </div>
+                                                        <div class="ui-grid-a pt-1">
+                                                            <div class="ui-block-a font-size-s text-muted font-weight-bold">
+                                                                Total Amount
+                                                            </div>
+                                                            <div class="ui-block-b font-size-s text-right primary-color-red-text font-weight-heavy">
+                                                                USD 650.00
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="unpaid">
+                    <div class="carousell px-3">
+                        <div class="item">
+                            <div class="ui-grid-solo">
+                                <div class="ui-block-a w100 p-1">
+                                    <div class="card py-0 px-0 mx-0 mt-0">
+                                        <div class="top-card p-3">
+                                            <div class="ui-grid-a d-flex align-items-center">
+                                                <div class="ui-block-a w30">
+                                                    <img alt="product Image" class="img-fluid"
+                                                         src="assets/img/prod_1.png" height="auto" width="85%">
+                                                </div>
+                                                <div class="ui-block-b w70">
+                                                    <div class="prodContent">
+                                                        <div class="ui-grid-solo mb-3">
+                                                            <div class="ui-block-a">
+                                                                <h4 class="mt-0 truncate font-weight-bold m-0">Google
+                                                                    Pixel 2 - Black</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ui-grid-a font-weight-bold">
+                                                            <div class="ui-block-a font-size-s text-muted">
+                                                                Order Placed
+                                                            </div>
+                                                            <div class="ui-block-b font-size-s text-right">
+                                                                Feb 12, 2019
+                                                            </div>
+                                                        </div>
+                                                        <div class="ui-grid-a pt-1 font-weight-bold">
+                                                            <div class="ui-block-a font-size-s text-muted">
+                                                                Quantity
+                                                            </div>
+                                                            <div class="ui-block-b font-size-s text-right">
+                                                                1
+                                                            </div>
+                                                        </div>
+                                                        <div class="ui-grid-a pt-1">
+                                                            <div class="ui-block-a font-size-s text-muted font-weight-bold">
+                                                                Total Amount
+                                                            </div>
+                                                            <div class="ui-block-b font-size-s text-right primary-color-red-text font-weight-heavy">
+                                                                USD 650.00
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="ui-grid-solo">
+                                <div class="ui-block-a w100 p-1">
+                                    <div class="card py-0 px-0 mx-0 mt-0">
+                                        <div class="top-card p-3">
+                                            <div class="ui-grid-a d-flex align-items-center">
+                                                <div class="ui-block-a w30">
+                                                    <img alt="product Image" class="img-fluid"
+                                                         src="assets/img/prod_1.png" height="auto" width="85%">
+                                                </div>
+                                                <div class="ui-block-b w70">
+                                                    <div class="prodContent">
+                                                        <div class="ui-grid-solo mb-3">
+                                                            <div class="ui-block-a">
+                                                                <h4 class="mt-0 truncate font-weight-bold m-0">Google
+                                                                    Pixel 2 - Black</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ui-grid-a font-weight-bold">
+                                                            <div class="ui-block-a font-size-s text-muted">
+                                                                Order Placed
+                                                            </div>
+                                                            <div class="ui-block-b font-size-s text-right">
+                                                                Feb 12, 2019
+                                                            </div>
+                                                        </div>
+                                                        <div class="ui-grid-a pt-1 font-weight-bold">
+                                                            <div class="ui-block-a font-size-s text-muted">
+                                                                Quantity
+                                                            </div>
+                                                            <div class="ui-block-b font-size-s text-right">
+                                                                1
+                                                            </div>
+                                                        </div>
+                                                        <div class="ui-grid-a pt-1">
+                                                            <div class="ui-block-a font-size-s text-muted font-weight-bold">
+                                                                Total Amount
+                                                            </div>
+                                                            <div class="ui-block-b font-size-s text-right primary-color-red-text font-weight-heavy">
+                                                                USD 650.00
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="ui-grid-solo">
+                                <div class="ui-block-a w100 p-1">
+                                    <div class="card py-0 px-0 mx-0 mt-0">
+                                        <div class="top-card p-3">
+                                            <div class="ui-grid-a d-flex align-items-center">
+                                                <div class="ui-block-a w30">
+                                                    <img alt="product Image" class="img-fluid"
+                                                         src="assets/img/prod_1.png" height="auto" width="85%">
+                                                </div>
+                                                <div class="ui-block-b w70">
+                                                    <div class="prodContent">
+                                                        <div class="ui-grid-solo mb-3">
+                                                            <div class="ui-block-a">
+                                                                <h4 class="mt-0 truncate font-weight-bold m-0">Google
+                                                                    Pixel 2 - Black</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ui-grid-a font-weight-bold">
+                                                            <div class="ui-block-a font-size-s text-muted">
+                                                                Order Placed
+                                                            </div>
+                                                            <div class="ui-block-b font-size-s text-right">
+                                                                Feb 12, 2019
+                                                            </div>
+                                                        </div>
+                                                        <div class="ui-grid-a pt-1 font-weight-bold">
+                                                            <div class="ui-block-a font-size-s text-muted">
+                                                                Quantity
+                                                            </div>
+                                                            <div class="ui-block-b font-size-s text-right">
+                                                                1
+                                                            </div>
+                                                        </div>
+                                                        <div class="ui-grid-a pt-1">
+                                                            <div class="ui-block-a font-size-s text-muted font-weight-bold">
+                                                                Total Amount
+                                                            </div>
+                                                            <div class="ui-block-b font-size-s text-right primary-color-red-text font-weight-heavy">
+                                                                USD 650.00
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div data-role="footer" data-position="fixed" id="footer" data-tap-toggle="false" transition="fade" class="py-2">
+        <div data-role="navbar" data-grid="d" class="h100">
+            <ul>
+                <li>
+                    <a class="pathUrl" accesskey="home.html">
+                        <i class="fa fa-home"></i>
+                        <div>Home</div>
+                    </a>
+                </li>
+                <li>
+                    <a class="pathUrl" accesskey="deals.html">
+                        <i class="fa fa-tag font"></i>
+                        <div>Deals</div>
+                    </a>
+                </li>
+                <li>
+                    <a class="pathUrl" accesskey="store.html">
+                        <i class="fa fa-store-alt"></i>
+                        <div>Store</div>
+                    </a>
+                </li>
+                <li>
+                    <a class="pathUrl" accesskey="cart.html">
+                        <i class="fa fa-shopping-cart"></i>
+                        <div>Cart</div>
+                    </a>
+                </li>
+                <li>
+                    <a class="pathUrl" accesskey="profile.html">
+                        <i class="fa fa-user"></i>
+                        <div>Profile</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div data-role="page" id="rankings" class="profile">
+    <div data-role="header" id="header" class="pt-5">
+        <div class="ui-grid-a d-flex align-items-center header-title px-4 ">
+            <div class="ui-block-a">
+                <h3 class="m-0">Profile</h3>
+            </div>
+            <div class="ui-block-b">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-camera"></i>
+            </div>
+        </div>
+        <div class="header-content-profile">
+            <div class="ui-grid-a px-4 d-flex align-items-center">
+                <div class="ui-block-a w30 profile_image">
+                    <img src="assets/img/avatar-placeholder.png" alt="User Image" width="85%" class="img-fluid">
+                </div>
+                <div class="ui-block-b w70 pl-2">
+                    <div class="font-weight-bold font-size-l truncate">James Smitherson</div>
+                    <div class="font-size-s text-muted font-weight-medium">smithersonrocks@gmail.com</div>
+                    <div class="ui-grid-a mt-3">
+                        <div class="ui-block-a text-left">
+                            <h3 class="secondary-color mb-0">15,050</h3>
+                            <p class="secondary-color m-0">Total Points</p>
+                        </div>
+                        <div class="ui-block-b text-right">
+                            <h3 class="primary-color mb-0">#1200</h3>
+                            <p class="gray m-0">Ranking</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-grid-a tabs">
+                <ul>
+                    <li>
+                        <a class="plain-btn-link" href="#summary" data-role="button" data-transition="fade">Summary</a>
+                    </li>
+                    <li class="active">
+                        <a class="plain-btn-link" href="#rankings" data-role="button"
+                           data-transition="fade">Rankings</a>
+                    </li>
+                    <li>
+                        <a class="plain-btn-link" href="#coupons" data-role="button" data-transition="fade">Coupons</a>
+                    </li>
+                    <li>
+                        <a class="plain-btn-link" href="#settings" data-role="button"
+                           data-transition="fade">Settings</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div role="main">
+        <div class="ranking mb-3">
+            <div class="ui-grid-solo">
+                <ul class="nav nav-tabs nav-justified nav-primary">
+                    <li class="nav-item">
+                        <a href="#daily" class="nav-link active" data-toggle="tab">Today</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#weekly" class="nav-link" data-toggle="tab">Week</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#monthly" class="nav-link" data-toggle="tab">Month</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane card fade show active mb-4 p-0" id="daily">
+                        <div class="ui-grid-a d-flex align-items-center p-3">
+                            <div class="ui-block-a w20">
+                                <img src="assets/img/avatar-placeholder.png" width="100%" class="img-fluid"
+                                     alt="Product 1" id="userProfile">
+                            </div>
+                            <div class="ui-block-b w80 pl-3">
+                                <div class="ui-grid-a d-flex align-items-center">
+                                    <h5 class="ui-block-a w70 text-muted font-weight-bold">Today's Rank</h5>
+                                    <h3 class="ui-block-b w30 primary-color">#101</h3>
+                                </div>
+                                <hr class="my-2">
+                                <div class="ui-grid-a d-flex align-items-center">
+                                    <h5 class="ui-block-a w70 text-muted font-weight-bold">Points</h5>
+                                    <h3 class="ui-block-b w30 secondary-color" id="userPoints">1500</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tableWrapper">
+                            <table data-role="table" id="tankTable" data-mode="" class="mt-2 rankTable"
+                                   data-role="table">
+                                <thead>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Name</th>
+                                    <th>Daily Points</th>
+                                    <th>Total Points</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr valign="middle">
+                                    <th>#1</th>
+                                    <td>
+                                        <div class="td-wrapper">
+                                            <img src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                 width="30px" alt="">
+                                            <div class="truncate">Jane Doe</div>
+                                        </div>
+                                    </td>
+                                    <td>2,000</td>
+                                    <td>4,500</td>
+                                </tr>
+                                <tr valign="middle">
+                                    <th>#2</th>
+                                    <td>
+                                        <div class="td-wrapper">
+                                            <img src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                 width="30px" alt="">
+                                            <div class="truncate">Simon Evans</div>
+                                        </div>
+                                    </td>
+                                    <td>1,800</td>
+                                    <td>11,200</td>
+                                </tr>
+                                <tr valign="middle">
+                                    <th>#3</th>
+                                    <td>
+                                        <div class="td-wrapper">
+                                            <img src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                 width="30px" alt="">
+                                            <div class="truncate">Maria Lee</div>
+                                        </div>
+                                    </td>
+                                    <td>1,450</td>
+                                    <td>2000</td>
+                                </tr>
+                                <tr valign="middle">
+                                    <th>#4</th>
+                                    <td>
+                                        <div class="td-wrapper">
+                                            <img src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                 width="30px" alt="">
+                                            <div class="truncate">James Scotty</div>
+                                        </div>
+                                    </td>
+                                    <td>1,250</td>
+                                    <td>4520</td>
+                                </tr>
+                                <tr valign="middle">
+                                    <th>#5</th>
+                                    <td>
+                                        <div class="td-wrapper">
+                                            <img src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                 width="30px" alt="">
+                                            <div class="truncate">Anne William</div>
+                                        </div>
+                                    </td>
+                                    <td>1,000</td>
+                                    <td>20,220</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane card fade show mb-4 p-0" id="weekly">
+                        <div class="ui-grid-a d-flex align-items-center p-3">
+                            <div class="ui-block-a w20">
+                                <img src="assets/img/avatar-placeholder.png" width="100%" class="img-fluid"
+                                     alt="Product 1">
+                            </div>
+                            <div class="ui-block-b w80 pl-3">
+                                <div class="ui-grid-a d-flex align-items-center">
+                                    <h5 class="ui-block-a w70 text-muted font-weight-bold">Today's Rank</h5>
+                                    <h3 class="ui-block-b w30 primary-color">#101</h3>
+                                </div>
+                                <hr class="my-2">
+                                <div class="ui-grid-a d-flex align-items-center">
+                                    <h5 class="ui-block-a w70 text-muted font-weight-bold">Points</h5>
+                                    <h3 class="ui-block-b w30 secondary-color">1500</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tableWrapper">
+                            <table data-role="table" id="tankTable" data-mode="" class="mt-2 rankTable"
+                                   data-role="table">
+                                <thead>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Name</th>
+                                    <th>Daily Points</th>
+                                    <th>Total Points</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr valign="middle">
+                                    <th>#1</th>
+                                    <td>
+                                        <div class="td-wrapper">
+                                            <img src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                 width="30px" alt="">
+                                            <div class="truncate">Jane Doe</div>
+                                        </div>
+                                    </td>
+                                    <td>2,000</td>
+                                    <td>4,500</td>
+                                </tr>
+                                <tr valign="middle">
+                                    <th>#2</th>
+                                    <td>
+                                        <div class="td-wrapper">
+                                            <img src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                 width="30px" alt="">
+                                            <div class="truncate">Simon Evans</div>
+                                        </div>
+                                    </td>
+                                    <td>1,800</td>
+                                    <td>11,200</td>
+                                </tr>
+                                <tr valign="middle">
+                                    <th>#3</th>
+                                    <td>
+                                        <div class="td-wrapper">
+                                            <img src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                 width="30px" alt="">
+                                            <div class="truncate">Maria Lee</div>
+                                        </div>
+                                    </td>
+                                    <td>1,450</td>
+                                    <td>2000</td>
+                                </tr>
+                                <tr valign="middle">
+                                    <th>#4</th>
+                                    <td>
+                                        <div class="td-wrapper">
+                                            <img src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                 width="30px" alt="">
+                                            <div class="truncate">James Scotty</div>
+                                        </div>
+                                    </td>
+                                    <td>1,250</td>
+                                    <td>4520</td>
+                                </tr>
+                                <tr valign="middle">
+                                    <th>#5</th>
+                                    <td>
+                                        <div class="td-wrapper">
+                                            <img src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                 width="30px" alt="">
+                                            <div class="truncate">Anne William</div>
+                                        </div>
+                                    </td>
+                                    <td>1,000</td>
+                                    <td>20,220</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane card fade show mb-4 p-0" id="monthly">
+                        <div class="ui-grid-a d-flex align-items-center p-3">
+                            <div class="ui-block-a w20">
+                                <img src="assets/img/avatar-placeholder.png" width="100%" class="img-fluid"
+                                     alt="Product 1">
+                            </div>
+                            <div class="ui-block-b w80 pl-3">
+                                <div class="ui-grid-a d-flex align-items-center">
+                                    <h5 class="ui-block-a w70 text-muted font-weight-bold">Today's Rank</h5>
+                                    <h3 class="ui-block-b w30 primary-color">#101</h3>
+                                </div>
+                                <hr class="my-2">
+                                <div class="ui-grid-a d-flex align-items-center">
+                                    <h5 class="ui-block-a w70 text-muted font-weight-bold">Points</h5>
+                                    <h3 class="ui-block-b w30 secondary-color">1500</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tableWrapper">
+                            <table data-role="table" id="tankTable" data-mode="" class="mt-2 rankTable"
+                                   data-role="table">
+                                <thead>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Name</th>
+                                    <th>Daily Points</th>
+                                    <th>Total Points</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr valign="middle">
+                                    <th>#1</th>
+                                    <td>
+                                        <div class="td-wrapper">
+                                            <img src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                 width="30px" alt="">
+                                            <div class="truncate">Jane Doe</div>
+                                        </div>
+                                    </td>
+                                    <td>2,000</td>
+                                    <td>4,500</td>
+                                </tr>
+                                <tr valign="middle">
+                                    <th>#2</th>
+                                    <td>
+                                        <div class="td-wrapper">
+                                            <img src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                 width="30px" alt="">
+                                            <div class="truncate">Simon Evans</div>
+                                        </div>
+                                    </td>
+                                    <td>1,800</td>
+                                    <td>11,200</td>
+                                </tr>
+                                <tr valign="middle">
+                                    <th>#3</th>
+                                    <td>
+                                        <div class="td-wrapper">
+                                            <img src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                 width="30px" alt="">
+                                            <div class="truncate">Maria Lee</div>
+                                        </div>
+                                    </td>
+                                    <td>1,450</td>
+                                    <td>2000</td>
+                                </tr>
+                                <tr valign="middle">
+                                    <th>#4</th>
+                                    <td>
+                                        <div class="td-wrapper">
+                                            <img src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                 width="30px" alt="">
+                                            <div class="truncate">James Scotty</div>
+                                        </div>
+                                    </td>
+                                    <td>1,250</td>
+                                    <td>4520</td>
+                                </tr>
+                                <tr valign="middle">
+                                    <th>#5</th>
+                                    <td>
+                                        <div class="td-wrapper">
+                                            <img src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                 width="30px" alt="">
+                                            <div class="truncate">Anne William</div>
+                                        </div>
+                                    </td>
+                                    <td>1,000</td>
+                                    <td>20,220</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-role="footer" data-position="fixed" id="footer" data-tap-toggle="false" transition="fade" class="py-2">
+        <div data-role="navbar" data-grid="d" class="h100">
+            <ul>
+                <li>
+                    <a class="pathUrl" accesskey="home.html">
+                        <i class="fa fa-home"></i>
+                        <div>Home</div>
+                    </a>
+                </li>
+                <li>
+                    <a class="pathUrl" accesskey="deals.html">
+                        <i class="fa fa-tag font"></i>
+                        <div>Deals</div>
+                    </a>
+                </li>
+                <li>
+                    <a class="pathUrl" accesskey="store.html">
+                        <i class="fa fa-store-alt"></i>
+                        <div>Store</div>
+                    </a>
+                </li>
+                <li>
+                    <a class="pathUrl" accesskey="cart.html">
+                        <i class="fa fa-shopping-cart"></i>
+                        <div>Cart</div>
+                    </a>
+                </li>
+                <li>
+                    <a class="pathUrl" accesskey="profile.html">
+                        <i class="fa fa-user"></i>
+                        <div>Profile</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div data-role="page" id="coupons" class="profile">
+    <div data-role="header" id="header" class="pt-5">
+        <div class="ui-grid-a d-flex align-items-center header-title px-4 ">
+            <div class="ui-block-a">
+                <h3 class="m-0">Profile</h3>
+            </div>
+            <div class="ui-block-b">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-camera"></i>
+            </div>
+        </div>
+        <div class="header-content-profile">
+            <div class="ui-grid-a px-4 d-flex align-items-center">
+                <div class="ui-block-a w30">
+                    <img src="assets/img/avatar-placeholder.png" alt="User Image" width="85%" class="img-fluid">
+                </div>
+                <div class="ui-block-b w70 pl-2">
+                    <div class="font-weight-bold font-size-l truncate">James Smitherson</div>
+                    <div class="font-size-s text-muted font-weight-medium">smithersonrocks@gmail.com</div>
+                    <div class="ui-grid-a mt-3">
+                        <div class="ui-block-a text-left">
+                            <h3 class="secondary-color mb-0">15,050</h3>
+                            <p class="secondary-color m-0">Total Points</p>
+                        </div>
+                        <div class="ui-block-b text-right">
+                            <h3 class="primary-color mb-0">#1200</h3>
+                            <p class="gray m-0">Ranking</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-grid-a tabs">
+                <ul>
+                    <li>
+                        <a class="plain-btn-link" href="#summary" data-role="button" data-transition="fade">Summary</a>
+                    </li>
+                    <li>
+                        <a class="plain-btn-link" href="#rankings" data-role="button"
+                           data-transition="fade">Rankings</a>
+                    </li>
+                    <li class="active">
+                        <a class="plain-btn-link" href="#coupons" data-role="button" data-transition="fade">Coupons</a>
+                    </li>
+                    <li>
+                        <a class="plain-btn-link" href="#settings" data-role="button"
+                           data-transition="fade">Settings</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div data-role="main" class="px-4">
+        <div class="couponProfile">
+            <ul class="nav nav-tabs nav-justified nav-primary">
+                <li class="nav-item">
+                    <a href="#available" class="nav-link active" data-toggle="tab">New</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#collected" class="nav-link" data-toggle="tab">Collected</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#expired" class="nav-link" data-toggle="tab">Expired</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active mb-5" id="available">
+
+                </div>
+                <div class="tab-pane fade mb-5" id="collected">
+
+                </div>
+                <div class="tab-pane fade mb-5" id="expired">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-role="footer" data-position="fixed" id="footer" data-tap-toggle="false" transition="fade" class="py-2">
+        <div data-role="navbar" data-grid="d" class="h100">
+            <ul>
+                <li>
+                    <a class="pathUrl" accesskey="home.html">
+                        <i class="fa fa-home"></i>
+                        <div>Home</div>
+                    </a>
+                </li>
+                <li>
+                    <a class="pathUrl" accesskey="deals.html">
+                        <i class="fa fa-tag font"></i>
+                        <div>Deals</div>
+                    </a>
+                </li>
+                <li>
+                    <a class="pathUrl" accesskey="store.html">
+                        <i class="fa fa-store-alt"></i>
+                        <div>Store</div>
+                    </a>
+                </li>
+                <li>
+                    <a class="pathUrl" accesskey="cart.html">
+                        <i class="fa fa-shopping-cart"></i>
+                        <div>Cart</div>
+                    </a>
+                </li>
+                <li>
+                    <a class="pathUrl" accesskey="profile.html">
+                        <i class="fa fa-user"></i>
+                        <div>Profile</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div data-role="page" id="settings" class="profile">
+    <div data-role="header" id="header" class="pt-5">
+        <div class="ui-grid-a d-flex align-items-center header-title px-4 ">
+            <div class="ui-block-a">
+                <h3 class="m-0">Profile</h3>
+            </div>
+            <div class="ui-block-b">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-camera"></i>
+            </div>
+        </div>
+        <div class="header-content-profile">
+            <div class="ui-grid-a px-4 d-flex align-items-center">
+                <div class="ui-block-a w30">
+                    <img src="assets/img/avatar-placeholder.png" alt="User Image" width="85%" class="img-fluid">
+                </div>
+                <div class="ui-block-b w70 pl-2">
+                    <div class="font-weight-bold font-size-l truncate">James Smitherson</div>
+                    <div class="font-size-s text-muted font-weight-medium">smithersonrocks@gmail.com</div>
+                    <div class="ui-grid-a mt-3">
+                        <div class="ui-block-a text-left">
+                            <h3 class="secondary-color mb-0">15,050</h3>
+                            <p class="secondary-color m-0">Total Points</p>
+                        </div>
+                        <div class="ui-block-b text-right">
+                            <h3 class="primary-color mb-0">#1200</h3>
+                            <p class="gray m-0">Ranking</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-grid-a tabs">
+                <ul>
+                    <li>
+                        <a class="plain-btn-link" href="#summary" data-role="button" data-transition="fade">Summary</a>
+                    </li>
+                    <li>
+                        <a class="plain-btn-link" href="#rankings" data-role="button"
+                           data-transition="fade">Rankings</a>
+                    </li>
+                    <li>
+                        <a class="plain-btn-link" href="#coupons" data-role="button" data-transition="fade">Coupons</a>
+                    </li>
+                    <li class="active">
+                        <a class="plain-btn-link" href="#settings" data-role="button"
+                           data-transition="fade">Settings</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div data-role="main">
+        <div class="settings">
+            <form id="sortForm">
+                <div class="ui-grid-solo px-4">
+                    <h4 class="font-weight-heavy mb-3">Accessibility</h4>
+                    <fieldset data-role="controlgroup">
+                        <div class="ui-grid-b d-flex align-items-center">
+                            <div class="ui-block-a d-flex align-items-center w45">
+                                <div class="font-size-m font-weight-bold">Change Font Size</div>
+                            </div>
+                            <div class="ui-block-b d-flex align-items-center w25 d-flex justify-content-start">
+                                <input type="radio" id="small" value="small" name="radio-group-1"
+                                       class="v-align-bottom"/>
+                                <div class="font-size-m font-weight-bold pl-2">Normal</div>
+                            </div>
+                            <div class="ui-block-c d-flex align-items-center w30 d-flex justify-content-end">
+                                <input type="radio" id="large" value="large" name="radio-group-1"
+                                       class="v-align-bottom"/>
+                                <div class="font-size-m font-weight-bold pl-2">Large</div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="ui-grid-solo my-5 px-4">
+                    <h4 class="font-weight-heavy mb-3">Display</h4>
+                    <fieldset data-role="controlgroup">
+                        <div class="ui-grid-b d-flex align-items-center">
+                            <div class="ui-block-a d-flex align-items-center w45">
+                                <div class="font-size-m font-weight-bold">Change Theme</div>
+                            </div>
+                            <div class="ui-block-b d-flex align-items-center w25 d-flex justify-content-start">
+                                <input type="radio" id="light" value="light" name="radio-group-1"
+                                       class="v-align-bottom"/>
+                                <div class="font-size-m font-weight-bold pl-2">Light</div>
+                            </div>
+                            <div class="ui-block-c d-flex align-items-center w30 d-flex justify-content-end">
+                                <input type="radio" id="dark" value="light" name="radio-group-1"
+                                       class="v-align-bottom"/>
+                                <div class="font-size-m font-weight-bold pl-2">Dark</div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="ui-grid-solo px-4">
+                    <h4 class="mb-3 font-weight-heavy">Account</h4>
+                    <fieldset data-role="controlgroup">
+                        <div class="card border-rad-20 p-3">
+                            <div class="ui-grid-a d-flex align-items-center">
+                                <div class="ui-block-a w70">
+                                    <div class="font-size-m font-weight-bold">Account Settings</div>
+                                </div>
+                                <div class="ui-block-b w30 text-right">
+                                    <i class="fas fa-user-cog icon v-align-middle"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card border-rad-20 p-3">
+                            <div class="ui-grid-a d-flex align-items-center">
+                                <div class="ui-block-a w70">
+                                    <div class="font-size-m font-weight-bold">Sign Out</div>
+                                </div>
+                                <div class="ui-block-b w30 text-right">
+                                    <i class="fas fa-power-off icon v-align-middle"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div data-role="footer" data-position="fixed" id="footer" data-tap-toggle="false" transition="fade" class="py-2">
+        <div data-role="navbar" data-grid="d" class="h100">
+            <ul>
+                <li>
+                    <a class="pathUrl" accesskey="home.html">
+                        <i class="fa fa-home"></i>
+                        <div>Home</div>
+                    </a>
+                </li>
+                <li>
+                    <a class="pathUrl" accesskey="deals.html">
+                        <i class="fa fa-tag font"></i>
+                        <div>Deals</div>
+                    </a>
+                </li>
+                <li>
+                    <a class="pathUrl" accesskey="store.html">
+                        <i class="fa fa-store-alt"></i>
+                        <div>Store</div>
+                    </a>
+                </li>
+                <li>
+                    <a class="pathUrl" accesskey="cart.html">
+                        <i class="fa fa-shopping-cart"></i>
+                        <div>Cart</div>
+                    </a>
+                </li>
+                <li>
+                    <a class="pathUrl" accesskey="profile.html">
+                        <i class="fa fa-user"></i>
+                        <div>Profile</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        let favouriteList;
+        changeValue = 'a';
+        count = 0;
+        $.post("backend/userData.php", {
+            action: 'view',
+            currentUser: sessionStorage.getItem("loggedUser")
+        }, function (data, status) {
+            const json = JSON.parse(data);
+            favouriteList = Object.values((json.favoriteList));
+            userData = JSON.parse(data);
+            $('#name').text(userData.name);
+            $('#email').text(sessionStorage.getItem('loggedUser'));
+            $('#points').text(' ' + userData.points);
+            $("#image").attr("src", userData.image);
+
+            $.post("backend/favourite.php", {
+                action: 'getList',
+                currentUser: sessionStorage.getItem("loggedUser"),
+                favList: favouriteList
+            }, function (data, status) {
+                const jsonProducts = JSON.parse(data);
+                jsonProducts.forEach(function (item) {
+                    const jsonIterate = JSON.parse(item);
+                    if (Object.keys(jsonProducts).length <= 1) {
+                        $('#favCount').text(Object.keys(jsonProducts).length + " Item");
+                    } else {
+                        $('#favCount').text(Object.keys(jsonProducts).length + " Items");
+                    }
+                    alert(JSON.stringify(jsonIterate));
+
+                    jsonIterate.reverse().forEach(function (product) {
+                        if (count < 3) {
+                            count = count + 1;
+                        }
+                        else {
+                            return false;
+                        }
+
+                        const favitem = `<div class="item">
+                    <div class="ui-grid-solo">
+                        <div class="ui-block-a w100 p-1">
+                            <div class="card py-0 px-0 mx-0 mt-0">
+                                <div class="top-card px-2 pb-2 pt-3">
+                                    <div class = "ui-grid-a d-flex align-items-center">
+                                        <div class="ui-block-a w30">
+                                            <img alt="product Image" class="img-fluid" src="` + product.image + `" height="auto" width="85%">
+                                        </div>
+                                        <div class="ui-block-b w70">
+                                            <div class = "prodContent">
+                                                <div class="ui-grid-solo">
+                                                    <div class="ui-block-a">
+                                                        <h4 class="mt-0 truncate font-weight-bold m-0">` + product.name + `</h4>
+                                                    </div>
+                                                </div>
+                                                <div class = "ui-grid-solo pt-1">
+                                                    <div class="ui-block-a w100">
+                                                        <i class="fa fa-star secondary-color-yellow-text"></i>
+                                                        <i class="fa fa-star secondary-color-yellow-text"></i>
+                                                        <i class="fa fa-star secondary-color-yellow-text"></i>
+                                                        <i class="fa fa-star secondary-color-yellow-text"></i>
+                                                        <i class="fa fa-star-o secondary-color-yellow-text"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class = "price mt-2">
+                                                <div class="font-size-s text-muted font-weight-bold">
+                                                    <del>20.99</del>
+                                                </div>
+                                                <div class="font-weight-heavy font-size-xl">
+                                                    <div class="red">
+                                                        <span class = "font-size-m font-weight-bold">USD</span> ` + product.price + `
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bottom-card ui-grid-a">
+                                    <div class = "ui-grid-a d-flex align-items-center">
+                                        <div class = "ui-block-a w10 text-left icon d-flex">
+                                            <i class="fa fa-trash-o removeClick" accesskey="` + product.id + `"></i>
+                                        </div>
+                                        <div class="ui-block-b w90 text-right d-flex justify-content-end">
+                                            <div class="d-inline font-size-s text-muted m-0">
+                                                <span class ="pr-1"> Item Added: </span>
+                                                <span class = "font-weight-bold"> 21/12/2019 </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+                        $("#favList").append(favitem);
+                        $("#favList").trigger('change');
+                        if (changeValue === 'a') {
+                            changeValue = 'b';
+
+                        } else if (changeValue === 'b') {
+                            changeValue = 'a';
+                        }
+                    });
+
+
+                });
+            });
+        });
+
+        $(document).on("click", ".removeClick", function () {
+            $.post("backend/favourite.php", {
+                action: 'remove',
+                currentUser: sessionStorage.getItem("loggedUser"),
+                prodId: this.accessKey
+            }, function (data, status) {
+                location.reload(true);
+            });
+        });
+
+        $(document).on("click", ".dealsClick", function () {
+            sessionStorage.setItem("currentDeal", this.accessKey);
+            sessionStorage.setItem("ratingFilter", '0');
+            sessionStorage.setItem("priceFilter", '{"startValue":"0","EndValue":"145"}');
+            sessionStorage.setItem("sort", 'default');
+            document.location.href = 'promotion_details.html';
+        });
+        $.post("backend/coupons.php", {type: 'null'}, function (data, status) {
+            alert(data);
+            userData = JSON.parse(data);
+            $('#name').text(userData.name);
+            $('#email').text(sessionStorage.getItem('loggedUser'));
+            $('#points').text(' ' + userData.points);
+            $("#image").attr("src", userData.image);
+
+
+        });
+
+        $(document).on("click", ".pathUrl", function () {
+            document.location.href = this.accessKey;
+        });
+        $.post("backend/coupons.php", {type: 'null'}, function (data, status) {
+            showCoupons = $.parseJSON(data);
+            $.each(showCoupons, function (i, item) {
+
+                if (item['status'] === 'redeem') {
+
+                    var coupon = `<div class="card p-0">
+                            <div class="top-card ui-grid-solo px-3 pt-3 pb-2">
+                                <div class="ui-block-a">
+                                    <h4 class ="truncate font-weight-bold">` + item['name'] + `</h4>
+                                    <p class ="text-muted font-weight-bold mb-0">Valid Through:</p>
+                                    <p class ="text-muted">21/11/2019 to 31/12/2019</p>
+                                    <div class="ui-grid-a text-right font-size-xl font-weight-heavy d-flex align-items-center">
+                                        <div class ="ui-block-a text-left primary-color-red-text ">
+                                            <span class = "font-size-m font-weight-bold">USD</span> ` + item['id'] + `
+                                        </div
+                                    </div>
+                                </div>
+                            </div>
+                            <div class ="bottom-card ui-grid-a px-3">
+                                <div class ="ui-block-a text-right">
+                                    <div class = "font-size-m text-left primary-color-green-text font-weight-bold">` + item['points'] + ` points</div>
+                                </div>
+                                <div class ="ui-block-b text-right">
+                                    <div class = "font-size-m text-right couponCollect" accesskey="` + item['id'] + `"><a>Redeem</a></div>
+                                </div>
+                            </div>
+                        </div>`;
+
+                    $("#available").append(coupon);
+
+                }
+                else if (item['status'] === 'collected') {
+                    var coupon = `<div class="card p-0">
+                            <div class="top-card ui-grid-solo px-3 pt-3 pb-2">
+                                <div class="ui-block-a">
+                                    <h4 class ="truncate font-weight-bold">` + item['name'] + `</h4>
+                                    <p class ="text-muted font-weight-bold mb-0">Valid Through:</p>
+                                    <p class ="text-muted">21/11/2019 to 31/12/2019</p>
+                                    <div class="ui-grid-a text-right font-size-xl font-weight-heavy d-flex align-items-center">
+                                        <div class ="ui-block-a text-left primary-color-red-text ">
+                                            <span class = "font-size-m font-weight-bold">USD</span> ` + item['id'] + `
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class ="bottom-card ui-grid-a px-3 d-flex align-items-baseline">
+                                <div class ="ui-block-a text-right">
+                                    <div class = "font-size-s text-left text-muted">
+                                        <span>Added On: </span>
+                                        <span class = "font-weight-bold">05/12/2019</span>
+                                    </div>
+                                </div>
+                                <div class ="ui-block-b text-right">
+                                    <div class = "font-size-m text-right"><a>See Deals</a></div>
+                                </div>
+                            </div>
+                        </div>`;
+                    $("#collected").append(coupon);
+                }
+                else {
+                    var coupon = `<div class="card p-0">
+                            <div class="top-card ui-grid-solo px-3 pt-3 pb-2">
+                                <div class="ui-block-a">
+                                    <h4 class ="truncate font-weight-bold">` + item['name'] + `</h4>
+                                    <p class ="text-muted font-weight-bold mb-0">Valid Through:</p>
+                                    <p class ="text-muted">21/11/2019 to 31/12/2019</p>
+                                    <div class="ui-grid-a text-right font-size-xl font-weight-heavy d-flex align-items-center">
+                                        <div class ="ui-block-a text-left primary-color-red-text ">
+                                            <span class = "font-size-m font-weight-bold">USD</span> ` + item['id'] + `
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class ="bottom-card ui-grid-a px-3 d-flex align-items-baseline">
+                                <div class ="ui-block-a text-right">
+                                    <div class = "font-size-s text-left text-muted">
+                                        <span>Expired: </span>
+                                        <span class = "font-weight-bold">03/04/2019</span>
+                                    </div>
+                                </div>
+                                <div class ="ui-block-b text-right">
+                                    <a class="couponDelete" accesskey="` + item['id'] + `"><i class="fa fa-trash-o icon primary-color-black-text"></i></a>
+                                </div>
+                            </div>
+                        </div>`;
+
+                    $("#expired").append(coupon);
+                }
+
+            });
+
+        });
+        $(document).on("click", ".couponCollect", function () {
+            $.post("backend/coupons.php", {
+                type: 'collected',
+                id: this.accessKey,
+                currentUser: sessionStorage.getItem('loggedUser')
+            }, function (data, status) {
+                if (data === 'success') {
+                    alert("Successfully Redeemed")
+                } else {
+                    // $( "#errorCoupon" ).click();
+                    alert("you are " + data + " points short")
+                }
+            });
+        });
+        $(document).on("click", ".couponDelete", function () {
+            $.post("backend/coupons.php", {type: 'redeem', id: this.accessKey}, function (data, status) {
+            });
+        });
+        $(document).on("click", ".removeClick", function () {
+            $.post("backend/favourite.php", {
+                action: 'remove',
+                currentUser: sessionStorage.getItem("loggedUser"),
+                prodId: this.accessKey
+            }, function (data, status) {
+                location.reload(true);
+            });
+        });
+    });
+
+
+</script>
+</body>
+
+</html>

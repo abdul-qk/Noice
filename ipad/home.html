@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+
+    <!-- jQuery mobile files -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+    <!-- Font awesome file -->
+    <script src="https://kit.fontawesome.com/f083cf2118.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom JS Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Custom main CSS file -->
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body class="post-login">
+    <div data-role="page" class="home">
+        <div data-role="header" id="header" class="align-stuff">
+            <div class="container">
+                <div class="ui-grid-a head-head">
+                    <div class="ui-block-a">
+                        <h1>Home</h1>
+                    </div>
+                    <div class="ui-block-b icons" id="optionz">
+                        <a class="primary-color-black-text" data-rel="popup" href="#overlay"
+                            data-position-to="#optionz"><i class="fas fa-search"></i></a>
+                        <div class="ui-content pt-0 mb-1" data-shadow="false" data-theme="none" data-overlay-theme="a"
+                            data-role="popup" id="overlay">
+                            <div class="deals-search-bar">
+                                <ul data-role="listview" data-filter="true" data-filter-reveal="true"
+                                    data-filter-placeholder="Searching Promotions" data-inset="true">
+                                    <li><a class="dealsClick" accesskey="1">Winter Coffee Sale</a></li>
+                                    <li><a class="dealsClick" accesskey="2">Google Pixel Sale</a></li>
+                                    <li><a class="dealsClick" accesskey="3">Furniture Sale</a></li>
+                                    <li><a class="dealsClick" accesskey="4">Electronic Christmas Sale</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a class="primary-color-black-text" href="realAR.html" rel="external"><i
+                                class="fas fa-camera"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="align-stuff" data-role="main">
+            <div class="container">
+                <div class="favourites">
+                    <div class="ui-grid-solo mx-auto text-center">
+                        <div class="head-body">
+                            <h2 class="primary-color-black-text">Welcome<span class="primary-color-blue-text user_name"
+                                    id="username">James</span></h2>
+                            <p class="primary-color-grey-text f16">We have a lot in store for you...literally !</p>
+                        </div>
+                    </div>
+                    <div class="ui-grid-a main-head ">
+                        <div class="ui-block-a pt-2 pl-2  w80">
+                            <h3><b>Today's Promotions</b></h3>
+                        </div>
+                        <div class="ui-block-b pl-3 w20 text-right">
+                            <h6><a class="pathurl" accesskey="deals.html">See all</a></h6>
+                        </div>
+                    </div>
+                    <div class="carousell">
+                        <div class="item">
+                            <div class="ui-grid-solo">
+                                <div class="ui-block-a">
+                                    <div class="card">
+                                        <div class="ui-grid-a d-flex align-items-end">
+                                            <div class="ui-block-a w60">
+                                                <div class="top">
+                                                    <div class="d-flex align-items-center">
+                                                        <h1 class="font-family-primary primary-color-black-text">
+                                                            <b>NIKE</b>
+                                                        </h1>
+                                                        <div class="top secondary-color-gold-text ml-2">
+                                                            <h5 class="mb-0 font-weight-bold">SUMMER</h5>
+                                                            <h5 style="letter-spacing: 9px;" class="font-weight-bold">
+                                                                SALE
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="font-size-m">Shoes starting from</div>
+                                                        <div
+                                                            class="primary-color-red-text font-size-xl font-weight-heavy">
+                                                            <span
+                                                                class="font-size-m mr-1 font-weight-bold">USD</span>89.99
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="bottom">
+                                                    <h6 class="text-muted font-weight-bold">Ends in 14 hours</h6>
+                                                </div>
+                                            </div>
+                                            <div class="ui-block-b w40">
+                                                <div class="bottom">
+                                                    <img src="assets/img/Nike.png" width="100%" height="auto">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="ui-grid-solo">
+                                <div class="ui-block-a">
+                                    <div class="card">
+                                        <div class="ui-grid-a d-flex align-items-end">
+                                            <div class="ui-block-a w60">
+                                                <div class="top">
+                                                    <div class="d-flex align-items-center">
+                                                        <h1 class="font-family-primary primary-color-black-text">
+                                                            <b>WWE</b>
+                                                        </h1>
+                                                        <div class="top secondary-color-gold-text ml-2">
+                                                            <h5 class="mb-0 font-weight-bold">Clearance</h5>
+                                                            <h5 class="font-weight-bold">Event</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="font-size-m">All merchandise</div>
+                                                        <div
+                                                            class="primary-color-red-text font-size-xl font-weight-heavy">
+                                                            <span class="font-size-m mr-1 font-weight-bold">up
+                                                                to</span>20%
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="bottom">
+                                                    <h6 class="text-muted font-weight-bold">Ends in 35 days</h6>
+                                                </div>
+                                            </div>
+                                            <div class="ui-block-b w40">
+                                                <div class="bottom text-right">
+                                                    <img src="assets/img/wwe.png" width="80%" height="auto">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="ui-grid-solo">
+                                <div class="ui-block-a">
+                                    <div class="card">
+                                        <div class="ui-grid-a d-flex align-items-end">
+                                            <div class="ui-block-a w60">
+                                                <div class="top">
+                                                    <div class="d-flex align-items-center">
+                                                        <h1 class="font-family-primary primary-color-black-text">
+                                                            <b>JBL</b>
+                                                        </h1>
+                                                        <div class="top secondary-color-gold-text ml-2">
+                                                            <h5 class="mb-0 font-weight-bold">Coachella</h5>
+                                                            <h5 class="font-weight-bold">Extravaganza</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="font-size-m">Audio products</div>
+                                                        <div
+                                                            class="primary-color-red-text font-size-xl font-weight-heavy">
+                                                            <span class="font-size-m mr-1 font-weight-bold">up
+                                                                to</span>40%
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="bottom">
+                                                    <h6 class="text-muted font-weight-bold">Ends in 12 Days</h6>
+                                                </div>
+                                            </div>
+                                            <div class="ui-block-b w40">
+                                                <div class="bottom text-right">
+                                                    <img src="assets/img/jbl.png" width="40%" height="auto">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="favourites">
+                    <div class="ui-grid-a main-head ">
+                        <div class="ui-block-a pt-2 pl-2  w80">
+                            <h3><b>Trending promotions</b></h3>
+                        </div>
+                        <div class="ui-block-b pl-3 w20 text-right">
+                            <h6><a class="pathurl" accesskey="deals.html">See All</a></h6>
+                        </div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a pr-3 justify-content-center">
+                            <a class="dealsClick" accesskey="1">
+                                <img alt="Trending promotion" class="img-fluid" width="100%"
+                                    src="assets/img/coffeePromo.png">
+                            </a>
+                        </div>
+                        <div class="ui-block-b pl-3 justify-content-center">
+                            <a class="dealsClick" accesskey="2">
+                                <img alt="Trending promotion" class="img-fluid" width="100%"
+                                    src="assets/img/pixelPromo.png">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a pt-3 pr-3 w50 justify-content-center">
+                            <a class="dealsClick" accesskey="3">
+                                <img alt="Trending promotion" class="img-fluid" width="100%"
+                                    src="assets/img/furniturePromo.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="ui-grid-a main-head mt-5">
+                    <div class="ui-block-a pt-2 pl-2  w80">
+                        <h3><b>Ranking Summary</b></h3>
+                    </div>
+                    <div class="ui-block-b pl-3 w20 text-right">
+                        <h6><a href="">See all</a></h6>
+                    </div>
+                </div>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a w40 pr-3">
+                        <div class="card">
+                            <div class="ui-grid-solo text-center mb-3">
+                                <img src="assets/img/avatar.svg" id="userImage" width="100" class="img-fluid">
+                                <p class="primary-color-grey-text f16 mb-0 mt-3">Personal Rank</p>
+                                <h2 class="primary-color-blue-text f32 fw-heavy">#101</h2>
+                                <div class="ui-grid-a mt-5">
+                                    <div class="ui-block-a text-left">
+                                        <p class="f16 primary-color-grey-text mb-0">Daily Points</p>
+                                        <h3 class="f22 primary-color-green-text">150</h3>
+                                    </div>
+                                    <div class="ui-block-b text-right">
+                                        <p class="f16 primary-color-grey-text mb-0">Total Points</p>
+                                        <h3 class="f22 primary-color-green-text" id="userPoints">15,050</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui-block-b w60 pl-3 mt-4">
+                        <ul class="nav nav-tabs nav-justified nav-primary">
+                            <li class="nav-item">
+                                <a href="#shipping" class="nav-link active" data-toggle="tab">Today</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#ongoing" class="nav-link" data-toggle="tab">Week</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#unpaid" class="nav-link" data-toggle="tab">Month</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane card fade show active" id="shipping">
+                                <table data-role="table" id="movie-table-custom" data-mode="" class="movie-list">
+                                    <thead>
+                                        <tr>
+                                            <th>Rank</th>
+                                            <th style="width:40%">Name</th>
+                                            <th>Daily Points</th>
+                                            <th>Total Points</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr valign="middle">
+                                            <th>#1</th>
+                                            <td class="primary-color-black-text fw-bold"><img
+                                                    src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                    width="30px" alt="">Citizen Kane
+                                            </td>
+                                            <td class="primary-color-blue-text fw-bold">1941</td>
+                                            <td class="primary-color-blue-text fw-bold">100%</td>
+                                        </tr>
+                                        <tr valign="middle">
+                                            <th>#2</th>
+                                            <td class="primary-color-black-text fw-bold"><img
+                                                    src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                    width="30px" alt="">Casablanca
+                                            </td>
+                                            <td class="primary-color-blue-text fw-bold">1942</td>
+                                            <td class="primary-color-blue-text fw-bold">97%</td>
+                                        </tr>
+                                        <tr valign="middle">
+                                            <th>#3</th>
+                                            <td class="primary-color-black-text fw-bold"><img
+                                                    src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                    width="30px" alt="">The Godfather
+                                            </td>
+                                            <td class="primary-color-blue-text fw-bold">1972</td>
+                                            <td class="primary-color-blue-text fw-bold">97%</td>
+                                        </tr>
+                                        <tr valign="middle">
+                                            <th>#4</th>
+                                            <td class="primary-color-black-text fw-bold"><img
+                                                    src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                    width="30px" alt="">The Middle Man
+                                            </td>
+                                            <td class="primary-color-blue-text fw-bold">1989</td>
+                                            <td class="primary-color-blue-text fw-bold">90%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab-pane card fade" id="ongoing">
+                                <table data-role="table" id="movie-table-custom" data-mode="" class="movie-list">
+                                    <thead>
+                                        <tr>
+                                            <th>Rank</th>
+                                            <th style="width:40%">Name</th>
+                                            <th>Daily Points</th>
+                                            <th>Total Points</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr valign="middle">
+                                            <th>#1</th>
+                                            <td class="primary-color-black-text fw-bold"><img
+                                                    src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                    width="30px" alt="">Citizen Kane
+                                            </td>
+                                            <td class="primary-color-blue-text fw-bold">1941</td>
+                                            <td class="primary-color-blue-text fw-bold">100%</td>
+                                        </tr>
+                                        <tr valign="middle">
+                                            <th>#2</th>
+                                            <td class="primary-color-black-text fw-bold"><img
+                                                    src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                    width="30px" alt="">Casablanca
+                                            </td>
+                                            <td class="primary-color-blue-text fw-bold">1942</td>
+                                            <td class="primary-color-blue-text fw-bold">97%</td>
+                                        </tr>
+                                        <tr valign="middle">
+                                            <th>#3</th>
+                                            <td class="primary-color-black-text fw-bold"><img
+                                                    src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                    width="30px" alt="">The Godfather
+                                            </td>
+                                            <td class="primary-color-blue-text fw-bold">1972</td>
+                                            <td class="primary-color-blue-text fw-bold">97%</td>
+                                        </tr>
+                                        <tr valign="middle">
+                                            <th>#4</th>
+                                            <td class="primary-color-black-text fw-bold"><img
+                                                    src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                    width="30px" alt="">The Middle Man
+                                            </td>
+                                            <td class="primary-color-blue-text fw-bold">1989</td>
+                                            <td class="primary-color-blue-text fw-bold">90%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab-pane card fade" id="unpaid">
+                                <table data-role="table" id="movie-table-custom" data-mode="" class="movie-list">
+                                    <thead>
+                                        <tr>
+                                            <th>Rank</th>
+                                            <th style="width:40%">Name</th>
+                                            <th>Daily Points</th>
+                                            <th>Total Points</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr valign="middle">
+                                            <th>#1</th>
+                                            <td class="primary-color-black-text fw-bold"><img
+                                                    src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                    width="30px" alt="">Citizen Kane
+                                            </td>
+                                            <td class="primary-color-blue-text fw-bold">1941</td>
+                                            <td class="primary-color-blue-text fw-bold">100%</td>
+                                        </tr>
+                                        <tr valign="middle">
+                                            <th>#2</th>
+                                            <td class="primary-color-black-text fw-bold"><img
+                                                    src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                    width="30px" alt="">Casablanca
+                                            </td>
+                                            <td class="primary-color-blue-text fw-bold">1942</td>
+                                            <td class="primary-color-blue-text fw-bold">97%</td>
+                                        </tr>
+                                        <tr valign="middle">
+                                            <th>#3</th>
+                                            <td class="primary-color-black-text fw-bold"><img
+                                                    src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                    width="30px" alt="">The Godfather
+                                            </td>
+                                            <td class="primary-color-blue-text fw-bold">1972</td>
+                                            <td class="primary-color-blue-text fw-bold">97%</td>
+                                        </tr>
+                                        <tr valign="middle">
+                                            <th>#4</th>
+                                            <td class="primary-color-black-text fw-bold"><img
+                                                    src="assets/img/avatar-placeholder.png" class="img-fluid pr-2"
+                                                    width="30px" alt="">The Middle Man
+                                            </td>
+                                            <td class="primary-color-blue-text fw-bold">1989</td>
+                                            <td class="primary-color-blue-text fw-bold">90%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" id="footer" data-tap-toggle="false" transition="fade"
+            class="py-2">
+            <div data-role="navbar" data-grid="d" class="h90 text-center footer">
+                <ul class="h100">
+                    <li class="w100 h20 nav-footer">
+                        <a href="home.html" rel="external" class="active">
+                            <i class="fa fa-home"></i>
+                            <div>Home</div>
+                        </a>
+                    </li>
+                    <li class="w100 h20 nav-footer">
+                        <a href="deals.html" rel="external">
+                            <i class="fa fa-tag font"></i>
+                            <div>Deals</div>
+                        </a>
+                    </li>
+                    <li class="w100 h20 nav-footer">
+                        <a href="store.html" rel="external">
+                            <i class="fa fa-store-alt"></i>
+                            <div>Store</div>
+                        </a>
+                    </li>
+                    <li class="w100 h20 nav-footer">
+                        <a href="cart.html" rel="external">
+                            <i class="fa fa-shopping-cart"></i>
+                            <div>Cart</div>
+                        </a>
+                    </li>
+                    <li class="w100 h20 nav-footer">
+                        <a href="profile.html" rel="external">
+                            <i class="fa fa-user"></i>
+                            <div>Profile</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" id="footer2" data-tap-toggle="false" transition="fade">
+            <div data-role="navbar" data-grid="d" class="text-center footer2">
+                <ul class="w100">
+                    <li class="w20 nav-footer">
+                        <a href="home.html" rel="external" class="active">
+                            <i class="fa fa-home"></i>
+                            <div>Home</div>
+                        </a>
+                    </li>
+                    <li class="w20 nav-footer">
+                        <a href="deals.html" rel="external">
+                            <i class="fa fa-tag font"></i>
+                            <div>Deals</div>
+                        </a>
+                    </li>
+                    <li class="w20 nav-footer">
+                        <a href="store.html" rel="external">
+                            <i class="fa fa-store-alt"></i>
+                            <div>Store</div>
+                        </a>
+                    </li>
+                    <li class="w20 nav-footer">
+                        <a href="cart.html" rel="external">
+                            <i class="fa fa-shopping-cart"></i>
+                            <div>Cart</div>
+                        </a>
+                    </li>
+                    <li class="w20 nav-footer">
+                        <a href="profile.html" rel="external">
+                            <i class="fa fa-user"></i>
+                            <div>Profile</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    $(document).ready(function () {
+
+        $('#' + sessionStorage.getItem('theme')).prop("checked", true);
+
+        if (sessionStorage.getItem('theme') === 'dark') {
+            $('body').addClass('dark');
+        }
+        $('input[name="radio-group-2"]:radio').change(function () {
+            if (this.accessKey === 'dark') {
+                sessionStorage.setItem('theme', 'dark')
+                $('body').addClass('dark');
+
+            } else {
+                sessionStorage.setItem('theme', 'light')
+                $('body').removeClass('dark');
+            }
+        });
+
+
+        $.post("backend/userData.php", {
+            action: 'view',
+            currentUser: sessionStorage.getItem("loggedUser")
+        }, function (data, status) {
+            const json = JSON.parse(data);
+            $("#username").html(json.name);
+            if (json.imageSrc !== "") {
+                $("#userImage").attr('src', json.imageSrc);
+            }
+
+            $("#userPoints").html(json.points);
+        });
+        $(document).on("click", ".dealsClick", function () {
+            if (this.accessKey === "2") {
+                sessionStorage.setItem("currentDeal", this.accessKey);
+                sessionStorage.setItem("ratingFilter", '0');
+                sessionStorage.setItem("priceFilter", '{"startValue":"0","EndValue":"999"}');
+                sessionStorage.setItem("sort", 'default');
+                document.location.href = 'promotion_details_in.html';
+            } else {
+                sessionStorage.setItem("currentDeal", this.accessKey);
+                sessionStorage.setItem("ratingFilter", '0');
+                sessionStorage.setItem("priceFilter", '{"startValue":"0","EndValue":"999"}');
+                sessionStorage.setItem("sort", 'default');
+                document.location.href = 'promotion_details.html';
+            }
+
+        });
+        $(document).on("click", ".pathurl", function () {
+            document.location.href = this.accessKey;
+        });
+
+    })
+</script>

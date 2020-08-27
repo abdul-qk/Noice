@@ -1,0 +1,361 @@
+@import "common_variables.css";
+
+/* Font Sizes and Style start */
+.ui-page {
+    text-shadow: none !important;
+}
+
+.wordmark {
+    font-size: var(--font-size-title);
+    font-weight: var(--font-weight-heavy);
+    font-family: futura;
+}
+
+.font-family-primary {
+    font-family: futura;
+}
+
+.font-family-lakeshore {
+    font-family: lakeshore;
+}
+
+.truncate {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+h1 {
+    font-size: var(--font-size-h1) !important;
+}
+
+h2 {
+    font-size: var(--font-size-h2) !important;
+}
+
+h3 {
+    font-size: var(--font-size-h3) !important;
+}
+
+h4 {
+    font-size: var(--font-size-h4) !important;
+}
+
+h5 {
+    font-size: var(--font-size-h5) !important;
+}
+
+h6 {
+    font-size: var(--font-size-h6) !important;
+}
+
+.font-size-xxxx {
+    font-size: 50px !important;
+}
+
+.font-size-xxx {
+    font-size: 45px !important;
+}
+
+.font-size-xx {
+    font-size: 35px !important;
+}
+
+.font-size-xxl {
+    font-size: 28px;
+}
+
+.font-size-xl {
+    font-size: 22px;
+}
+
+.font-size-l {
+    font-size: 18px !important;
+}
+
+.font-size-m {
+    font-size: 14px !important;
+}
+
+.font-size-s {
+    font-size: 12px !important;
+}
+
+.font-weight-heavy {
+    font-weight: var(--font-weight-heavy) !important;
+}
+
+.font-weight-bold {
+    font-weight: var(--font-weight-bold) !important;
+}
+
+.font-weight-medium {
+    font-weight: var(--font-weight-medium) !important;
+}
+
+.font-weight-light {
+    font-weight: var(--font-weight-light) !important;
+}
+.icon {
+    font-size:20px !important;
+}
+/* Font Sizes end */
+
+
+/* Buttons start */
+.plain-btn-link {
+    font-size: 14px !important;
+    display: block !important;
+    font-family: 'Open Sans', sans-serif !important;
+    margin:0px !important;
+    padding: 0px !important;
+    line-height: unset !important;
+    border: none !important;
+}
+
+.btn {
+width: 100% !important;
+height: 54px !important;
+border-radius: 8px !important;
+text-shadow: none !important;
+font-size: var(--font-size-h5) !important;
+border: none !important;
+display: flex !important;
+align-items: center;
+justify-content: center;
+line-height: 0px !important;
+}
+/* Buttons end */
+
+/* Forms start */
+.ui-field-contain {
+    border: none !important;
+}
+.ui-mobile label {
+    font-size: var(--font-size-h5);
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.ui-input-text input, #feedbackInput {
+    min-height: 54px !important;
+    border-radius: 8px !important;
+    font-size: var(--font-size-h5) !important;
+    padding: 0px 20px;
+}
+#feedbackInput {
+    height: 154px !important;
+    padding-top: 12px;
+}
+.sortFilter .ui-slider-handle {
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+}
+.sortFilter .ui-slider .ui-slider-track {
+    margin: 0 12px 0 80px;
+}
+/* Forms end */
+
+/* Pagination indicator start */
+.paginationSection .indicator {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 2px;
+}
+/* Pagination indicator end */
+
+/* Progress stepper start */
+.progress-stepper .step .step-count {
+    width: 29px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+}
+.progress-stepper .step-content-label {
+    width: 50px;
+    text-align: center;
+}
+.progress-stepper .bar-left {
+    position: absolute;
+    top: 67%;
+}
+.progress-stepper .bar-right {
+    position: absolute;
+    top: 67%;
+    width: 17%;
+    right: 0;
+}
+
+.progress-stepper .bar-left-1 {
+    left:0%;
+    width: 17%;
+}
+.progress-stepper .bar-left-2{
+    left: 25%;
+    width: 21%;
+}
+.progress-stepper .bar-left-3 {
+    left: 54%;
+    width: 21%;
+}
+/* Progress stepper end */
+
+/* Width classes start */
+
+.w15 {
+    width: 15% !important;
+}
+
+.w25 {
+    width: 25% !important;
+}
+
+.w35 {
+    width: 35% !important;
+}
+
+.w45 {
+    width: 45% !important;
+}
+
+.w55 {
+    width: 55% !important;
+}
+
+.w65 {
+    width: 65% !important;
+}
+
+.w75 {
+    width: 75% !important;
+}
+
+.w85 {
+    width: 85% !important;
+}
+
+.w95 {
+    width: 95% !important;
+}
+
+.w10 {
+    width: 10% !important;
+}
+
+.w20 {
+    width: 20% !important;
+}
+
+.w30 {
+    width: 30% !important;
+}
+
+.w40 {
+    width: 40% !important;
+}
+
+.w50 {
+    width: 50% !important;
+}
+
+.w60 {
+    width: 60% !important;
+}
+
+.w70 {
+    width: 70% !important;
+}
+
+.w80 {
+    width: 80% !important;
+}
+
+.w90 {
+    width: 90% !important;
+}
+
+.w100 {
+    width: 100% !important;
+}
+
+/* Width classes end */
+
+/* Height classes start */
+.h100 {
+    height: 100% !important;
+}
+
+.h90 {
+    height: 90% !important;
+}
+
+.h80 {
+    height: 80% !important;
+}
+
+.h70 {
+    height: 70% !important;
+}
+
+.h60 {
+    height: 60% !important;
+}
+
+.h50 {
+    height: 50% !important;
+}
+
+.h40 {
+    height: 40% !important;
+}
+
+.h30 {
+    height: 30% !important;
+}
+
+.h20 {
+    height: 20% !important;
+}
+
+.h10 {
+    height: 10% !important;
+}
+/* Height classes end */
+
+/* Line height classes start */
+.line-height-none {
+    line-height: 0px !important;
+}
+
+.line-height-small {
+    line-height: 22px !important;
+}
+
+.line-height-normal {
+    line-height: 24px !important;
+}
+
+.line-height-medium {
+    line-height: 26px;
+}
+
+.line-height-large {
+    line-height: 28px;
+}
+/* Line height classes end */
+
+/* Position Classes start */
+.v-align-middle {
+    vertical-align: middle !important;
+}
+.v-align-top {
+    vertical-align: top !important;
+}
+.v-align-bottom {
+    vertical-align: bottom; !important;
+}
+/* Position Classes end */
